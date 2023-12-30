@@ -22,5 +22,13 @@
 body {
 	color: rgb(var(--foreground-rgb));
 	background: rgb(var(--background-rgb));
-	overflow-wrap: break-word;  /* protects against overflow with very long words */
+	overflow-wrap: break-word; /* protects against overflow with very long words */
+}
+
+a.touchable {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-width: 48px;
+	min-height: 48px;
 }
