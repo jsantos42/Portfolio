@@ -3,7 +3,7 @@ import {Dictionary, SupportedLocale} from '@/types';
 import {NextRequest, NextResponse} from 'next/server';
 import {match} from '@formatjs/intl-localematcher';
 import Negotiator from 'negotiator';
-import {dictionaries, getSlug} from "@/dictionaries";
+import {getDictionaries, getSlug} from "@/dictionaries";
 
 //==============================================================================
 // LOCALES
@@ -61,7 +61,7 @@ const hasValidLocale = (pathname: string) => {
 
 const getStaticRoute = (pathname: string) => {
 	let staticRoute = '';
-	const dictionariesEntries = Object.entries(dictionaries) as [
+	const dictionariesEntries = Object.entries(getDictionaries()) as [
 		SupportedLocale,
 		Dictionary,
 	][];

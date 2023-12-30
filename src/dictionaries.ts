@@ -1,6 +1,6 @@
 import { DictionaryWithLanguage, SupportedLocale } from '@/types';
 
-export const dictionaries: DictionaryWithLanguage = {
+const dictionaries: DictionaryWithLanguage = {
 	en: {
 		pages: {
 			home: '',
@@ -20,6 +20,8 @@ export const dictionaries: DictionaryWithLanguage = {
 		},
 	},
 };
+
+export const getDictionaries: () => DictionaryWithLanguage = () => dictionaries;
 
 export const getSlug = (lang: SupportedLocale, pageName: string) => {
 	if (!pageName) {
