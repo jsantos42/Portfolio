@@ -1,7 +1,6 @@
 import { SupportedLocale } from '@/types';
-import { getDictionaries, getSlug } from '@/dictionaries';
 import { useEffect } from 'react';
-import { TouchableLink } from '@/app/components/navigation/TouchableLink';
+import { PageList } from '@/app/components/navigation/PageList';
 
 export const Sidebar = ({
 	lang,
@@ -10,11 +9,6 @@ export const Sidebar = ({
 	lang: SupportedLocale;
 	toggle: () => void;
 }) => {
-	const dict = getDictionaries()[lang];
-	const pagesNames = Object.values(dict.pages).filter(
-		name => name.length > 0
-	);
-
 	const preventScroll = (e: Event) => {
 		e.preventDefault();
 	};
@@ -39,18 +33,7 @@ export const Sidebar = ({
 	return (
 		<div className="w-full h-full fixed flex justify-center bg-theme/90">
 			<div className="w-10/12 h-full flex justify-center bg-theme pt-16">
-				<ul className="text-center">
-					{pagesNames.map(name => (
-						<li key={name}>
-							<TouchableLink
-								href={getSlug(lang, name)}
-								onClick={toggle}
-							>
-								{name}
-							</TouchableLink>
-						</li>
-					))}
-				</ul>
+				<PageList lang={lang} classes="text-center" toggle={toggle}/>
 			</div>
 		</div>
 	);
