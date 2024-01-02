@@ -1,6 +1,17 @@
-export const HamburgerMenuButton = ({ toggle }: { toggle: () => void }) => {
+import { CloseButton } from '@/app/components/navigation/buttons/CloseButton';
+
+export const HamburgerMenu = ({
+	isNavModalOpen,
+	toggleNavModal,
+}: {
+	isNavModalOpen: boolean;
+	toggleNavModal: () => void;
+}) => {
+	if (isNavModalOpen) {
+		return <CloseButton toggleModal={toggleNavModal} />;
+	}
 	return (
-		<button onClick={toggle}>
+		<button onClick={toggleNavModal}>
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				width="48"

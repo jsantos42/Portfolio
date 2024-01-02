@@ -5,12 +5,12 @@ import { TouchableLink } from '@/app/components/navigation/TouchableLink';
 
 export const Logo = ({
 	lang,
-	toggle,
-	isOpen,
+	toggleNavModal,
+	isNavModalOpen,
 }: {
 	lang: SupportedLocale;
-	toggle: () => void;
-	isOpen: boolean;
+	toggleNavModal: () => void;
+	isNavModalOpen: boolean;
 }) => {
 	const { pages } = getDictionaries()[lang];
 
@@ -18,7 +18,7 @@ export const Logo = ({
 		<>
 			<TouchableLink
 				href={getSlug(lang, pages.home)}
-				onClick={isOpen ? toggle : undefined}
+				onClick={isNavModalOpen ? toggleNavModal : undefined}
 			>
 				Logo
 				{/*<Image src={} alt={}*/}

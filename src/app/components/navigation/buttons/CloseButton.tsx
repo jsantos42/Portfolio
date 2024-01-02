@@ -1,6 +1,10 @@
-export const CloseButton = ({ toggle }: { toggle: () => void }) => {
+export const CloseButton = ({
+	toggleModal,
+}: {
+	toggleModal: () => void;
+}) => {
 	return (
-		<button onClick={toggle}>
+		<button onClick={toggleModal}>
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				width="48"
@@ -11,8 +15,8 @@ export const CloseButton = ({ toggle }: { toggle: () => void }) => {
 					strokeLinecap: 'round',
 				}}
 			>
-				<line x1="10" y1="10" x2="38" y2="38" />
-				<line x1="38" y1="10" x2="10" y2="38" />
+				<line x1="13" y1="13" x2="35" y2="35" />
+				<line x1="35" y1="13" x2="13" y2="35" />
 			</svg>
 		</button>
 	);

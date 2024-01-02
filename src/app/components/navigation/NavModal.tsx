@@ -2,12 +2,12 @@ import { SupportedLocale } from '@/types';
 import { useEffect } from 'react';
 import { PageList } from '@/app/components/navigation/PageList';
 
-export const Sidebar = ({
+export const NavModal = ({
 	lang,
-	toggle,
+	toggleNavModal,
 }: {
 	lang: SupportedLocale;
-	toggle: () => void;
+	toggleNavModal: () => void;
 }) => {
 	const preventScroll = (e: Event) => {
 		e.preventDefault();

@@ -1,19 +1,19 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { Navbar } from '@/app/components/navigation/navbar/Navbar';
+import { NavBar } from '@/app/components/navigation/NavBar';
 import { SupportedLocale } from '@/types';
-import { Sidebar } from '@/app/components/navigation/Sidebar';
+import { NavModal } from '@/app/components/navigation/NavModal';
 
 export const Navigation = ({ lang }: { lang: SupportedLocale }) => {
 	const MOBILE_THRESHOLD = 768;
 	const [isMobile, setIsMobile] = useState(
 		window.innerWidth < MOBILE_THRESHOLD
 	);
-	const [isOpen, setIsOpen] = useState(false);
+	const [isNavModalOpen, setIsNavModalOpen] = useState(false);
 
-	const toggle = () => {
-		setIsOpen(!isOpen);
+	const toggleNavModal = () => {
+		setIsNavModalOpen(!isNavModalOpen);
 	};
 
 	useEffect(() => {
@@ -22,7 +22,7 @@ export const Navigation = ({ lang }: { lang: SupportedLocale }) => {
 			const shouldBeMobile = width < MOBILE_THRESHOLD;
 			if (shouldBeMobile !== isMobile) {
 				setIsMobile(shouldBeMobile);
-				setIsOpen(false);
+				setIsNavModalOpen(false);
 			}
 		};
 
@@ -37,13 +37,13 @@ export const Navigation = ({ lang }: { lang: SupportedLocale }) => {
 
 	return (
 		<>
-			<Navbar
+			<NavBar
 				lang={lang}
-				toggle={toggle}
-				isOpen={isOpen}
+				toggleNavModal={toggleNavModal}
+				isNavModalOpen={isNavModalOpen}
 				isMobile={isMobile}
 			/>
-			{isOpen ? <Sidebar lang={lang} toggle={toggle} /> : null}
+			{isNavModalOpen ? <NavModal lang={lang} toggle={toggleNavModal} /> : null}
 		</>
 	);
 };
