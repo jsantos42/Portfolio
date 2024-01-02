@@ -3,7 +3,8 @@
 import { useEffect, useState } from 'react';
 import { NavBar } from '@/app/components/navigation/NavBar';
 import { SupportedLocale } from '@/types';
-import { NavModal } from '@/app/components/navigation/NavModal';
+import { NavModal } from '@/app/components/navigation/modals/NavModal';
+import { LangModal } from '@/app/components/navigation/modals/LangModal';
 
 export const Navigation = ({ lang }: { lang: SupportedLocale }) => {
 	const MOBILE_THRESHOLD = 768;
@@ -11,9 +12,16 @@ export const Navigation = ({ lang }: { lang: SupportedLocale }) => {
 		window.innerWidth < MOBILE_THRESHOLD
 	);
 	const [isNavModalOpen, setIsNavModalOpen] = useState(false);
+	const [isLangModalOpen, setIsLangModalOpen] = useState(false);
 
 	const toggleNavModal = () => {
 		setIsNavModalOpen(!isNavModalOpen);
+		setIsLangModalOpen(false);
+	};
+
+	const toggleLangModal = () => {
+		setIsLangModalOpen(!isLangModalOpen);
+		setIsNavModalOpen(false);
 	};
 
 	useEffect(() => {
@@ -23,6 +31,7 @@ export const Navigation = ({ lang }: { lang: SupportedLocale }) => {
 			if (shouldBeMobile !== isMobile) {
 				setIsMobile(shouldBeMobile);
 				setIsNavModalOpen(false);
+				setIsLangModalOpen(false);
 			}
 		};
 
@@ -41,11 +50,16 @@ export const Navigation = ({ lang }: { lang: SupportedLocale }) => {
 				{...{
 					lang,
 					toggleNavModal,
+					toggleLangModal,
 					isNavModalOpen,
+					isLangModalOpen,
 					isMobile,
 				}}
 			/>
 			{isNavModalOpen ? <NavModal {...{ lang, toggleNavModal }} /> : null}
+			{isLangModalOpen ? (
+				<LangModal {...{ lang, toggleLangModal, isMobile }} />
+			) : null}
 		</>
 	);
 };
