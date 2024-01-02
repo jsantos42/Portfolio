@@ -16,7 +16,7 @@ export const TouchableLink = ({
 	onClick?: React.MouseEventHandler<HTMLAnchorElement>;
 }) => {
 	return (
-		<Link href={href} onClick={onClick} className="touchable px-2">
+		<Link {...{ href, onClick, className: 'touchable px-2' }}>
 			{children}
 		</Link>
 	);

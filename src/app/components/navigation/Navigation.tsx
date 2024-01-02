@@ -38,12 +38,14 @@ export const Navigation = ({ lang }: { lang: SupportedLocale }) => {
 	return (
 		<>
 			<NavBar
-				lang={lang}
-				toggleNavModal={toggleNavModal}
-				isNavModalOpen={isNavModalOpen}
-				isMobile={isMobile}
+				{...{
+					lang,
+					toggleNavModal,
+					isNavModalOpen,
+					isMobile,
+				}}
 			/>
-			{isNavModalOpen ? <NavModal lang={lang} toggle={toggleNavModal} /> : null}
+			{isNavModalOpen ? <NavModal {...{ lang, toggleNavModal }} /> : null}
 		</>
 	);
 };

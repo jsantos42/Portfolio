@@ -1,7 +1,6 @@
 import { SupportedLocale } from '@/types';
 import { Logo } from '@/app/components/navigation/Logo';
 import { HamburgerMenu } from '@/app/components/navigation/buttons/HamburgerMenu';
-import { CloseButton } from '@/app/components/navigation/buttons/CloseButton';
 import { PageList } from '@/app/components/navigation/PageList';
 
 export const NavBar = ({
@@ -20,17 +19,25 @@ export const NavBar = ({
 			<div className="w-full h-nav bg-theme sticky top-0">
 				<div className="px-4 h-full">
 					<div className="flex justify-between items-center h-full">
-						<Logo lang={lang} toggle={toggleNavModal} isOpen={isNavModalOpen} />
-						<div className={`flex items-center ${isMobile ? "gap-1" : "gap-8"}`}>
+						<Logo {...{ lang, isNavModalOpen, toggleNavModal }} />
+						<div
+							className={`flex items-center ${
+								isMobile ? 'gap-1' : 'gap-8'
+							}`}
+						>
 							{isMobile ? (
 								<>
-									<HamburgerMenu isNavModalOpen={isNavModalOpen} toggleNavModal={toggleNavModal} />
+									<HamburgerMenu
+										{...{ isNavModalOpen, toggleNavModal }}
+									/>
 								</>
 							) : (
 								<>
 									<PageList
-										lang={lang}
-										classes={'flex gap-x-8 text-theme'}
+										{...{
+											lang,
+											classes: 'flex gap-x-8 text-theme',
+										}}
 									/>
 								</>
 							)}

@@ -22,7 +22,7 @@ export default function RootLayout({
 	return (
 		<html lang={lang}>
 			<body className={inter.className}>
-				<Navigation lang={lang} />
+				<Navigation {...{ lang }} />
 				<div className="min-h-fillScreen">{children}</div>
 			</body>
 		</html>
