@@ -10,13 +10,18 @@ export const TouchableLink = ({
 	children,
 	href,
 	onClick,
+	inNewWindow
 }: {
 	children: React.ReactNode;
 	href: string;
 	onClick?: React.MouseEventHandler<HTMLAnchorElement>;
+	inNewWindow?: boolean
 }) => {
 	return (
-		<Link {...{ href, onClick, className: 'touchable px-2' }}>
+		<Link
+			rel={'no-referrer'}
+			target={inNewWindow ? '_blank': '_self'}
+			{...{ href, onClick, className: 'touchable' }}>
 			{children}
 		</Link>
 	);

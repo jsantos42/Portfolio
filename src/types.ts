@@ -17,3 +17,17 @@ export type Dictionary = {
 export type DictionaryWithLanguage = {
 	[language in SupportedLocale]: Dictionary;
 };
+
+export type InfoType =
+	| 'phoneNumber'
+	| 'emailAddress'
+	| 'linkedInUser'
+	| 'gitHubUser'
+	| 'website';
+
+export type Data = {
+	name: string;
+	info: {
+		[info in InfoType]: string;
+	};
+};

@@ -1,7 +1,7 @@
 import type { Config } from 'tailwindcss';
 
 const navHeight: string = '4rem';
-const footerHeight: string = '4rem';
+const footerHeight: string = '6rem';
 
 // Using rgba() instead of rgb() to allow the use of the opacity modifier
 // cf https://tailwindcss.com/docs/background-color#changing-the-opacity
