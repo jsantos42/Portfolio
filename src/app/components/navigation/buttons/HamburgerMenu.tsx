@@ -1,4 +1,4 @@
-import { CloseButton } from '@/app/components/navigation/buttons/CloseButton';
+import { CloseButton } from '@src/app/components/navigation/buttons/CloseButton';
 
 export const HamburgerMenu = ({
 	isNavModalOpen,

@@ -1,6 +1,6 @@
-import { TouchableLink } from '@/app/components/navigation/TouchableLink';
-import { getDictionaries, getSlug } from '@/dictionaries';
-import { SupportedLocale } from '@/types';
+import { TouchableLink } from '@src/app/components/navigation/TouchableLink';
+import { getDictionaries, getSlug } from '@src/dictionaries';
+import { SupportedLocale } from '@src/types';
 
 export const PageList = ({
 	lang,

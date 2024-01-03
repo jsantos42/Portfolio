@@ -1,8 +1,8 @@
-import { SupportedLocale } from '@/types';
+import { SupportedLocale } from '@src/types';
 import { useEffect } from 'react';
-import { preventScroll } from '@/app/components/navigation/modals/utils';
-import { getDictionaries, getSlug } from '@/dictionaries';
-import { TouchableLink } from '@/app/components/navigation/TouchableLink';
+import { preventScroll } from '@src/app/components/navigation/modals/utils';
+import { getDictionaries, getSlug } from '@src/dictionaries';
+import { TouchableLink } from '@src/app/components/navigation/TouchableLink';
 
 export const LangModal = ({
 	lang,

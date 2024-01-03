@@ -1,5 +1,5 @@
-import { PageParams } from '@/types';
-import { getDictionaries, getSlug } from '@/dictionaries';
+import { PageParams } from '@src/types';
+import { getDictionaries, getSlug } from '@src/dictionaries';
 import Link from 'next/link';
 
 export default function Home({ params }: { params: PageParams }) {

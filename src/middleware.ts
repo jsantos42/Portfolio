@@ -1,9 +1,9 @@
 // THIS PAGE MUST BE ON THE SAME LEVEL AS THE PAGES/APP FOLDER !!!
-import {Dictionary, SupportedLocale} from '@/types';
+import {Dictionary, SupportedLocale} from '@src/types';
 import {NextRequest, NextResponse} from 'next/server';
 import {match} from '@formatjs/intl-localematcher';
 import Negotiator from 'negotiator';
-import {getDictionaries, getSlug} from "@/dictionaries";
+import {getDictionaries, getSlug} from "@src/dictionaries";
 
 //==============================================================================
 // LOCALES

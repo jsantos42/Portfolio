@@ -1,7 +1,7 @@
-import {getDictionaries, getSlug} from '@/dictionaries';
+import {getDictionaries, getSlug} from '@src/dictionaries';
 import React from 'react';
-import {SupportedLocale} from '@/types';
-import {TouchableLink} from '@/app/components/navigation/TouchableLink';
+import {SupportedLocale} from '@src/types';
+import {TouchableLink} from '@src/app/components/navigation/TouchableLink';
 
 export const Logo = ({
 						 lang,

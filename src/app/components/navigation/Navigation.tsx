@@ -1,10 +1,10 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { NavBar } from '@/app/components/navigation/NavBar';
-import { SupportedLocale } from '@/types';
-import { NavModal } from '@/app/components/navigation/modals/NavModal';
-import { LangModal } from '@/app/components/navigation/modals/LangModal';
+import { NavBar } from '@src/app/components/navigation/NavBar';
+import { SupportedLocale } from '@src/types';
+import { NavModal } from '@src/app/components/navigation/modals/NavModal';
+import { LangModal } from '@src/app/components/navigation/modals/LangModal';
 
 export const Navigation = ({ lang }: { lang: SupportedLocale }) => {
 	const MOBILE_THRESHOLD = 768;

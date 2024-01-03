@@ -1,8 +1,8 @@
-import { SupportedLocale } from '@/types';
-import { Logo } from '@/app/components/navigation/Logo';
-import { HamburgerMenu } from '@/app/components/navigation/buttons/HamburgerMenu';
-import { PageList } from '@/app/components/navigation/PageList';
-import { LanguageSwitcher } from '@/app/components/navigation/buttons/LanguageSwitcher';
+import { SupportedLocale } from '@src/types';
+import { Logo } from '@src/app/components/navigation/Logo';
+import { HamburgerMenu } from '@src/app/components/navigation/buttons/HamburgerMenu';
+import { PageList } from '@src/app/components/navigation/PageList';
+import { LanguageSwitcher } from '@src/app/components/navigation/buttons/LanguageSwitcher';
 
 export const NavBar = ({
 	lang,

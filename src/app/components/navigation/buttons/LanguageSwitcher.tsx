@@ -1,5 +1,5 @@
-import { SupportedLocale } from '@/types';
-import { CloseButton } from '@/app/components/navigation/buttons/CloseButton';
+import { SupportedLocale } from '@src/types';
+import { CloseButton } from '@src/app/components/navigation/buttons/CloseButton';
 
 export const LanguageSwitcher = ({
 	lang,

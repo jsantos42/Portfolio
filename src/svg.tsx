@@ -1,4 +1,4 @@
-import { InfoType } from '@/types';
+import { InfoType } from '@src/types';
 
 export const phoneSvg = (info: InfoType) => {
 	return (
