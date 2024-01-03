@@ -1,4 +1,4 @@
-type Page = 'about' | 'home';
+type Page = 'about' | 'home' | 'projects';
 
 export type SupportedLocale = 'en' | 'pt' | 'fr';
 

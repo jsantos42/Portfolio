@@ -1,22 +1,25 @@
-import { DictionaryWithLanguage, SupportedLocale } from '@/types';
+import { DictionaryWithLanguage, SupportedLocale } from '@src/types';
 
 const dictionaries: DictionaryWithLanguage = {
 	en: {
 		pages: {
 			home: '',
 			about: 'About',
+			projects: 'Projects',
 		},
 	},
 	fr: {
 		pages: {
 			home: '',
 			about: 'À propos',
+			projects: 'Projets',
 		},
 	},
 	pt: {
 		pages: {
 			home: '',
 			about: 'Sobre',
+			projects: 'Projectos',
 		},
 	},
 };

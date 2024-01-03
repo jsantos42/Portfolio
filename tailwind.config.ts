@@ -29,6 +29,10 @@ const config: Config = {
 			animation: {
 				fadeInFromTop: 'fromTop 0.2s ease-out',
 				fadeInFromLeft: 'fromLeft 0.2s ease-out',
+			},
+			gridTemplateColumns: {
+				projectsMobile: '1fr',
+				projects: 'repeat(auto-fill, minmax(400px, 1fr))'
 			}
 		},
 	},
