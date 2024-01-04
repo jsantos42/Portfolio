@@ -1,4 +1,6 @@
-type Page = 'about' | 'home' | 'projects';
+import {StaticImageData} from "next/image";
+
+type Page = 'home' | 'about' | 'projects';
 
 export type SupportedLocale = 'en' | 'pt' | 'fr';
 
@@ -31,3 +33,13 @@ export type Data = {
 		[info in InfoType]: string;
 	};
 };
+
+export type Project = {
+	title: string;
+	img: StaticImageData;
+	brief: string;
+	languages: string[];
+	keywords: string[];
+	repo: string;
+	description: string;
+}
