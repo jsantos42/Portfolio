@@ -19,17 +19,16 @@ export const NavBar = ({
 	isLangModalOpen: boolean;
 	isMobile: boolean;
 }) => {
-	const languageSwitcher = () => {
-		return (
-			<LanguageSwitcher
-				{...{
-					lang,
-					isLangModalOpen,
-					toggleLangModal,
-				}}
-			/>
-		);
-	};
+	const languageSwitcher = () => (
+		<LanguageSwitcher
+			{...{
+				lang,
+				isLangModalOpen,
+				toggleLangModal,
+			}}
+		/>
+	);
+
 	return (
 		<>
 			<div className="w-full h-nav bg-theme sticky top-0">
