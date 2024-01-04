@@ -1,4 +1,4 @@
-import {getDictionaries, getSlug} from '@src/dictionaries';
+import {getDictionaries, getSlug} from '@src/res/dictionaries';
 import React from 'react';
 import {SupportedLocale} from '@src/types';
 import {TouchableLink} from '@src/app/components/navigation/TouchableLink';

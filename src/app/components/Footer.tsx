@@ -1,6 +1,6 @@
 import { InfoType } from '@src/types';
 import { TouchableLink } from '@src/app/components/navigation/TouchableLink';
-import { data, getInfoLink, getInfoSvg } from '@src/data';
+import { data, getInfoLink, getInfoSvg } from '@src/res/data';
 
 export const Footer = () => {
 	const infoEntries = Object.entries(data.info) as [InfoType, string][];

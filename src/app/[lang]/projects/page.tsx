@@ -1,6 +1,6 @@
 'use client';
 import { PageParams } from '@src/types';
-import { getDictionaries, getSlug } from '@src/dictionaries';
+import { getDictionaries, getSlug } from '@src/res/dictionaries';
 import Link from 'next/link';
 import { useState } from 'react';
 import { TouchableLink } from '@src/app/components/navigation/TouchableLink';

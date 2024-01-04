@@ -3,7 +3,7 @@ import {Dictionary, SupportedLocale} from '@src/types';
 import {NextRequest, NextResponse} from 'next/server';
 import {match} from '@formatjs/intl-localematcher';
 import Negotiator from 'negotiator';
-import {getDictionaries, getSlug} from "@src/dictionaries";
+import {getDictionaries, getSlug} from "@src/res/dictionaries";
 
 //==============================================================================
 // LOCALES

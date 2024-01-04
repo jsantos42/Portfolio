@@ -1,5 +1,5 @@
 import {Data, InfoType} from "@src/types";
-import {emailSvg, gitHubSvg, linkedInSvg, phoneSvg} from "@src/svg";
+import {emailSvg, gitHubSvg, linkedInSvg, phoneSvg} from "@src/res/svg";
 
 export const data: Data = {
 	name: process.env.MY_NAME || '',
