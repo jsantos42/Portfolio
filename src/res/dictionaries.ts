@@ -2,24 +2,51 @@ import { DictionaryWithLanguage, SupportedLocale } from '@src/types';
 
 const dictionaries: DictionaryWithLanguage = {
 	en: {
-		pages: {
-			home: '',
-			about: 'About',
-			projects: 'Projects',
+		home: {
+			pageName: '',
+			pageContent: {},
+		},
+		about: {
+			pageName: 'About',
+			pageContent: {},
+		},
+		projects: {
+			pageName: 'Projects',
+			pageContent: {
+				filters: 'Filters',
+			},
 		},
 	},
 	fr: {
-		pages: {
-			home: '',
-			about: 'À propos',
-			projects: 'Projets',
+		home: {
+			pageName: '',
+			pageContent: {},
+		},
+		about: {
+			pageName: 'À propos',
+			pageContent: {},
+		},
+		projects: {
+			pageName: 'Projets',
+			pageContent: {
+				filters: 'foo',
+			},
 		},
 	},
 	pt: {
-		pages: {
-			home: '',
-			about: 'Sobre',
-			projects: 'Projectos',
+		home: {
+			pageName: '',
+			pageContent: {},
+		},
+		about: {
+			pageName: 'Sobre',
+			pageContent: {},
+		},
+		projects: {
+			pageName: 'Projectos',
+			pageContent: {
+				filters: 'foo',
+			},
 		},
 	},
 };

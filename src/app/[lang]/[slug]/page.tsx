@@ -7,10 +7,10 @@ export default function Home({ params }: { params: PageParams }) {
 
 	return (
 		<>
-			<h1>HomePage {dict.pages.home}</h1>
+			<h1>HomePage {dict.home.pageName}</h1>
 			<h2>Language is {params.lang}</h2>
-			<Link href={getSlug(params.lang, dict.pages.about)}>
-				Go to {dict.pages.about}
+			<Link href={getSlug(params.lang, dict.about.pageName)}>
+				Go to {dict.about.pageName}
 			</Link>
 		</>
 	);

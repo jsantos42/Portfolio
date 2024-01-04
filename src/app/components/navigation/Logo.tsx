@@ -16,7 +16,7 @@ export const Logo = ({
 	isNavModalOpen: boolean;
 	isLangModalOpen: boolean;
 }) => {
-	const {pages} = getDictionaries()[lang];
+	const dict = getDictionaries()[lang];
 	const handleClick = () => {
 		if (isNavModalOpen) {
 			toggleNavModal();
@@ -29,7 +29,7 @@ export const Logo = ({
 	return (
 		<>
 			<TouchableLink
-				href={getSlug(lang, pages.home)}
+				href={getSlug(lang, dict.home.pageName)}
 				onClick={handleClick}
 			>
 				Logo

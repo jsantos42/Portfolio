@@ -61,13 +61,13 @@ const hasValidLocale = (pathname: string) => {
 
 const getStaticRoute = (pathname: string) => {
 	let staticRoute = '';
-	const dictionariesEntries = Object.entries(getDictionaries()) as [
+	const dictEntries = Object.entries(getDictionaries()) as [
 		SupportedLocale,
 		Dictionary,
 	][];
 
-	dictionariesEntries.find(([lang, dict]) =>
-		Object.entries(dict.pages).some(([page, pageName]) => {
+	dictEntries.find(([lang, dict]) =>
+		Object.entries(dict).some(([page, {pageName}]) => {
 			if (pathname === getSlug(lang, pageName)) {
 				staticRoute = `/${lang}/${page}`;
 				return true;

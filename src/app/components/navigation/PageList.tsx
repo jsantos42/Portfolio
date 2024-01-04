@@ -11,15 +11,18 @@ export const PageList = ({
 	classes: string;
 	toggleNavModal?: () => void;
 }) => {
-	const { pages } = getDictionaries()[lang];
-	const pagesNames = Object.values(pages).filter(name => name.length > 0);
+	const dict = getDictionaries()[lang];
+	const pages = Object.values(dict).filter(page => page.pageName.length > 0);
 
 	return (
 		<ul className={classes}>
-			{pagesNames.map(name => (
-				<li key={name}>
-					<TouchableLink href={getSlug(lang, name)} onClick={toggleNavModal}>
-						{name}
+			{pages.map(page => (
+				<li key={page.pageName}>
+					<TouchableLink
+						href={getSlug(lang, page.pageName)}
+						onClick={toggleNavModal}
+					>
+						{page.pageName}
 					</TouchableLink>
 				</li>
 			))}

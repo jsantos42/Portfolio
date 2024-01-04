@@ -10,9 +10,13 @@ export type PageParams = {
 	lang: SupportedLocale;
 };
 
+// CHANGE THIS
+export type Content = any;
+
 export type Dictionary = {
-	pages: {
-		[pageName in Page]: string;
+	[pageName in Page]: {
+		pageName: string;
+		pageContent: Content;
 	};
 };
 
