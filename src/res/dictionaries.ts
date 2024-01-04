@@ -14,6 +14,13 @@ const dictionaries: DictionaryWithLanguage = {
 			pageName: 'Projects',
 			pageContent: {
 				filters: 'Filters',
+				field: 'Field',
+				language: 'Language',
+				framework: 'Framework',
+				styling: 'Styling',
+				db: 'Database',
+				testingFramework: 'Testing Framework',
+				year: 'Year',
 			},
 		},
 	},

@@ -1,15 +1,15 @@
-import online_shop_api_png from "@public/images/projects/online_shop_api.png";
-import fast_food_gif from "@public/images/projects/fast_food.gif";
-import face_detector_gif from "@public/images/projects/face_detector.gif";
-import online_booking_gif from "@public/images/projects/online_booking.gif";
-import portfolio_gif from "@public/images/projects/portfolio.gif";
-import pokemon_gif from "@public/images/projects/pokemon.gif";
-import notepad_gif from "@public/images/projects/notepad.gif";
-import minishell_gif from "@public/images/projects/minishell.gif";
-import cub3d_gif from "@public/images/projects/cub3d.gif";
-import so_long_gif from "@public/images/projects/so_long.gif";
-import philo_gif from "@public/images/projects/philo.gif";
-import {Project} from "@src/types";
+import online_shop_api_png from '@public/images/projects/online_shop_api.png';
+import fast_food_gif from '@public/images/projects/fast_food.gif';
+import face_detector_gif from '@public/images/projects/face_detector.gif';
+import online_booking_gif from '@public/images/projects/online_booking.gif';
+import portfolio_gif from '@public/images/projects/portfolio.gif';
+import pokemon_gif from '@public/images/projects/pokemon.gif';
+import notepad_gif from '@public/images/projects/notepad.gif';
+import minishell_gif from '@public/images/projects/minishell.gif';
+import cub3d_gif from '@public/images/projects/cub3d.gif';
+import so_long_gif from '@public/images/projects/so_long.gif';
+import philo_gif from '@public/images/projects/philo.gif';
+import { Project } from '@src/types';
 
 export const projects: Project[] = [
 	{
@@ -119,3 +119,48 @@ export const projects: Project[] = [
 	},
 ];
 
+export const fields = [
+	'Front End',
+	'Back End',
+	'Mobile',
+	'Datascience',
+	'Low Level',
+	'Game Dev',
+];
+
+export const languages = [
+	'TypeScript',
+	'JavaScript',
+	'PHP',
+	'Python',
+	'R',
+	'C',
+	'C++',
+];
+
+export const frameworks = [
+	'React.js',
+	'Next.js',
+	'React Native',
+	'Node.js',
+	'Express.js',
+	'Laravel',
+	'QT',
+];
+
+export const stylingFrameworks = [
+	'Tailwind',
+	'Styled Components',
+	'CSS/SASS/LESS',
+];
+
+export const db = ['MySQL', 'PostgreSQL'];
+
+export const testingFrameworks = ['PHPunit'];
+
+const STARTING_YEAR = 2020;
+const length = new Date().getFullYear() - STARTING_YEAR + 1;
+export const years = Array.from(
+	{ length: length },
+	(_, index) => `${STARTING_YEAR + index}`
+).sort((a, b) => (a < b ? 1 : -1));
