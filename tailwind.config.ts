@@ -26,6 +26,10 @@ const config: Config = {
 			minHeight: {
 				fillScreen: `calc(100vh - ${navHeight} - ${footerHeight})`,
 			},
+			animation: {
+				fadeInFromTop: 'fromTop 0.2s ease-out',
+				fadeInFromLeft: 'fromLeft 0.2s ease-out',
+			}
 		},
 	},
 	plugins: [],

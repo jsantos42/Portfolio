@@ -32,3 +32,25 @@ a.touchable {
 	min-width: 48px;
 	min-height: 48px;
 }
+
+@keyframes fromTop {
+	from {
+		transform: translateY(-1%);
+		opacity: 0;
+	}
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+@keyframes fromLeft {
+	from {
+		transform: translateX(-10%);
+		opacity: 0;
+	}
+	to {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
