@@ -21,7 +21,7 @@ export const LangModal = ({
 		<div className="w-full h-full fixed flex justify-end bg-theme/90 animate-fadeInFromTop">
 			<div
 				className={`flex h-fit bg-theme gap-8 ${
-					isMobile ? 'px-2 mr-[3.75rem]' : 'px-4'
+					isMobile ? 'w-full justify-center py-16' : 'px-4'
 				}`}
 			>
 				<ul className={''}>

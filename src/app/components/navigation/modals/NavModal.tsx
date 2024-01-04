@@ -14,7 +14,7 @@ export const NavModal = ({
 
 	return (
 		<div className="w-full h-full fixed flex justify-center bg-theme/90 animate-fadeInFromTop">
-			<div className="w-10/12 h-full flex justify-center bg-theme pt-16">
+			<div className="w-full h-fit flex justify-center bg-theme py-16">
 				<PageList
 					{...{ lang, toggleNavModal, classes: 'text-center' }}
 				/>
