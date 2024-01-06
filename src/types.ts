@@ -1,4 +1,4 @@
-import {StaticImageData} from "next/image";
+import { StaticImageData } from 'next/image';
 
 type Page = 'home' | 'about' | 'projects';
 
@@ -10,13 +10,15 @@ export type PageParams = {
 	lang: SupportedLocale;
 };
 
-// CHANGE THIS
-export type Content = any;
+export type ProjectPageContent = {
+	filtersTitle: string;
+	filtersLabels: ProjectFiltersDict;
+};
 
 export type Dictionary = {
 	[pageName in Page]: {
 		pageName: string;
-		pageContent: Content;
+		pageContent: ProjectPageContent;
 	};
 };
 
@@ -41,9 +43,69 @@ export type Data = {
 export type Project = {
 	title: string;
 	img: StaticImageData;
-	brief: string;
-	languages: string[];
-	keywords: string[];
 	repo: string;
+	brief: string;
 	description: string;
-}
+} & {
+	[K in FilterType]: FilterTypeMap[K];
+};
+
+export type FilterType =
+	| 'field'
+	| 'language'
+	| 'framework'
+	| 'styling'
+	| 'db'
+	| 'testingFramework'
+	| 'year';
+
+type FilterTypeMap = {
+	field: Field[];
+	language: ProgrammingLanguage[];
+	framework?: Framework[];
+	styling?: StylingFramework[];
+	db?: Database[];
+	testingFramework?: TestingFramework[];
+	year: string[];
+};
+
+export type Filter = {
+	[K in FilterType]: FilterTypeMap[K];
+};
+
+export type ProjectFiltersDict = Record<FilterType, string>;
+
+export type Field =
+	| 'Front End'
+	| 'Back End'
+	| 'Mobile'
+	| 'Datascience'
+	| 'Low Level'
+	| 'Game Dev';
+
+export type ProgrammingLanguage =
+	| 'TypeScript'
+	| 'JavaScript'
+	| 'PHP'
+	| 'Python'
+	| 'R'
+	| 'C'
+	| 'C++';
+
+export type Framework =
+	| 'React.js'
+	| 'Next.js'
+	| 'React Native'
+	| 'Node.js'
+	| 'Express.js'
+	| 'Laravel'
+	| 'Qt';
+
+export type StylingFramework =
+	| 'Tailwind'
+	| 'Styled Components'
+	| 'CSS/SASS/LESS';
+
+export type Database = 'MySQL' | 'PostgreSQL';
+
+export type TestingFramework = 'PHPunit';

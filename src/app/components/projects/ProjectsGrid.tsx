@@ -25,9 +25,21 @@ export const ProjectsGrid = ({
 							<strong>{project.brief}</strong>
 						</p>
 						<p>
-							Stack:{' '}
-							<strong>{project.languages.join(', ')}</strong>
+							<strong>{project.field}</strong>
 						</p>
+						<p>
+							Stack:{' '}
+							<strong>
+								{[
+									...project.language,
+									...(project.framework ?? []),
+									...(project.testingFramework ?? []),
+									...(project.styling ?? []),
+									...(project.db ?? []),
+								].join(', ')}
+							</strong>
+						</p>
+						<p>{project.year}</p>
 						<p>
 							<TouchableLink
 								href={project.repo}

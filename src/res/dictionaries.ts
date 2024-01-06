@@ -13,14 +13,16 @@ const dictionaries: DictionaryWithLanguage = {
 		projects: {
 			pageName: 'Projects',
 			pageContent: {
-				filters: 'Filters',
-				field: 'Field',
-				language: 'Language',
-				framework: 'Framework',
-				styling: 'Styling',
-				db: 'Database',
-				testingFramework: 'Testing Framework',
-				year: 'Year',
+				filtersTitle: 'Filters',
+				filtersLabels: {
+					field: 'Field',
+					language: 'Language',
+					framework: 'Framework',
+					styling: 'Styling',
+					db: 'Database',
+					testingFramework: 'Testing Framework',
+					year: 'Year',
+				}
 			},
 		},
 	},
@@ -36,7 +38,7 @@ const dictionaries: DictionaryWithLanguage = {
 		projects: {
 			pageName: 'Projets',
 			pageContent: {
-				filters: 'foo',
+				filtersLabels: 'foo',
 			},
 		},
 	},
@@ -52,7 +54,7 @@ const dictionaries: DictionaryWithLanguage = {
 		projects: {
 			pageName: 'Projectos',
 			pageContent: {
-				filters: 'foo',
+				filtersLabels: 'foo',
 			},
 		},
 	},
