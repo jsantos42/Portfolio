@@ -66,7 +66,6 @@ export default function Projects({ params }: { params: PageParams }) {
 
 	return (
 		<>
-			{/*<h1>{dict.projects.pageName}</h1>*/}
 			{isMobile ? (
 				<button onClick={toggleFilterModal}>Toggle</button>
 			) : null}
@@ -85,9 +84,6 @@ export default function Projects({ params }: { params: PageParams }) {
 					filteredProjects={getFilteredProjects(selectedOptions)}
 				/>
 			</div>
-			<Link href={getSlug(params.lang, dict.about.pageName)}>
-				Go to {dict.about.pageName}
-			</Link>
 		</>
 	);
 }
