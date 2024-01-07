@@ -1,17 +1,28 @@
 'use client';
-import { PageParams } from '@src/types';
-import { getDictionaries, getSlug } from '@src/res/dictionaries';
-import Link from 'next/link';
+import { Filter, FilterType, PageParams } from '@src/types';
+import { getDictionaries } from '@src/res/dictionaries';
 import { useEffect, useState } from 'react';
-import { ProjectsFilter } from '@src/app/components/projects/ProjectsFilter';
+import { FilterSidebar } from '@src/app/components/projects/FilterSidebar';
 import { projects } from '@src/res/projects';
 import { ProjectsGrid } from '@src/app/components/projects/ProjectsGrid';
 
 export default function Projects({ params }: { params: PageParams }) {
-	const dict = getDictionaries()[params.lang];
-	const [filteread, setFiltered] = useState();
-	const searchField = '';
-	const filteredProjects = projects;
+	const { filtersTitle, filtersLabels } =
+		getDictionaries()[params.lang].projects.pageContent;
+
+	// We should initialize selectedOptions with empty arrays for each filter
+	// type. This way, initially, no filters will be applied, and all projects
+	// will be shown. Filters should only start applying when the user selects
+	// specific options.
+	const [selectedOptions, setSelectedOptions] = useState({
+		field: [],
+		language: [],
+		framework: [],
+		styling: [],
+		db: [],
+		testingFramework: [],
+		year: [],
+	});
 
 	const MOBILE_THRESHOLD = 768; // CHANGE THIS
 	const [isMobile, setIsMobile] = useState(
@@ -43,6 +54,16 @@ export default function Projects({ params }: { params: PageParams }) {
 		};
 	});
 
+	const handleFilterChange = (
+		filterType: FilterType,
+		updatedSelection: string[]
+	) => {
+		setSelectedOptions(prevState => ({
+			...prevState,
+			[filterType]: updatedSelection,
+		}));
+	};
+
 	return (
 		<>
 			{/*<h1>{dict.projects.pageName}</h1>*/}
@@ -51,9 +72,18 @@ export default function Projects({ params }: { params: PageParams }) {
 			) : null}
 			<div className="flex">
 				{!isMobile || isFilterModalOpen ? (
-					<ProjectsFilter content={dict.projects.pageContent} />
+					<FilterSidebar
+						{...{
+							filtersTitle,
+							filtersLabels,
+							selectedOptions,
+							handleFilterChange,
+						}}
+					/>
 				) : null}
-				<ProjectsGrid {...{ filteredProjects }} />
+				<ProjectsGrid
+					filteredProjects={getFilteredProjects(selectedOptions)}
+				/>
 			</div>
 			<Link href={getSlug(params.lang, dict.about.pageName)}>
 				Go to {dict.about.pageName}
@@ -61,3 +91,20 @@ export default function Projects({ params }: { params: PageParams }) {
 		</>
 	);
 }
+
+const getFilteredProjects = (selectedOptions: Filter) =>
+	projects.filter(project =>
+		Object.entries(selectedOptions).every(
+			([filterType, filterSelectedOptions]) => {
+				if (
+					!filterSelectedOptions ||
+					filterSelectedOptions.length === 0
+				) {
+					return true;
+				}
+				return project[filterType as FilterType]?.some(
+					value => filterSelectedOptions?.includes(value)
+				);
+			}
+		)
+	);
