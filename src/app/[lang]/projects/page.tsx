@@ -1,10 +1,11 @@
 'use client';
 import { Filter, FilterType, PageParams } from '@src/types';
 import { getDictionaries } from '@src/res/dictionaries';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { FilterSidebar } from '@src/app/components/projects/FilterSidebar';
 import { projects } from '@src/res/projects';
 import { ProjectsGrid } from '@src/app/components/projects/ProjectsGrid';
+import { useMobileState } from '@src/app/utils';
 
 export default function Projects({ params }: { params: PageParams }) {
 	const { filtersTitle, filtersLabels } =
@@ -24,35 +25,14 @@ export default function Projects({ params }: { params: PageParams }) {
 		year: [],
 	});
 
-	const MOBILE_THRESHOLD = 768; // CHANGE THIS
-	const [isMobile, setIsMobile] = useState(
-		window.innerWidth < MOBILE_THRESHOLD
-	);
 	const [isFilterModalOpen, setIsFilterModalOpen] = useState(false);
+	const isMobile = useMobileState(768, [
+		{ callback: setIsFilterModalOpen, args: false },
+	]);
 
 	const toggleFilterModal = () => {
 		setIsFilterModalOpen(!isFilterModalOpen);
 	};
-
-	// consider extract duplicated code from Navigation.tsx
-	useEffect(() => {
-		const handleResizing = (e: UIEvent) => {
-			const width = (e.target as Window).innerWidth;
-			const shouldBeMobile = width < MOBILE_THRESHOLD;
-			if (shouldBeMobile !== isMobile) {
-				setIsMobile(shouldBeMobile);
-				setIsFilterModalOpen(false);
-			}
-		};
-
-		window.addEventListener('resize', handleResizing);
-
-		// Cleanup function of useEffect(). In this case, it removes the event
-		// listener when the component unmounts, to prevent memory leaks
-		return () => {
-			window.removeEventListener('resize', handleResizing);
-		};
-	});
 
 	const handleFilterChange = (
 		filterType: FilterType,
