@@ -31,7 +31,7 @@ export const NavBar = ({
 
 	return (
 		<>
-			<div className="w-full h-nav bg-theme sticky top-0">
+			<div className="w-full h-nav bg-theme sticky top-0 z-40">
 				<div className="px-4 h-full">
 					<div className="flex justify-between items-center h-full">
 						<Logo
