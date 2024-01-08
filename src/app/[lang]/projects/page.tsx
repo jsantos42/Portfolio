@@ -6,9 +6,10 @@ import { FilterSidebar } from '@src/app/components/projects/FilterSidebar';
 import { projects } from '@src/res/projects';
 import { ProjectsGrid } from '@src/app/components/projects/ProjectsGrid';
 import { useMobileState } from '@src/app/utils';
+import { SortFilterButtons } from '@src/app/components/projects/SortFilterButtons';
 
 export default function Projects({ params }: { params: PageParams }) {
-	const { filtersTitle, filtersLabels } =
+	const { sortTitle, sortLabels, filterButton, filtersTitle, filtersLabels } =
 		getDictionaries()[params.lang].projects.pageContent;
 
 	// We should initialize selectedOptions with empty arrays for each filter
@@ -47,12 +48,20 @@ export default function Projects({ params }: { params: PageParams }) {
 	return (
 		<>
 			{isMobile ? (
-				<button onClick={toggleFilterModal}>Toggle</button>
+				<SortFilterButtons
+					{...{
+						sortTitle,
+						filterButton,
+						sortLabels,
+						toggleFilterModal,
+					}}
+				/>
 			) : null}
 			<div className="flex">
 				{!isMobile || isFilterModalOpen ? (
 					<FilterSidebar
 						{...{
+							isMobile,
 							filtersTitle,
 							filtersLabels,
 							selectedOptions,
@@ -62,6 +71,7 @@ export default function Projects({ params }: { params: PageParams }) {
 				) : null}
 				<ProjectsGrid
 					filteredProjects={getFilteredProjects(selectedOptions)}
+					display={!isMobile || !isFilterModalOpen}
 				/>
 			</div>
 		</>

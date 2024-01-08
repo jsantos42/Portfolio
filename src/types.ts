@@ -11,6 +11,11 @@ export type PageParams = {
 };
 
 export type ProjectPageContent = {
+	sortTitle: string;
+	sortLabels: {
+		[label in SortLabel]: string;
+	};
+	filterButton: string;
 	filtersTitle: string;
 	filtersLabels: ProjectFiltersDict;
 };
@@ -25,6 +30,8 @@ export type Dictionary = {
 export type DictionaryWithLanguage = {
 	[language in SupportedLocale]: Dictionary;
 };
+
+export type SortLabel = 'recommended' | 'newest' | 'oldest';
 
 export type InfoType =
 	| 'phoneNumber'

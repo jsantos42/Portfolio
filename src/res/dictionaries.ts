@@ -13,6 +13,13 @@ const dictionaries: DictionaryWithLanguage = {
 		projects: {
 			pageName: 'Projects',
 			pageContent: {
+				sortTitle: 'Sort',
+				sortLabels: {
+					recommended: 'Recommended',
+					newest: 'Newest',
+					oldest: 'Oldest'
+				},
+				filterButton: 'Filter',
 				filtersTitle: 'Filters',
 				filtersLabels: {
 					field: 'Field',

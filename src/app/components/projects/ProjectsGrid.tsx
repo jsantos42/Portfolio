@@ -4,10 +4,15 @@ import { TouchableLink } from '@src/app/components/navigation/TouchableLink';
 
 export const ProjectsGrid = ({
 	filteredProjects,
+	display,
 }: {
 	filteredProjects: Project[];
+	display: boolean;
 }) => (
-	<div className="grid grid-cols-projectsMobile min-[470px]:grid-cols-projects gap-20 px-4 sm:px-8 py-16 flex-grow">
+	<div
+		className="grid grid-cols-projectsMobile min-[470px]:grid-cols-projects
+	gap-20 px-4 sm:px-8 py-16 flex-grow"
+	>
 		{filteredProjects.map(project => (
 			<div
 				key={project.title}

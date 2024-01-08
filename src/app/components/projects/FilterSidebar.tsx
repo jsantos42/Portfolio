@@ -9,13 +9,16 @@ import {
 	testingFrameworks,
 	years,
 } from '@src/res/projects';
+import { useEffect, useRef } from 'react';
 
 export const FilterSidebar = ({
+	isMobile,
 	filtersTitle,
 	filtersLabels,
 	selectedOptions,
 	handleFilterChange,
 }: {
+	isMobile: boolean;
 	filtersTitle: string;
 	filtersLabels: ProjectFiltersDict;
 	selectedOptions: Filter;
@@ -33,6 +36,32 @@ export const FilterSidebar = ({
 		testingFramework: testingFrameworks,
 		year: years,
 	};
+
+	// When all the filter dropdowns are closed, the content of the component is
+	// not enough to make it scrollable. By adding a dummy div at the end of the
+	// content's div, I can ensure that the total height of the parent div
+	// exceeds the height of the viewport (by 1 extra pixel), thus making it
+	// scrollable. The dummy div's minimum height should be updated whenever the
+	// user toggles a filter dropdown
+	const dummyDivRef = useRef(null);
+	const parentDivRef = useRef(null);
+	useEffect(() => {
+		if (dummyDivRef.current && parentDivRef.current) {
+			const { paddingTop, height } = window.getComputedStyle(
+				parentDivRef.current
+			);
+			const parentHeight = parseInt(height) - parseInt(paddingTop);
+			const distanceToParentTop = dummyDivRef.current.offsetTop;
+			const EXTRA_PIXEL = 1;
+
+			const minScrollableHeight =
+				parentHeight - distanceToParentTop + EXTRA_PIXEL;
+
+			dummyDivRef.current.style.minHeight = `${minScrollableHeight}px`;
+		}
+		//addDependency of when we toggle each filter
+	}, []);
+
 	const toggleAllFilters = (newValue: boolean) => {
 		// setFilters(prevFilters => {
 		// 	let updatedFilters = {};
@@ -48,38 +77,52 @@ export const FilterSidebar = ({
 		// isOpen = !isOpen;
 	};
 
+	// Note that overscroll-contain here is key to avoid scrolling the overlaid
+	// layer (in this case, the projects grid)!
 	return (
-		<div className="w-1/4 border-2 p-3">
-			{/*<div className="w-1/4 min-h-sidebar max-h-sidebar border-2 p-3 overflow-scroll">*/}
-			<h1 className="font-bold text-2xl py-3">{filtersTitle}</h1>
-			<div className="flex justify-between">
-				<button onClick={() => toggleAllFilters(true)}>
-					Expand All
-				</button>
-				<button onClick={() => toggleAllFilters(false)}>
-					Collapse All
-				</button>
-			</div>
-			<div className="divide-y-2">
-				{Object.entries(filters).map(([filterType, filterOptions]) => {
-					return (
-						<FilterDropdown
-							key={filterType}
-							filterLabel={
-								filtersLabels[filterType as FilterType]
-							}
-							selectedOptions={
-								selectedOptions[filterType as FilterType]
-							}
-							{...{
-								filterType,
-								filterOptions,
-								updateIsOpen,
-								handleFilterChange,
-							}}
-						/>
-					);
-				})}
+		<div className="w-full h-full fixed flex z-20 bg-theme animate-fadeInFromLeft">
+			<div
+				ref={parentDivRef}
+				className="w-full flex flex-col p-4 min-h-sidebarMobile
+			max-h-sidebarMobile text-sm overflow-scroll overscroll-contain"
+			>
+				{isMobile ? null : (
+					<h1 className="font-bold text-2xl py-3">{filtersTitle}</h1>
+				)}
+				<div className="flex justify-between w-[200px]">
+					<button onClick={() => toggleAllFilters(true)}>
+						Expand All
+					</button>
+					<button onClick={() => toggleAllFilters(false)}>
+						Collapse All
+					</button>
+				</div>
+				<div className="divide-y-2 w-[200px]">
+					{Object.entries(filters).map(
+						([filterType, filterOptions]) => {
+							return (
+								<FilterDropdown
+									key={filterType}
+									filterLabel={
+										filtersLabels[filterType as FilterType]
+									}
+									selectedOptions={
+										selectedOptions[
+											filterType as FilterType
+										]
+									}
+									{...{
+										filterType,
+										filterOptions,
+										updateIsOpen,
+										handleFilterChange,
+									}}
+								/>
+							);
+						}
+					)}
+				</div>
+				<div ref={dummyDivRef}></div>
 			</div>
 		</div>
 	);

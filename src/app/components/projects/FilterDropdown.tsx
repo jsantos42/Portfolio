@@ -30,15 +30,21 @@ export const FilterDropdown = ({
 		if (target.checked) {
 			updatedFilterValues = [...selectedOptions, target.value];
 		} else {
-			updatedFilterValues = selectedOptions.filter(i => i !== target.value);
+			updatedFilterValues = selectedOptions.filter(
+				i => i !== target.value
+			);
 		}
 		handleFilterChange(filterType, updatedFilterValues);
 	};
 
 	return (
 		<details className="py-3 group" onChange={updateIsOpen}>
-			<summary className="flex justify-between items-center group-open:after:content-['−'] after:content-['+'] after:text-3xl after:-translate-y-0.5">
-				{filterLabel}({selectedOptions.length}/{filterOptions.length})
+			<summary
+				className="flex justify-between items-center
+			group-open:after:content-['−'] after:content-['+'] after:text-2xl
+			after:-translate-y-0.5"
+			>
+				{filterLabel} ({selectedOptions.length}/{filterOptions.length})
 			</summary>
 			<div className="flex flex-col gap-y-1 pt-1">
 				{filterOptions.map(option => (
