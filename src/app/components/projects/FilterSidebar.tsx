@@ -18,19 +18,20 @@ import { useEffect, useRef } from 'react';
 
 export const FilterSidebar = ({
 	isMobile,
+	expandAllButton,
+	collapseAllButton,
 	filtersTitle,
 	filtersLabels,
 	selectedOptions,
-	handleFilterChange,
+	setSelectedOptions,
 }: {
 	isMobile: boolean;
+	expandAllButton: string;
+	collapseAllButton: string;
 	filtersTitle: string;
 	filtersLabels: ProjectFiltersDict;
 	selectedOptions: SelectedOptions;
-	handleFilterChange: (
-		filterType: keyof SelectedOptions,
-		updatedSelection: string[]
-	) => void;
+	setSelectedOptions: (updatedSelectedOptions: SelectedOptions) => void;
 }) => {
 	const filters: Filters = {
 		field: fields,
@@ -68,14 +69,27 @@ export const FilterSidebar = ({
 	}, []);
 
 	const toggleAllFilters = (newValue: boolean) => {
-		// setFilters(prevFilters => {
-		// 	let updatedFilters = {};
-		// 	for (let key in prevFilters) {
-		// 		updatedFilters[key] = { ...prevFilters[key], isOpen: newValue };
-		// 	}
-		// 	console.log(updatedFilters);
-		// 	return updatedFilters;
-		// });
+		const updatedSelectedOptions = (
+			Object.keys(selectedOptions) as FilterType[]
+		).reduce((acc, key) => {
+			acc[key] = {
+				...selectedOptions[key],
+				isDropdownOpen: newValue,
+			};
+			return acc;
+		}, {} as SelectedOptions);
+
+		setSelectedOptions(updatedSelectedOptions);
+	};
+
+	const handleFilterChange = (
+		filterType: FilterType,
+		updatedSelection: SelectedOptions[FilterType]
+	) => {
+		setSelectedOptions({
+			...selectedOptions,
+			[filterType]: updatedSelection,
+		});
 	};
 
 	// Note that overscroll-contain here is key to avoid scrolling the overlaid
@@ -90,37 +104,42 @@ export const FilterSidebar = ({
 				{isMobile ? null : (
 					<h1 className="font-bold text-2xl py-3">{filtersTitle}</h1>
 				)}
-				<div className="flex justify-between w-[200px]">
-					<button onClick={() => toggleAllFilters(true)}>
-						Expand All
+				<div className="flex justify-between w-[200px] gap-x-2">
+					<button
+						className="bg-teal-800 rounded-md w-full h-8"
+						onClick={() => toggleAllFilters(true)}
+					>
+						{expandAllButton}
 					</button>
-					<button onClick={() => toggleAllFilters(false)}>
-						Collapse All
+					<button
+						className="bg-teal-800 rounded-md w-full h-8"
+						onClick={() => toggleAllFilters(false)}
+					>
+						{collapseAllButton}
 					</button>
 				</div>
 				<div className="divide-y-2 w-[200px]">
-					{Object.entries(filters).map(
-						([filterType, filterOptions]) => {
-							return (
-								<FilterDropdown
-									key={filterType}
-									filterLabel={
-										filtersLabels[filterType as FilterType]
-									}
-									filterSelectedOptions={
-										selectedOptions[
-											filterType as FilterType
-										]
-									}
-									{...{
-										filterType,
-										filterOptions,
-										handleFilterChange,
-									}}
-								/>
-							);
-						}
-					)}
+					{(
+						Object.entries(filters) as [
+							FilterType,
+							Filters[FilterType],
+						][]
+					).map(([filterType, filterOptions]) => {
+						return (
+							<FilterDropdown
+								key={filterType}
+								filterLabel={filtersLabels[filterType]}
+								filterSelectedOptions={
+									selectedOptions[filterType]
+								}
+								{...{
+									filterType,
+									filterOptions,
+									handleFilterChange,
+								}}
+							/>
+						);
+					})}
 				</div>
 				<div ref={dummyDivRef}></div>
 			</div>

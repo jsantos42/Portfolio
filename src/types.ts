@@ -16,6 +16,8 @@ export type ProjectPageContent = {
 		[label in SortLabel]: string;
 	};
 	filterButton: string;
+	expandAllButton: string;
+	collapseAllButton: string;
 	filtersTitle: string;
 	filtersLabels: ProjectFiltersDict;
 };

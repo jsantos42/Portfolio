@@ -20,6 +20,8 @@ const dictionaries: DictionaryWithLanguage = {
 					oldest: 'Oldest'
 				},
 				filterButton: 'Filter',
+				expandAllButton: 'Expand All',
+				collapseAllButton: 'Collapse All',
 				filtersTitle: 'Filters',
 				filtersLabels: {
 					field: 'Field',

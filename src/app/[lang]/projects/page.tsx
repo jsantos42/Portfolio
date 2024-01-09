@@ -9,8 +9,15 @@ import { useMobileState } from '@src/app/utils';
 import { SortFilterButtons } from '@src/app/components/projects/SortFilterButtons';
 
 export default function Projects({ params }: { params: PageParams }) {
-	const { sortTitle, sortLabels, filterButton, filtersTitle, filtersLabels } =
-		getDictionaries()[params.lang].projects.pageContent;
+	const {
+		sortTitle,
+		sortLabels,
+		filterButton,
+		expandAllButton,
+		collapseAllButton,
+		filtersTitle,
+		filtersLabels,
+	} = getDictionaries()[params.lang].projects.pageContent;
 
 	// We should initialize selectedOptions with empty arrays for each filter
 	// type. This way, initially, no filters will be applied, and all projects
@@ -47,16 +54,6 @@ export default function Projects({ params }: { params: PageParams }) {
 		setIsFilterModalOpen(!isFilterModalOpen);
 	};
 
-	const handleFilterChange = (
-		filterType: FilterType,
-		updatedSelection: SelectedOptions[FilterType]
-	) => {
-		setSelectedOptions((prevState: SelectedOptions) => ({
-			...prevState,
-			[filterType]: updatedSelection,
-		}));
-	};
-
 	return (
 		<>
 			{isMobile ? (
@@ -74,10 +71,12 @@ export default function Projects({ params }: { params: PageParams }) {
 					<FilterSidebar
 						{...{
 							isMobile,
+							expandAllButton,
+							collapseAllButton,
 							filtersTitle,
 							filtersLabels,
 							selectedOptions,
-							handleFilterChange,
+							setSelectedOptions,
 						}}
 					/>
 				) : null}
