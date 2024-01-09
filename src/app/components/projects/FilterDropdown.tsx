@@ -5,13 +5,13 @@ export const FilterDropdown = ({
 	filterLabel,
 	filterType,
 	filterOptions,
-	selectedOptions,
+	filterSelectedOptions,
 	handleFilterChange,
 }: {
 	filterLabel: string;
 	filterType: FilterType;
 	filterOptions: string[];
-	selectedOptions: SelectedOptions[FilterType];
+	filterSelectedOptions: SelectedOptions[FilterType];
 	handleFilterChange: (
 		filterType: FilterType,
 		updatedSelection: SelectedOptions[FilterType]
@@ -21,7 +21,7 @@ export const FilterDropdown = ({
 		target,
 	}: ChangeEvent<HTMLDetailsElement>) => {
 		const updatedSelectedOptions = {
-			...selectedOptions,
+			...filterSelectedOptions,
 			isDropdownOpen: target.open,
 		};
 		handleFilterChange(filterType, updatedSelectedOptions);
@@ -32,14 +32,14 @@ export const FilterDropdown = ({
 	}: ChangeEvent<HTMLInputElement>) => {
 		let updatedSelected;
 		if (target.checked) {
-			updatedSelected = [...selectedOptions.selected, target.value];
+			updatedSelected = [...filterSelectedOptions.selected, target.value];
 		} else {
-			updatedSelected = selectedOptions.selected.filter(
+			updatedSelected = filterSelectedOptions.selected.filter(
 				i => i !== target.value
 			);
 		}
 		const updatedSelectedOptions = {
-			...selectedOptions,
+			...filterSelectedOptions,
 			selected: updatedSelected,
 		};
 		handleFilterChange(filterType, updatedSelectedOptions);
@@ -49,14 +49,14 @@ export const FilterDropdown = ({
 		<details
 			className="py-3 group"
 			onToggle={handleDropdownToggle}
-			open={selectedOptions.isDropdownOpen}
+			open={filterSelectedOptions.isDropdownOpen}
 		>
 			<summary
 				className="flex justify-between items-center
 			group-open:after:content-['−'] after:content-['+'] after:text-2xl
 			after:-translate-y-0.5"
 			>
-				{filterLabel} ({selectedOptions.selected.length}/
+				{filterLabel} ({filterSelectedOptions.selected.length}/
 				{filterOptions.length})
 			</summary>
 			<div className="flex flex-col gap-y-1 pt-1">
@@ -66,7 +66,9 @@ export const FilterDropdown = ({
 							type={'checkbox'}
 							name={filterLabel}
 							value={option}
-							checked={selectedOptions.selected.includes(option)}
+							checked={filterSelectedOptions.selected.includes(
+								option
+							)}
 							onChange={handleCheckboxChange}
 						/>
 						<label htmlFor={filterLabel}>{option}</label>

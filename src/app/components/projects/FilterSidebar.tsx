@@ -107,7 +107,7 @@ export const FilterSidebar = ({
 									filterLabel={
 										filtersLabels[filterType as FilterType]
 									}
-									selectedOptions={
+									filterSelectedOptions={
 										selectedOptions[
 											filterType as FilterType
 										]
