@@ -36,7 +36,7 @@ export const ProjectsGrid = ({
 							Stack:{' '}
 							<strong>
 								{[
-									...project.language,
+									...(project.language ?? []),
 									...(project.framework ?? []),
 									...(project.testingFramework ?? []),
 									...(project.styling ?? []),

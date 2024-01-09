@@ -1,5 +1,5 @@
 import { ChangeEvent } from 'react';
-import { FilterType } from '@src/types';
+import { FilterType, SelectedOptions } from '@src/types';
 
 export const FilterDropdown = ({
 	filterLabel,
@@ -12,11 +12,11 @@ export const FilterDropdown = ({
 	filterLabel: string;
 	filterType: FilterType;
 	filterOptions: string[];
-	selectedOptions: string[];
+	selectedOptions: SelectedOptions[FilterType];
 	updateIsOpen: () => void;
 	handleFilterChange: (
 		filterType: FilterType,
-		updatedSelection: string[]
+		updatedSelection: SelectedOptions[FilterType]
 	) => void;
 }) => {
 	{
@@ -26,15 +26,19 @@ export const FilterDropdown = ({
 	const handleCheckboxChange = ({
 		target,
 	}: ChangeEvent<HTMLInputElement>) => {
-		let updatedFilterValues;
+		let updatedSelected;
 		if (target.checked) {
-			updatedFilterValues = [...selectedOptions, target.value];
+			updatedSelected = [...selectedOptions.selected, target.value];
 		} else {
-			updatedFilterValues = selectedOptions.filter(
+			updatedSelected = selectedOptions.selected.filter(
 				i => i !== target.value
 			);
 		}
-		handleFilterChange(filterType, updatedFilterValues);
+		const updatedSelectedOptions = {
+			...selectedOptions,
+			selected: updatedSelected,
+		};
+		handleFilterChange(filterType, updatedSelectedOptions);
 	};
 
 	return (
@@ -44,7 +48,8 @@ export const FilterDropdown = ({
 			group-open:after:content-['−'] after:content-['+'] after:text-2xl
 			after:-translate-y-0.5"
 			>
-				{filterLabel} ({selectedOptions.length}/{filterOptions.length})
+				{filterLabel} ({selectedOptions.selected.length}/
+				{filterOptions.length})
 			</summary>
 			<div className="flex flex-col gap-y-1 pt-1">
 				{filterOptions.map(option => (
@@ -53,7 +58,7 @@ export const FilterDropdown = ({
 							type={'checkbox'}
 							name={filterLabel}
 							value={option}
-							checked={selectedOptions.includes(option)}
+							checked={selectedOptions.selected.includes(option)}
 							onChange={handleCheckboxChange}
 						/>
 						<label htmlFor={filterLabel}>{option}</label>

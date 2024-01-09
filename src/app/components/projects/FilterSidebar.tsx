@@ -1,4 +1,9 @@
-import { Filter, FilterType, ProjectFiltersDict } from '@src/types';
+import {
+	Filters,
+	FilterType,
+	ProjectFiltersDict,
+	SelectedOptions,
+} from '@src/types';
 import { FilterDropdown } from '@src/app/components/projects/FilterDropdown';
 import {
 	db,
@@ -21,13 +26,13 @@ export const FilterSidebar = ({
 	isMobile: boolean;
 	filtersTitle: string;
 	filtersLabels: ProjectFiltersDict;
-	selectedOptions: Filter;
+	selectedOptions: SelectedOptions;
 	handleFilterChange: (
-		filterType: keyof Filter,
+		filterType: keyof SelectedOptions,
 		updatedSelection: string[]
 	) => void;
 }) => {
-	const filters: Filter = {
+	const filters: Filters = {
 		field: fields,
 		language: languages,
 		framework: frameworks,

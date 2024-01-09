@@ -54,7 +54,7 @@ export type Project = {
 	brief: string;
 	description: string;
 } & {
-	[K in FilterType]: FilterTypeMap[K];
+	[K in FilterType]: Filters[K] | undefined;
 };
 
 export type FilterType =
@@ -66,18 +66,21 @@ export type FilterType =
 	| 'testingFramework'
 	| 'year';
 
-type FilterTypeMap = {
+export type Filters = {
 	field: Field[];
 	language: ProgrammingLanguage[];
-	framework?: Framework[];
-	styling?: StylingFramework[];
-	db?: Database[];
-	testingFramework?: TestingFramework[];
+	framework: Framework[];
+	styling: StylingFramework[];
+	db: Database[];
+	testingFramework: TestingFramework[];
 	year: string[];
 };
 
-export type Filter = {
-	[K in FilterType]: FilterTypeMap[K];
+export type SelectedOptions = {
+	[K in FilterType]: {
+		selected: Filters[K];
+		isDropdownOpen: boolean;
+	};
 };
 
 export type ProjectFiltersDict = Record<FilterType, string>;

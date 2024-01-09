@@ -1,5 +1,5 @@
 'use client';
-import { Filter, FilterType, PageParams } from '@src/types';
+import { Filters, FilterType, PageParams, SelectedOptions } from '@src/types';
 import { getDictionaries } from '@src/res/dictionaries';
 import { useState } from 'react';
 import { FilterSidebar } from '@src/app/components/projects/FilterSidebar';
@@ -16,15 +16,27 @@ export default function Projects({ params }: { params: PageParams }) {
 	// type. This way, initially, no filters will be applied, and all projects
 	// will be shown. Filters should only start applying when the user selects
 	// specific options.
-	const [selectedOptions, setSelectedOptions] = useState({
-		field: [],
-		language: [],
-		framework: [],
-		styling: [],
-		db: [],
-		testingFramework: [],
-		year: [],
-	});
+	const [selectedOptions, setSelectedOptions] = useState(
+		Object.fromEntries(
+			(
+				[
+					'field',
+					'language',
+					'framework',
+					'styling',
+					'db',
+					'testingFramework',
+					'year',
+				] as FilterType[]
+			).map(filterType => [
+				filterType,
+				{
+					selected: [] as Filters[typeof filterType],
+					isDropdownOpen: false,
+				},
+			])
+		) as SelectedOptions
+	);
 
 	const [isFilterModalOpen, setIsFilterModalOpen] = useState(false);
 	const isMobile = useMobileState(768, [
@@ -37,9 +49,9 @@ export default function Projects({ params }: { params: PageParams }) {
 
 	const handleFilterChange = (
 		filterType: FilterType,
-		updatedSelection: string[]
+		updatedSelection: SelectedOptions[FilterType]
 	) => {
-		setSelectedOptions(prevState => ({
+		setSelectedOptions((prevState: SelectedOptions) => ({
 			...prevState,
 			[filterType]: updatedSelection,
 		}));
@@ -78,19 +90,19 @@ export default function Projects({ params }: { params: PageParams }) {
 	);
 }
 
-const getFilteredProjects = (selectedOptions: Filter) =>
-	projects.filter(project =>
-		Object.entries(selectedOptions).every(
-			([filterType, filterSelectedOptions]) => {
-				if (
-					!filterSelectedOptions ||
-					filterSelectedOptions.length === 0
-				) {
-					return true;
-				}
-				return project[filterType as FilterType]?.some(
-					value => filterSelectedOptions?.includes(value)
-				);
+const getFilteredProjects = (selectedOptions: SelectedOptions) =>
+	projects.filter(project => {
+		const selectedOptionsArray = Object.entries(selectedOptions) as [
+			FilterType,
+			SelectedOptions[FilterType],
+		][];
+
+		return selectedOptionsArray.every(([filterType, { selected }]) => {
+			if (!selected || selected.length === 0) {
+				return true;
 			}
-		)
-	);
+			return project[filterType]?.some(
+				value => selected?.includes(value)
+			);
+		});
+	});
