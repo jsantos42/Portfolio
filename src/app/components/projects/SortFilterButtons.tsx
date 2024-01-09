@@ -19,8 +19,11 @@ export const SortFilterButtons = ({
 			>
 				{filterButton}
 			</button>
-			<select className="bg-transparent w-3/5 text-center border-2 border-stone-700 rounded-md">
-				<option disabled={true} selected={true} value="">
+			<select
+				className="bg-transparent w-3/5 text-center border-2 border-stone-700 rounded-md"
+				defaultValue={''}
+			>
+				<option disabled={true} value="">
 					{sortTitle}
 				</option>
 				{Object.entries(sortLabels).map(([key, value]) => (
