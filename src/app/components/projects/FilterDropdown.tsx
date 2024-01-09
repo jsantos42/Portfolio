@@ -6,22 +6,26 @@ export const FilterDropdown = ({
 	filterType,
 	filterOptions,
 	selectedOptions,
-	updateIsOpen,
 	handleFilterChange,
 }: {
 	filterLabel: string;
 	filterType: FilterType;
 	filterOptions: string[];
 	selectedOptions: SelectedOptions[FilterType];
-	updateIsOpen: () => void;
 	handleFilterChange: (
 		filterType: FilterType,
 		updatedSelection: SelectedOptions[FilterType]
 	) => void;
 }) => {
-	{
-		/* open={filter.isDropdownOpen} */
-	}
+	const handleDropdownToggle = ({
+		target,
+	}: ChangeEvent<HTMLDetailsElement>) => {
+		const updatedSelectedOptions = {
+			...selectedOptions,
+			isDropdownOpen: target.open,
+		};
+		handleFilterChange(filterType, updatedSelectedOptions);
+	};
 
 	const handleCheckboxChange = ({
 		target,
@@ -42,7 +46,11 @@ export const FilterDropdown = ({
 	};
 
 	return (
-		<details className="py-3 group" onChange={updateIsOpen}>
+		<details
+			className="py-3 group"
+			onToggle={handleDropdownToggle}
+			open={selectedOptions.isDropdownOpen}
+		>
 			<summary
 				className="flex justify-between items-center
 			group-open:after:content-['−'] after:content-['+'] after:text-2xl

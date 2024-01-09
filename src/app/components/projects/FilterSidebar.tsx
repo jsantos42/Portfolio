@@ -78,10 +78,6 @@ export const FilterSidebar = ({
 		// });
 	};
 
-	const updateIsOpen = () => {
-		// isOpen = !isOpen;
-	};
-
 	// Note that overscroll-contain here is key to avoid scrolling the overlaid
 	// layer (in this case, the projects grid)!
 	return (
@@ -119,7 +115,6 @@ export const FilterSidebar = ({
 									{...{
 										filterType,
 										filterOptions,
-										updateIsOpen,
 										handleFilterChange,
 									}}
 								/>
