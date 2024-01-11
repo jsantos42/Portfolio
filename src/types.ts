@@ -10,7 +10,7 @@ export type PageParams = {
 	lang: SupportedLocale;
 };
 
-export type ProjectPageContent = {
+type ProjectPageContent = {
 	sortTitle: string;
 	sortLabels: {
 		[label in SortLabel]: string;
@@ -22,10 +22,20 @@ export type ProjectPageContent = {
 	filtersLabels: ProjectFiltersDict;
 };
 
+type HomePageContent = {};
+
+type AboutPageContent = {};
+
+type PageContent = {
+	home: HomePageContent;
+	about: AboutPageContent;
+	projects: ProjectPageContent;
+};
+
 export type Dictionary = {
-	[pageName in Page]: {
+	[page in Page]: {
 		pageName: string;
-		pageContent: ProjectPageContent;
+		pageContent: PageContent[page];
 	};
 };
 
