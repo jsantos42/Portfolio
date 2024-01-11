@@ -56,17 +56,9 @@ export type Project = {
 	brief: string;
 	description: string;
 } & {
-	[K in FilterType]: Filters[K] | undefined;
+	[K in keyof Filters]: Filters[K] | undefined;
 };
 
-export type FilterType =
-	| 'field'
-	| 'language'
-	| 'framework'
-	| 'styling'
-	| 'db'
-	| 'testingFramework'
-	| 'year';
 
 export type Filters = {
 	field: Field[];
@@ -79,13 +71,13 @@ export type Filters = {
 };
 
 export type SelectedOptions = {
-	[K in FilterType]: {
+	[K in keyof Filters]: {
 		selected: Filters[K];
 		isDropdownOpen: boolean;
 	};
 };
 
-export type ProjectFiltersDict = Record<FilterType, string>;
+export type ProjectFiltersDict = Record<keyof Filters, string>;
 
 export type Field =
 	| 'Front End'

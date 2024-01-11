@@ -1,9 +1,4 @@
-import {
-	Filters,
-	FilterType,
-	ProjectFiltersDict,
-	SelectedOptions,
-} from '@src/types';
+import { Filters, ProjectFiltersDict, SelectedOptions } from '@src/types';
 import { FilterDropdown } from '@src/app/components/projects/FilterDropdown';
 import {
 	db,
@@ -48,7 +43,7 @@ export const FilterSidebar = ({
 
 	const toggleAllFilters = (newValue: boolean) => {
 		const updatedSelectedOptions = (
-			Object.keys(selectedOptions) as FilterType[]
+			Object.keys(selectedOptions) as (keyof Filters)[]
 		).reduce((acc, key) => {
 			acc[key] = {
 				...selectedOptions[key],
@@ -61,8 +56,8 @@ export const FilterSidebar = ({
 	};
 
 	const handleFilterChange = (
-		filterType: FilterType,
-		updatedSelection: SelectedOptions[FilterType]
+		filterType: keyof Filters,
+		updatedSelection: SelectedOptions[keyof Filters]
 	) => {
 		setSelectedOptions({
 			...selectedOptions,
@@ -98,8 +93,8 @@ export const FilterSidebar = ({
 				<div className="divide-y-2 w-[200px]">
 					{(
 						Object.entries(filters) as [
-							FilterType,
-							Filters[FilterType],
+							keyof Filters,
+							Filters[keyof Filters],
 						][]
 					).map(([filterType, filterOptions]) => {
 						return (

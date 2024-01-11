@@ -1,5 +1,5 @@
 'use client';
-import { Filters, FilterType, PageParams, SelectedOptions } from '@src/types';
+import { Filters, PageParams, SelectedOptions } from '@src/types';
 import { getDictionaries } from '@src/res/dictionaries';
 import { useState } from 'react';
 import { FilterSidebar } from '@src/app/components/projects/FilterSidebar';
@@ -34,7 +34,7 @@ export default function Projects({ params }: { params: PageParams }) {
 					'db',
 					'testingFramework',
 					'year',
-				] as FilterType[]
+				] as (keyof Filters)[]
 			).map(filterType => [
 				filterType,
 				{
@@ -92,8 +92,8 @@ export default function Projects({ params }: { params: PageParams }) {
 const getFilteredProjects = (selectedOptions: SelectedOptions) =>
 	projects.filter(project => {
 		const selectedOptionsArray = Object.entries(selectedOptions) as [
-			FilterType,
-			SelectedOptions[FilterType],
+			keyof Filters,
+			SelectedOptions[keyof Filters],
 		][];
 
 		return selectedOptionsArray.every(([filterType, { selected }]) => {

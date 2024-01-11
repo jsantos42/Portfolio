@@ -1,5 +1,5 @@
 import { ChangeEvent } from 'react';
-import { FilterType, SelectedOptions } from '@src/types';
+import { Filters, SelectedOptions } from '@src/types';
 
 export const FilterDropdown = ({
 	filterLabel,
@@ -9,12 +9,12 @@ export const FilterDropdown = ({
 	handleFilterChange,
 }: {
 	filterLabel: string;
-	filterType: FilterType;
+	filterType: keyof Filters;
 	filterOptions: string[];
-	filterSelectedOptions: SelectedOptions[FilterType];
+	filterSelectedOptions: SelectedOptions[keyof Filters];
 	handleFilterChange: (
-		filterType: FilterType,
-		updatedSelection: SelectedOptions[FilterType]
+		filterType: keyof Filters,
+		updatedSelection: SelectedOptions[keyof Filters]
 	) => void;
 }) => {
 	const handleDropdownToggle = ({
@@ -66,9 +66,9 @@ export const FilterDropdown = ({
 							type={'checkbox'}
 							name={filterLabel}
 							value={option}
-							checked={filterSelectedOptions.selected.includes(
-								option
-							)}
+							checked={(
+								filterSelectedOptions.selected as Filters[keyof Filters]
+							).includes(option)}
 							onChange={handleCheckboxChange}
 						/>
 						<label htmlFor={filterLabel}>{option}</label>
