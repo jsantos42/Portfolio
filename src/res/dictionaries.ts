@@ -47,7 +47,25 @@ const dictionaries: DictionaryWithLanguage = {
 		projects: {
 			pageName: 'Projets',
 			pageContent: {
-				filtersLabels: 'foo',
+				sortTitle: 'Trier',
+				sortLabels: {
+					recommended: 'Recommandé',
+					newest: 'Plus récent',
+					oldest: 'Plus ancien'
+				},
+				filterButton: 'Filtrer',
+				expandAllButton: 'Tout développer',
+				collapseAllButton: 'Tout fermer',
+				filtersTitle: 'Filtres',
+				filtersLabels: {
+					field: 'Domaine',
+					language: 'Langage',
+					framework: 'Framework',
+					styling: 'Style',
+					db: 'Base de données',
+					testingFramework: 'Framework de test',
+					year: 'Année',
+				}
 			},
 		},
 	},
@@ -63,7 +81,25 @@ const dictionaries: DictionaryWithLanguage = {
 		projects: {
 			pageName: 'Projectos',
 			pageContent: {
-				filtersLabels: 'foo',
+				sortTitle: 'Ordenar',
+				sortLabels: {
+					recommended: 'Recomendado',
+					newest: 'Mais recente',
+					oldest: 'Mais antigo'
+				},
+				filterButton: 'Filtrar',
+				expandAllButton: 'Expandir todos',
+				collapseAllButton: 'Recolher todos',
+				filtersTitle: 'Filtros',
+				filtersLabels: {
+					field: 'Área',
+					language: 'Linguagem',
+					framework: 'Framework',
+					styling: 'Styling',
+					db: 'Base de dados',
+					testingFramework: 'Framework de teste',
+					year: 'Ano',
+				}
 			},
 		},
 	},
