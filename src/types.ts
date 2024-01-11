@@ -1,14 +1,17 @@
 import { StaticImageData } from 'next/image';
 
-type Page = 'home' | 'about' | 'projects';
-
 export type SupportedLocale = 'en' | 'pt' | 'fr';
 
+//==============================================================================
+// PAGES
+//==============================================================================
 export type PageParams = {
 	slug: string;
 } & {
 	lang: SupportedLocale;
 };
+
+type Page = 'home' | 'about' | 'projects';
 
 type ProjectPageContent = {
 	sortTitle: string;
@@ -32,6 +35,9 @@ type PageContent = {
 	projects: ProjectPageContent;
 };
 
+//==============================================================================
+// DICTIONARY, DATA & PROJECT
+//==============================================================================
 export type Dictionary = {
 	[page in Page]: {
 		pageName: string;
@@ -42,8 +48,6 @@ export type Dictionary = {
 export type DictionaryWithLanguage = {
 	[language in SupportedLocale]: Dictionary;
 };
-
-export type SortLabel = 'recommended' | 'newest' | 'oldest';
 
 export type InfoType =
 	| 'phoneNumber'
@@ -69,6 +73,10 @@ export type Project = {
 	[K in keyof Filters]: Filters[K] | undefined;
 };
 
+//==============================================================================
+// FILTERS AND SORTING
+//==============================================================================
+export type SortLabel = 'recommended' | 'newest' | 'oldest';
 
 export type Filters = {
 	field: Field[];
