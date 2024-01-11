@@ -87,7 +87,7 @@ export const FilterSidebar = ({
 					{[true, false].map(willBeOpen => (
 						<button
 							key={willBeOpen.toString()}
-							className="text-teal-800 w-full h-8"
+							className="w-full h-8 text-primary"
 							onClick={() => toggleAllFilters(willBeOpen)}
 						>
 							{willBeOpen ? expandAllButton : collapseAllButton}

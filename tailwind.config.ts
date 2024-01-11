@@ -45,7 +45,7 @@ const config: Config = {
 			},
 			gridTemplateColumns: {
 				projectsMobile: '1fr',
-				projects: 'repeat(auto-fill, minmax(400px, 1fr))',
+				projects: 'repeat(auto-fit, minmax(324px, 1fr))',
 			},
 			spacing: {
 				// allows to customize Top / Right / Bottom / Left (eg: top-nav)

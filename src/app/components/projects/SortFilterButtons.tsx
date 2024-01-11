@@ -17,7 +17,7 @@ export const SortFilterButtons = ({
 				justify-between gap-x-4 text-sm bg-theme"
 		>
 			<button
-				className="bg-teal-800 rounded-md min-w-[92px]"
+				className="min-w-[92px] rounded-md bg-primary text-contrast font-semibold tracking-wide"
 				onClick={toggleFilterModal}
 			>
 				{filterButton}
