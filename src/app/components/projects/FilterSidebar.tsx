@@ -77,7 +77,7 @@ export const FilterSidebar = ({
 				{isMobile ? null : (
 					<h1 className="font-bold text-2xl py-3">{filtersTitle}</h1>
 				)}
-				<div className="flex justify-between w-[200px] gap-x-2">
+				<div className="flex justify-between w-[250px] gap-x-2">
 					<button
 						className="bg-teal-800 rounded-md w-full h-8"
 						onClick={() => toggleAllFilters(true)}
@@ -91,7 +91,7 @@ export const FilterSidebar = ({
 						{collapseAllButton}
 					</button>
 				</div>
-				<div className="divide-y-2 w-[200px]">
+				<div className="divide-y-2 w-[250px]">
 					{(
 						Object.entries(filters) as [
 							keyof Filters,
