@@ -100,8 +100,8 @@ const getFilteredProjects = (selectedOptions: SelectedOptions) =>
 			if (!selected || selected.length === 0) {
 				return true;
 			}
-			return project[filterType]?.some(
-				value => selected?.includes(value)
+			return project[filterType]?.some(value =>
+				(selected as string[]).includes(value)
 			);
 		});
 	});

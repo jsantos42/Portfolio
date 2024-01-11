@@ -45,6 +45,7 @@ export const FilterSidebar = ({
 		const updatedSelectedOptions = (
 			Object.keys(selectedOptions) as (keyof Filters)[]
 		).reduce((acc, key) => {
+			// @ts-ignore
 			acc[key] = {
 				...selectedOptions[key],
 				isDropdownOpen: newValue,

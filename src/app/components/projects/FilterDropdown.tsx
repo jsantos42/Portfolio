@@ -10,7 +10,7 @@ export const FilterDropdown = ({
 }: {
 	filterLabel: string;
 	filterType: keyof Filters;
-	filterOptions: string[];
+	filterOptions: Filters[keyof Filters]
 	filterSelectedOptions: SelectedOptions[keyof Filters];
 	handleFilterChange: (
 		filterType: keyof Filters,
@@ -67,7 +67,7 @@ export const FilterDropdown = ({
 							name={filterLabel}
 							value={option}
 							checked={(
-								filterSelectedOptions.selected as Filters[keyof Filters]
+								filterSelectedOptions.selected as string[]
 							).includes(option)}
 							onChange={handleCheckboxChange}
 						/>
