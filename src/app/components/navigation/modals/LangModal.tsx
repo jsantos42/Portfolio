@@ -1,6 +1,6 @@
 import { SupportedLocale } from '@src/types';
 import { useEffect } from 'react';
-import { preventScroll } from '@src/app/components/navigation/modals/utils';
+import { preventScroll } from '@src/app/utils';
 import { getDictionaries, getSlug } from '@src/res/dictionaries';
 import { TouchableLink } from '@src/app/components/navigation/TouchableLink';
 

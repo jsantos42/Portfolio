@@ -1,7 +1,7 @@
 import { SupportedLocale } from '@src/types';
 import { useEffect } from 'react';
 import { PageList } from '@src/app/components/navigation/PageList';
-import { preventScroll } from '@src/app/components/navigation/modals/utils';
+import { preventScroll } from '@src/app/utils';
 
 export const NavModal = ({
 	lang,

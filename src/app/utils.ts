@@ -28,3 +28,11 @@ export const useMobileState = (
 	});
 	return isMobile;
 };
+
+export const preventScroll = () => {
+	document.body.style.overflow = 'hidden';
+
+	return () => {
+		document.body.style.overflow = 'scroll';
+	};
+};

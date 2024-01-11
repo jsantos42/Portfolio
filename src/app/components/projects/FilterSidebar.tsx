@@ -14,7 +14,8 @@ import {
 	testingFrameworks,
 	years,
 } from '@src/res/projects';
-import { useEffect, useRef } from 'react';
+import { useEffect } from 'react';
+import { preventScroll } from '@src/app/utils';
 
 export const FilterSidebar = ({
 	isMobile,
@@ -43,30 +44,7 @@ export const FilterSidebar = ({
 		year: years,
 	};
 
-	// When all the filter dropdowns are closed, the content of the component is
-	// not enough to make it scrollable. By adding a dummy div at the end of the
-	// content's div, I can ensure that the total height of the parent div
-	// exceeds the height of the viewport (by 1 extra pixel), thus making it
-	// scrollable. The dummy div's minimum height should be updated whenever the
-	// user toggles a filter dropdown
-	const dummyDivRef = useRef(null);
-	const parentDivRef = useRef(null);
-	useEffect(() => {
-		if (dummyDivRef.current && parentDivRef.current) {
-			const { paddingTop, height } = window.getComputedStyle(
-				parentDivRef.current
-			);
-			const parentHeight = parseInt(height) - parseInt(paddingTop);
-			const distanceToParentTop = dummyDivRef.current.offsetTop;
-			const EXTRA_PIXEL = 1;
-
-			const minScrollableHeight =
-				parentHeight - distanceToParentTop + EXTRA_PIXEL;
-
-			dummyDivRef.current.style.minHeight = `${minScrollableHeight}px`;
-		}
-		//addDependency of when we toggle each filter
-	}, []);
+	useEffect(preventScroll);
 
 	const toggleAllFilters = (newValue: boolean) => {
 		const updatedSelectedOptions = (
@@ -97,7 +75,6 @@ export const FilterSidebar = ({
 	return (
 		<div className="w-full h-full fixed flex z-20 bg-theme animate-fadeInFromLeft">
 			<div
-				ref={parentDivRef}
 				className="w-full flex flex-col p-4 min-h-sidebarMobile
 			max-h-sidebarMobile text-sm overflow-scroll overscroll-contain"
 			>
@@ -141,7 +118,6 @@ export const FilterSidebar = ({
 						);
 					})}
 				</div>
-				<div ref={dummyDivRef}></div>
 			</div>
 		</div>
 	);
