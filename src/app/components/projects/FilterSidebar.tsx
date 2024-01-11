@@ -16,7 +16,6 @@ export const FilterSidebar = ({
 	isMobile,
 	expandAllButton,
 	collapseAllButton,
-	filtersTitle,
 	filtersLabels,
 	selectedOptions,
 	setSelectedOptions,
@@ -24,7 +23,6 @@ export const FilterSidebar = ({
 	isMobile: boolean;
 	expandAllButton: string;
 	collapseAllButton: string;
-	filtersTitle: string;
 	filtersLabels: ProjectFiltersDict;
 	selectedOptions: SelectedOptions;
 	setSelectedOptions: (updatedSelectedOptions: SelectedOptions) => void;
@@ -39,16 +37,20 @@ export const FilterSidebar = ({
 		year: years,
 	};
 
-	useEffect(preventScroll);
+	useEffect(() => {
+		if (isMobile) {
+			return preventScroll();
+		}
+	});
 
-	const toggleAllFilters = (newValue: boolean) => {
+	const toggleAllFilters = (openingState: boolean) => {
 		const updatedSelectedOptions = (
 			Object.keys(selectedOptions) as (keyof Filters)[]
 		).reduce((acc, key) => {
 			// @ts-ignore
 			acc[key] = {
 				...selectedOptions[key],
-				isDropdownOpen: newValue,
+				isDropdownOpen: openingState,
 			};
 			return acc;
 		}, {} as SelectedOptions);
@@ -69,29 +71,30 @@ export const FilterSidebar = ({
 	// Note that overscroll-contain here is key to avoid scrolling the overlaid
 	// layer (in this case, the projects grid)!
 	return (
-		<div className="w-full h-full fixed flex z-20 bg-theme animate-fadeInFromLeft">
+		<div
+			className={`${
+				isMobile
+					? 'w-full h-full fixed flex z-20 bg-theme animate-fadeInFromLeft'
+					: ''
+			}`}
+		>
 			<div
-				className="w-full flex flex-col p-4 min-h-sidebarMobile
-			max-h-sidebarMobile text-sm overflow-scroll overscroll-contain"
+				className="sticky top-sortFilterBar w-full min-h-sidebarMobile
+				max-h-sidebarMobile p-4 flex flex-col text-sm overflow-scroll
+				overscroll-contain"
 			>
-				{isMobile ? null : (
-					<h1 className="font-bold text-2xl py-3">{filtersTitle}</h1>
-				)}
 				<div className="flex justify-between w-[250px] gap-x-2">
-					<button
-						className="bg-teal-800 rounded-md w-full h-8"
-						onClick={() => toggleAllFilters(true)}
-					>
-						{expandAllButton}
-					</button>
-					<button
-						className="bg-teal-800 rounded-md w-full h-8"
-						onClick={() => toggleAllFilters(false)}
-					>
-						{collapseAllButton}
-					</button>
+					{[true, false].map(willBeOpen => (
+						<button
+							key={willBeOpen.toString()}
+							className="text-teal-800 w-full h-8"
+							onClick={() => toggleAllFilters(willBeOpen)}
+						>
+							{willBeOpen ? expandAllButton : collapseAllButton}
+						</button>
+					))}
 				</div>
-				<div className="divide-y-2 w-[250px]">
+				<div className="w-[250px] divide-y-2 divide-theme">
 					{(
 						Object.entries(filters) as [
 							keyof Filters,

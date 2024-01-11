@@ -13,7 +13,7 @@ const dictionaries: DictionaryWithLanguage = {
 		projects: {
 			pageName: 'Projects',
 			pageContent: {
-				sortTitle: 'Sort',
+				sortButton: 'Sort',
 				sortLabels: {
 					recommended: 'Recommended',
 					newest: 'Newest',
@@ -22,7 +22,6 @@ const dictionaries: DictionaryWithLanguage = {
 				filterButton: 'Filter',
 				expandAllButton: 'Expand All',
 				collapseAllButton: 'Collapse All',
-				filtersTitle: 'Filters',
 				filtersLabels: {
 					field: 'Field',
 					language: 'Language',
@@ -47,7 +46,7 @@ const dictionaries: DictionaryWithLanguage = {
 		projects: {
 			pageName: 'Projets',
 			pageContent: {
-				sortTitle: 'Trier',
+				sortButton: 'Trier',
 				sortLabels: {
 					recommended: 'Recommandé',
 					newest: 'Plus récent',
@@ -56,7 +55,6 @@ const dictionaries: DictionaryWithLanguage = {
 				filterButton: 'Filtrer',
 				expandAllButton: 'Tout développer',
 				collapseAllButton: 'Tout fermer',
-				filtersTitle: 'Filtres',
 				filtersLabels: {
 					field: 'Domaine',
 					language: 'Langage',
@@ -81,7 +79,7 @@ const dictionaries: DictionaryWithLanguage = {
 		projects: {
 			pageName: 'Projectos',
 			pageContent: {
-				sortTitle: 'Ordenar',
+				sortButton: 'Ordenar',
 				sortLabels: {
 					recommended: 'Recomendado',
 					newest: 'Mais recente',
@@ -90,7 +88,6 @@ const dictionaries: DictionaryWithLanguage = {
 				filterButton: 'Filtrar',
 				expandAllButton: 'Expandir todos',
 				collapseAllButton: 'Recolher todos',
-				filtersTitle: 'Filtros',
 				filtersLabels: {
 					field: 'Área',
 					language: 'Linguagem',

@@ -14,14 +14,13 @@ export type PageParams = {
 type Page = 'home' | 'about' | 'projects';
 
 type ProjectPageContent = {
-	sortTitle: string;
+	sortButton: string;
 	sortLabels: {
 		[label in SortLabel]: string;
 	};
 	filterButton: string;
 	expandAllButton: string;
 	collapseAllButton: string;
-	filtersTitle: string;
 	filtersLabels: ProjectFiltersDict;
 };
 

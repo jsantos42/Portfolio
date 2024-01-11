@@ -10,12 +10,11 @@ import { SortFilterButtons } from '@src/app/components/projects/SortFilterButton
 
 export default function Projects({ params }: { params: PageParams }) {
 	const {
-		sortTitle,
+		sortButton,
 		sortLabels,
 		filterButton,
 		expandAllButton,
 		collapseAllButton,
-		filtersTitle,
 		filtersLabels,
 	} = getDictionaries()[params.lang].projects.pageContent;
 
@@ -46,7 +45,7 @@ export default function Projects({ params }: { params: PageParams }) {
 	);
 
 	const [isFilterModalOpen, setIsFilterModalOpen] = useState(false);
-	const isMobile = useMobileState(768, [
+	const isMobile = useMobileState(1100, [
 		{ callback: setIsFilterModalOpen, args: false },
 	]);
 
@@ -56,16 +55,9 @@ export default function Projects({ params }: { params: PageParams }) {
 
 	return (
 		<>
-			{isMobile ? (
-				<SortFilterButtons
-					{...{
-						sortTitle,
-						filterButton,
-						sortLabels,
-						toggleFilterModal,
-					}}
-				/>
-			) : null}
+			<SortFilterButtons
+				{...{ sortButton, filterButton, sortLabels, toggleFilterModal }}
+			/>
 			<div className="flex">
 				{!isMobile || isFilterModalOpen ? (
 					<FilterSidebar
@@ -73,7 +65,6 @@ export default function Projects({ params }: { params: PageParams }) {
 							isMobile,
 							expandAllButton,
 							collapseAllButton,
-							filtersTitle,
 							filtersLabels,
 							selectedOptions,
 							setSelectedOptions,

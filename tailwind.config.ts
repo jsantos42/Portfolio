@@ -1,8 +1,9 @@
 import type { Config } from 'tailwindcss';
 
-const navHeight: string = '4rem';
-const footerHeight: string = '6rem';
-const sortFilterHeight: string = '3rem';
+// Measures in rem
+const navHeight: number = 4;
+const footerHeight: number = 6;
+const sortFilterBarHeight: number = 3;
 
 // Using rgba() instead of rgb() to allow the use of the opacity modifier
 // cf https://tailwindcss.com/docs/background-color#changing-the-opacity
@@ -21,18 +22,18 @@ const config: Config = {
 				theme: 'rgba(var(--foreground-rgb))',
 			},
 			height: {
-				nav: navHeight,
-				footer: footerHeight,
-				sortFilterHeight: sortFilterHeight,
+				nav: `${navHeight}rem`,
+				footer: `${footerHeight}rem`,
+				sortFilterBar: `${sortFilterBarHeight}rem`,
 			},
 			minHeight: {
-				fillScreen: `calc(100vh - ${navHeight} - ${footerHeight})`,
-				sidebarDesktop: `calc(100vh - ${navHeight} - ${footerHeight})`,
-				sidebarMobile: `calc(100vh - ${navHeight} - ${footerHeight} - ${sortFilterHeight})`,
+				fillScreen: `calc(100vh - ${navHeight + footerHeight}rem)`,
+				sidebarDesktop: `calc(100vh - ${navHeight + footerHeight}rem)`,
+				sidebarMobile: `calc(100vh - ${navHeight + footerHeight + sortFilterBarHeight}rem)`,
 			},
 			maxHeight: {
-				sidebarDesktop: `calc(100vh - ${navHeight})`,
-				sidebarMobile: `calc(100vh - ${navHeight} - ${sortFilterHeight})`,
+				sidebarDesktop: `calc(100vh - ${navHeight}rem)`,
+				sidebarMobile: `calc(100vh - ${navHeight + sortFilterBarHeight}rem)`,
 			},
 			animation: {
 				fadeInFromTop: 'fromTop 0.2s ease-out',
@@ -44,7 +45,8 @@ const config: Config = {
 			},
 			spacing: {
 				// allows to customize Top / Right / Bottom / Left (eg: top-nav)
-				nav: `${navHeight}`,
+				nav: `${navHeight}rem`,
+				sortFilterBar: `${navHeight + sortFilterBarHeight}rem`,
 			},
 		},
 	},
