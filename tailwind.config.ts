@@ -17,9 +17,13 @@ const config: Config = {
 		extend: {
 			backgroundColor: {
 				theme: 'rgba(var(--background-rgb))',
+				highlight: 'rgba(var(--background-highlight-rgb))',
+				primary: 'rgba(var(--primary-rgb))',
 			},
 			colors: {
 				theme: 'rgba(var(--foreground-rgb))',
+				primary: 'rgba(var(--primary-rgb))',
+				contrast: 'rgba(var(--background-rgb))',
 			},
 			height: {
 				nav: `${navHeight}rem`,
