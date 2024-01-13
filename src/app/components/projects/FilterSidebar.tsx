@@ -34,7 +34,7 @@ export const FilterSidebar = ({
 		styling: stylingFrameworks,
 		db: db,
 		testingFramework: testingFrameworks,
-		year: years,
+		date: years,
 	};
 
 	useEffect(() => {

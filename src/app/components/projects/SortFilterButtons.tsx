@@ -1,15 +1,15 @@
 import { SortLabel } from '@src/types';
 
 export const SortFilterButtons = ({
-	sortButton,
 	filterButton,
 	sortLabels,
 	toggleFilterModal,
+	setSortBy,
 }: {
-	sortButton: string;
 	filterButton: string;
 	sortLabels: { [label in SortLabel]: string };
 	toggleFilterModal: () => void;
+	setSortBy: (method: string) => void;
 }) => {
 	return (
 		<div
@@ -26,10 +26,8 @@ export const SortFilterButtons = ({
 				className="min-w-[140px] bg-transparent text-center border-2
 					border-stone-700 rounded-md"
 				defaultValue={''}
+				onChange={e => setSortBy(e.target.value)}
 			>
-				<option disabled={true} value="">
-					{sortButton}
-				</option>
 				{Object.entries(sortLabels).map(([key, value]) => (
 					<option key={key} value={key}>
 						{value}

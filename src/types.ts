@@ -84,7 +84,7 @@ export type Filters = {
 	styling: StylingFramework[];
 	db: Database[];
 	testingFramework: TestingFramework[];
-	year: string[];
+	date: string[];
 };
 
 export type SelectedOptions = {

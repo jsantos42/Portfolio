@@ -40,7 +40,6 @@ export const ProjectsGrid = ({
 					</ul>
 					<p className="font-semibold">{project.brief}</p>
 					<p>{project.field}</p>
-					<p>{project.year}</p>
 					<p>
 						<TouchableLink href={project.repo} inNewWindow={true}>
 							Repository

@@ -29,7 +29,7 @@ const dictionaries: DictionaryWithLanguage = {
 					styling: 'Styling',
 					db: 'Database',
 					testingFramework: 'Testing Framework',
-					year: 'Year',
+					date: 'Year',
 				}
 			},
 		},
@@ -62,7 +62,7 @@ const dictionaries: DictionaryWithLanguage = {
 					styling: 'Style',
 					db: 'Base de données',
 					testingFramework: 'Framework de test',
-					year: 'Année',
+					date: 'Année',
 				}
 			},
 		},
@@ -95,7 +95,7 @@ const dictionaries: DictionaryWithLanguage = {
 					styling: 'Styling',
 					db: 'Base de dados',
 					testingFramework: 'Framework de teste',
-					year: 'Ano',
+					date: 'Ano',
 				}
 			},
 		},

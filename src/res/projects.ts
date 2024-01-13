@@ -32,7 +32,7 @@ export const projects: Project[] = [
 		styling: undefined,
 		db: ['MySQL'],
 		testingFramework: ['PHPunit'],
-		year: ['2023'],
+		date: ['2023-09'],
 	},
 	{
 		title: 'Fast-Food and Schools in Portugal',
@@ -46,7 +46,7 @@ export const projects: Project[] = [
 		styling: undefined,
 		db: undefined,
 		testingFramework: undefined,
-		year: ['2020'],
+		date: ['2020-06'],
 	},
 	{
 		title: 'Face Detector',
@@ -60,7 +60,7 @@ export const projects: Project[] = [
 		styling: ['Styled Components'],
 		db: ['PostgreSQL'],
 		testingFramework: undefined,
-		year: ['2022'],
+		date: ['2022-06'],
 	},
 	{
 		title: 'Online Booking',
@@ -74,7 +74,7 @@ export const projects: Project[] = [
 		styling: ['Styled Components'],
 		db: undefined,
 		testingFramework: undefined,
-		year: ['2022'],
+		date: ['2022-08'],
 	},
 	{
 		title: 'Old portfolio',
@@ -88,7 +88,7 @@ export const projects: Project[] = [
 		styling: ['Styled Components'],
 		db: undefined,
 		testingFramework: undefined,
-		year: ['2022'],
+		date: ['2022-07'],
 	},
 	{
 		title: 'Moves of Pokémons',
@@ -102,7 +102,7 @@ export const projects: Project[] = [
 		styling: ['Styled Components'],
 		db: undefined,
 		testingFramework: undefined,
-		year: ['2022'],
+		date: ['2022-05'],
 	},
 	{
 		title: 'Notepad',
@@ -116,7 +116,7 @@ export const projects: Project[] = [
 		styling: undefined,
 		db: undefined,
 		testingFramework: undefined,
-		year: ['2022'],
+		date: ['2022-03'],
 	},
 	{
 		title: 'Minishell',
@@ -130,7 +130,7 @@ export const projects: Project[] = [
 		styling: undefined,
 		db: undefined,
 		testingFramework: undefined,
-		year: ['2021'],
+		date: ['2021-10'],
 	},
 	{
 		title: 'Cub3D',
@@ -144,7 +144,7 @@ export const projects: Project[] = [
 		styling: undefined,
 		db: undefined,
 		testingFramework: undefined,
-		year: ['2021'],
+		date: ['2022-01'],
 	},
 	{
 		title: 'So Long',
@@ -158,7 +158,7 @@ export const projects: Project[] = [
 		styling: undefined,
 		db: undefined,
 		testingFramework: undefined,
-		year: ['2021'],
+		date: ['2021-08'],
 	},
 	{
 		title: 'Dining Philosophers',
@@ -172,7 +172,7 @@ export const projects: Project[] = [
 		styling: undefined,
 		db: undefined,
 		testingFramework: undefined,
-		year: ['2022'],
+		date: ['2021-09'],
 	},
 ];
 
