@@ -79,11 +79,10 @@ export const FilterSidebar = ({
 			}`}
 		>
 			<div
-				className="sticky top-sortFilterBar w-full min-h-sidebarMobile
-				max-h-sidebarMobile p-4 flex flex-col text-sm overflow-scroll
-				overscroll-contain"
+				className="sticky top-sortFilterBar w-full max-h-sidebar p-4
+				flex flex-col text-sm overflow-scroll overscroll-contain"
 			>
-				<div className="flex justify-between w-[250px] gap-x-2">
+				<div className="flex justify-between w-sidebar gap-x-2">
 					{[true, false].map(willBeOpen => (
 						<button
 							key={willBeOpen.toString()}
@@ -94,7 +93,7 @@ export const FilterSidebar = ({
 						</button>
 					))}
 				</div>
-				<div className="w-[250px] divide-y-2 divide-theme">
+				<div className="w-sidebar divide-y divide-theme">
 					{(
 						Object.entries(filters) as [
 							keyof Filters,

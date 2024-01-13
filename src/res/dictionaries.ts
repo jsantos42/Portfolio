@@ -19,7 +19,9 @@ const dictionaries: DictionaryWithLanguage = {
 					newest: 'Newest',
 					oldest: 'Oldest'
 				},
+				filtersTitle: 'Filters',
 				filterButton: 'Filter',
+				applyFiltersButton: 'Apply',
 				expandAllButton: 'Expand All',
 				collapseAllButton: 'Collapse All',
 				filtersLabels: {
@@ -52,7 +54,9 @@ const dictionaries: DictionaryWithLanguage = {
 					newest: 'Plus récent',
 					oldest: 'Plus ancien'
 				},
+				filtersTitle: 'Filtres',
 				filterButton: 'Filtrer',
+				applyFiltersButton: 'Appliquer',
 				expandAllButton: 'Tout développer',
 				collapseAllButton: 'Tout fermer',
 				filtersLabels: {
@@ -85,7 +89,9 @@ const dictionaries: DictionaryWithLanguage = {
 					newest: 'Mais recente',
 					oldest: 'Mais antigo'
 				},
+				filtersTitle: 'Filtros',
 				filterButton: 'Filtrar',
+				applyFiltersButton: 'Aplicar',
 				expandAllButton: 'Expandir todos',
 				collapseAllButton: 'Recolher todos',
 				filtersLabels: {

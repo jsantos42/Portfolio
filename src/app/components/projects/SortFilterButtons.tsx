@@ -1,12 +1,20 @@
 import { SortLabel } from '@src/types';
 
 export const SortFilterButtons = ({
+	isMobile,
+	isFilterModalOpen,
 	filterButton,
+	filtersTitle,
+	applyFiltersButton,
 	sortLabels,
 	toggleFilterModal,
 	setSortBy,
 }: {
+	isMobile: boolean;
+	isFilterModalOpen: boolean;
+	filtersTitle: string;
 	filterButton: string;
+	applyFiltersButton: string;
 	sortLabels: { [label in SortLabel]: string };
 	toggleFilterModal: () => void;
 	setSortBy: (method: string) => void;
@@ -14,14 +22,24 @@ export const SortFilterButtons = ({
 	return (
 		<div
 			className="h-sortFilterBar sticky top-nav px-4 py-2 z-10 flex
-				justify-between gap-x-4 text-sm bg-theme"
+			gap-x-4 text-sm bg-theme justify-between"
 		>
-			<button
-				className="min-w-[92px] rounded-md bg-primary text-contrast font-semibold tracking-wide"
-				onClick={toggleFilterModal}
-			>
-				{filterButton}
-			</button>
+			{isMobile ? (
+				<button
+					className="min-w-[92px] rounded-md bg-primary text-contrast
+					font-semibold tracking-wide"
+					onClick={toggleFilterModal}
+				>
+					{isFilterModalOpen ? applyFiltersButton : filterButton}
+				</button>
+			) : (
+				<div
+					className="w-sidebar flex justify-center items-end
+				text-base font-semibold"
+				>
+					{filtersTitle}
+				</div>
+			)}
 			<select
 				className="min-w-[140px] bg-transparent text-center border-2
 					border-stone-700 rounded-md"

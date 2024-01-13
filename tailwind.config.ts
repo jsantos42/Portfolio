@@ -4,6 +4,7 @@ import type { Config } from 'tailwindcss';
 const navHeight: number = 4;
 const footerHeight: number = 6;
 const sortFilterBarHeight: number = 3;
+const sideBarWidth: number = 250;
 
 // Using rgba() instead of rgb() to allow the use of the opacity modifier
 // cf https://tailwindcss.com/docs/background-color#changing-the-opacity
@@ -25,6 +26,9 @@ const config: Config = {
 				primary: 'rgba(var(--primary-rgb))',
 				contrast: 'rgba(var(--background-rgb))',
 			},
+			width: {
+				sidebar: `${sideBarWidth}px`,
+			},
 			height: {
 				nav: `${navHeight}rem`,
 				footer: `${footerHeight}rem`,
@@ -32,12 +36,10 @@ const config: Config = {
 			},
 			minHeight: {
 				fillScreen: `calc(100vh - ${navHeight + footerHeight}rem)`,
-				sidebarDesktop: `calc(100vh - ${navHeight + footerHeight}rem)`,
-				sidebarMobile: `calc(100vh - ${navHeight + footerHeight + sortFilterBarHeight}rem)`,
+				sidebar: `calc(100vh - ${navHeight + footerHeight + sortFilterBarHeight}rem)`,
 			},
 			maxHeight: {
-				sidebarDesktop: `calc(100vh - ${navHeight}rem)`,
-				sidebarMobile: `calc(100vh - ${navHeight + sortFilterBarHeight}rem)`,
+				sidebar: `calc(100vh - ${navHeight + sortFilterBarHeight}rem)`,
 			},
 			animation: {
 				fadeInFromTop: 'fromTop 0.2s ease-out',

@@ -14,7 +14,9 @@ export default function Projects({ params }: { params: PageParams }) {
 	//==========================================================================
 	const {
 		sortLabels,
+		filtersTitle,
 		filterButton,
+		applyFiltersButton,
 		expandAllButton,
 		collapseAllButton,
 		filtersLabels,
@@ -112,7 +114,11 @@ export default function Projects({ params }: { params: PageParams }) {
 		<>
 			<SortFilterButtons
 				{...{
+					isMobile,
+					isFilterModalOpen,
+					filtersTitle,
 					filterButton,
+					applyFiltersButton,
 					sortLabels,
 					toggleFilterModal,
 					setSortBy,
