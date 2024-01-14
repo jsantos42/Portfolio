@@ -23,10 +23,18 @@
 	}
 }
 
+html {
+	scrollbar-width: none;					/* Firefox */
+}
+
 body {
 	color: rgb(var(--foreground-rgb));
 	background: rgb(var(--background-rgb));
 	overflow-wrap: break-word; /* protects against overflow with very long words */
+}
+
+body::-webkit-scrollbar {
+	display: none;							/* Opera, Chrome, and Safari */
 }
 
 a.touchable {
@@ -35,6 +43,12 @@ a.touchable {
 	align-items: center;
 	min-width: 48px;
 	min-height: 48px;
+}
+
+.hideScrollBars {
+	-ms-overflow-style: none;				/* IE */
+	scrollbar-width: none;					/* Firefox */
+	&::-webkit-scrollbar {display: none;}	/* Opera, Chrome, and Safari */
 }
 
 @keyframes fromTop {

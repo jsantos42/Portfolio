@@ -80,7 +80,8 @@ export const FilterSidebar = ({
 		>
 			<div
 				className="sticky top-sortFilterBar w-full max-h-sidebar p-4
-				flex flex-col text-sm overflow-scroll overscroll-contain"
+				flex flex-col text-sm overflow-scroll overscroll-contain
+				hideScrollBars"
 			>
 				<div className="flex justify-between w-sidebar gap-x-2">
 					{[true, false].map(willBeOpen => (
