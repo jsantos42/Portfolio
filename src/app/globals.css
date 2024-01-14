@@ -51,6 +51,10 @@ a.touchable {
 	&::-webkit-scrollbar {display: none;}	/* Opera, Chrome, and Safari */
 }
 
+summary::-webkit-details-marker {
+	display: none;
+}
+
 @keyframes fromTop {
 	from {
 		transform: translateY(-1%);
