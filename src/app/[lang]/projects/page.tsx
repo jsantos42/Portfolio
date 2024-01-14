@@ -141,7 +141,6 @@ export default function Projects({ params }: { params: PageParams }) {
 					filteredProjects={getFilteredSortedProjects(
 						selectedOptions
 					)}
-					display={!isMobile || !isFilterModalOpen}
 				/>
 			</div>
 		</>

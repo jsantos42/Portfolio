@@ -1,52 +1,66 @@
 import { Project } from '@src/types';
 import Image from 'next/image';
-import { TouchableLink } from '@src/app/components/navigation/TouchableLink';
+import Link from 'next/link';
+import React from 'react';
 
 export const ProjectsGrid = ({
 	filteredProjects,
-	display,
 }: {
 	filteredProjects: Project[];
-	display: boolean;
 }) => (
 	<div
 		className="w-full pb-16 px-1 sm:px-8 grid grid-cols-projectsMobile
-		min-[332px]:grid-cols-projects justify-items-center gap-12"
+		min-[332px]:grid-cols-projects justify-items-center items-start gap-12"
 	>
 		{filteredProjects.map(project => (
-			<div
+			<Link
 				key={project.title}
-				className="min-w-[248px] min-[332px]:min-w-[324px] max-w-[500px]
-				px-3 py-4 flex flex-wrap flex-col justify-center items-center
-				gap-y-4 hover:bg-highlight rounded-xl"
+				rel={'no-referrer'}
+				target={'_blank'}
+				href={project.repo}
 			>
-				<h2 className="font-semibold">{project.title}</h2>
-				<Image
-					src={project.img}
-					alt={project.title}
-					className="w-full"
-				/>
-				<div className="mt-2 flex flex-col gap-y-2">
-					<ul className="flex flex-wrap justify-center gap-2 text-xs text-primary">
-						{[
-							...(project.language ?? []),
-							...(project.framework ?? []),
-							...(project.testingFramework ?? []),
-							...(project.styling ?? []),
-							...(project.db ?? []),
-						].map((i, index) => (
-							<li key={index}>{i}</li>
-						))}
-					</ul>
-					<p className="font-semibold">{project.brief}</p>
-					<p>{project.field}</p>
-					<p>
-						<TouchableLink href={project.repo} inNewWindow={true}>
-							Repository
-						</TouchableLink>
-					</p>
+				<div
+					key={project.title}
+					className="min-w-[248px] min-[332px]:min-w-[324px]
+					max-w-[500px] max-h-[550px] px-3 py-4 flex flex-wrap
+					flex-col gap-y-4 justify-center items-center self-start
+					hover:bg-highlight rounded-xl"
+				>
+					<h2 className="md:text-lg font-semibold">
+						{project.title}
+					</h2>
+					<Image
+						src={project.img}
+						alt={project.title}
+						className="w-full aspect-16/10 row-start-2 row-end-6"
+					/>
+					<div
+						className="grid grid-rows-projects gap-y-2
+					items-center"
+					>
+						<ul
+							className="row-start-1 flex flex-wrap justify-center
+						gap-x-2 text-sm font-semibold text-primary"
+						>
+							{[
+								...(project.language ?? []),
+								...(project.framework ?? []),
+								...(project.testingFramework ?? []),
+								...(project.styling ?? []),
+								...(project.db ?? []),
+							].map((i, index) => (
+								<li key={index}>{i}</li>
+							))}
+						</ul>
+						<p
+							className="text-center text-sm row-start-2 row-end-4
+						self-start"
+						>
+							{project.brief}
+						</p>
+					</div>
 				</div>
-			</div>
+			</Link>
 		))}
 	</div>
 );

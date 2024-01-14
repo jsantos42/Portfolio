@@ -54,6 +54,12 @@ const config: Config = {
 				nav: `${navHeight}rem`,
 				sortFilterBar: `${navHeight + sortFilterBarHeight}rem`,
 			},
+			gridTemplateRows: {
+				projects: 'repeat(2, 40px)',
+			},
+			aspectRatio: {
+				'16/10': '16 / 10',
+			},
 		},
 	},
 	plugins: [],
