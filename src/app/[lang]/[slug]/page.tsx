@@ -5,7 +5,7 @@ import { TouchableLink } from '@src/app/components/navigation/TouchableLink';
 import Markdown from 'react-markdown';
 
 export default function Home({ params }: { params: PageParams }) {
-	const { pageContent, pageName } = getDictionaries()[params.lang].about;
+	const { pageContent, pageName } = getDictionaries()[params.lang].home;
 	const infoEntries = Object.entries(data.info) as [InfoType, string][];
 
 	return (

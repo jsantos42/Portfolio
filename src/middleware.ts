@@ -43,6 +43,13 @@ export function middleware(req: NextRequest) {
 		return NextResponse.redirect(req.nextUrl);
 	}
 
+	// Redirect to homepage if root
+	if (locales.includes(pathname.substring(1) as SupportedLocale)) {
+		const lang = pathname.substring(1) as SupportedLocale;
+		req.nextUrl.pathname = getSlug(lang, getDictionaries()[lang].home.pageName);
+		return NextResponse.redirect(req.nextUrl);
+	}
+
 	const staticRoute = getStaticRoute(pathname);
 	if (staticRoute.length === 0) {
 		return NextResponse.error();

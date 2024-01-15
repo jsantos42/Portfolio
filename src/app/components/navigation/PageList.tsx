@@ -12,7 +12,7 @@ export const PageList = ({
 	toggleNavModal?: () => void;
 }) => {
 	const dict = getDictionaries()[lang];
-	const pages = Object.values(dict).filter(page => page.pageName.length > 0);
+	const pages = Object.values(dict);
 
 	return (
 		<ul className={classes}>

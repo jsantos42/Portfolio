@@ -11,7 +11,7 @@ export type PageParams = {
 	lang: SupportedLocale;
 };
 
-type Page = 'home' | 'about' | 'projects';
+type Page = 'home' | 'projects';
 
 type ProjectPageContent = {
 	sortButton: string;
@@ -26,13 +26,14 @@ type ProjectPageContent = {
 	filtersLabels: ProjectFiltersDict;
 };
 
-type HomePageContent = {};
+type HomePageContent = {
+	headline: string,
+	summary: string,
+};
 
-type AboutPageContent = {};
 
 type PageContent = {
 	home: HomePageContent;
-	about: AboutPageContent;
 	projects: ProjectPageContent;
 };
 

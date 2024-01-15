@@ -3,15 +3,10 @@ import { DictionaryWithLanguage, SupportedLocale } from '@src/types';
 const dictionaries: DictionaryWithLanguage = {
 	en: {
 		home: {
-			pageName: '',
-			pageContent: {},
-		},
-		about: {
-			pageName: 'About',
+			pageName: 'Home',
 			pageContent: {
 				headline: 'Full-Stack Developer | Former Medical Doctor',
 				summary: `
-
 I began programming as a self-taught endeavor in **2020**, and I became so passionate
 about it that, after having invested **11&nbsp;years in Medicine**, I decided to **shift**
 to a software development career. \n
@@ -39,7 +34,7 @@ achievement, though: I value being part of a team that makes a positive
 				sortLabels: {
 					recommended: 'Recommended',
 					newest: 'Newest',
-					oldest: 'Oldest'
+					oldest: 'Oldest',
 				},
 				filtersTitle: 'Filters',
 				filterButton: 'Filter',
@@ -54,18 +49,17 @@ achievement, though: I value being part of a team that makes a positive
 					db: 'Database',
 					testingFramework: 'Testing Framework',
 					date: 'Year',
-				}
+				},
 			},
 		},
 	},
 	fr: {
 		home: {
-			pageName: '',
-			pageContent: {},
-		},
-		about: {
-			pageName: 'À propos',
-			pageContent: {},
+			pageName: 'Accueil',
+			pageContent: {
+				headline: '',
+				summary: '',
+			},
 		},
 		projects: {
 			pageName: 'Projets',
@@ -74,7 +68,7 @@ achievement, though: I value being part of a team that makes a positive
 				sortLabels: {
 					recommended: 'Recommandé',
 					newest: 'Plus récent',
-					oldest: 'Plus ancien'
+					oldest: 'Plus ancien',
 				},
 				filtersTitle: 'Filtres',
 				filterButton: 'Filtrer',
@@ -89,18 +83,17 @@ achievement, though: I value being part of a team that makes a positive
 					db: 'Base de données',
 					testingFramework: 'Framework de test',
 					date: 'Année',
-				}
+				},
 			},
 		},
 	},
 	pt: {
 		home: {
-			pageName: '',
-			pageContent: {},
-		},
-		about: {
-			pageName: 'Sobre',
-			pageContent: {},
+			pageName: 'Início',
+			pageContent: {
+				headline: '',
+				summary: '',
+			},
 		},
 		projects: {
 			pageName: 'Projectos',
@@ -109,7 +102,7 @@ achievement, though: I value being part of a team that makes a positive
 				sortLabels: {
 					recommended: 'Recomendado',
 					newest: 'Mais recente',
-					oldest: 'Mais antigo'
+					oldest: 'Mais antigo',
 				},
 				filtersTitle: 'Filtros',
 				filterButton: 'Filtrar',
@@ -124,7 +117,7 @@ achievement, though: I value being part of a team that makes a positive
 					db: 'Base de dados',
 					testingFramework: 'Framework de teste',
 					date: 'Ano',
-				}
+				},
 			},
 		},
 	},
