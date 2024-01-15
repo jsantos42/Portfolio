@@ -13,7 +13,7 @@ const dictionaries: DictionaryWithLanguage = {
 				summary: `
 
 I began programming as a self-taught endeavor in **2020**, and I became so passionate
-about it that, after having invested **11 years in Medicine**, I decided to **shift**
+about it that, after having invested **11&nbsp;years in Medicine**, I decided to **shift**
 to a software development career. \n
 As a **full-stack developer**, I bring a unique perspective shaped by 
 both my medical background and comprehensive programming training.
