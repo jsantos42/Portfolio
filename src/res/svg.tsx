@@ -22,8 +22,8 @@ export const emailSvg = (info: InfoType) => {
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			viewBox="0 0 24 24"
-			width={34}
-			height={34}
+			width={30}
+			height={30}
 		>
 			<path
 				fill="rgba(var(--foreground-rgb))"
@@ -43,8 +43,8 @@ export const emailSvg = (info: InfoType) => {
 export const linkedInSvg = (info: InfoType) => (
 	<svg
 		xmlns="http://www.w3.org/2000/svg"
-		width={34}
-		height={34}
+		width={30}
+		height={30}
 		viewBox="0 0 54 54"
 	>
 		<path
@@ -67,8 +67,8 @@ export const linkedInSvg = (info: InfoType) => (
 export const gitHubSvg = (info: InfoType) => (
 	<svg
 		xmlns="http://www.w3.org/2000/svg"
-		width={34}
-		height={34}
+		width={30}
+		height={30}
 		viewBox="-1163 1657.697 56.693 56.693"
 	>
 		<path

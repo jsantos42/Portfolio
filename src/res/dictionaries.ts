@@ -8,7 +8,29 @@ const dictionaries: DictionaryWithLanguage = {
 		},
 		about: {
 			pageName: 'About',
-			pageContent: {},
+			pageContent: {
+				headline: 'Full-Stack Developer | Former Medical Doctor',
+				summary: `
+
+I began programming as a self-taught endeavor in **2020**, and I became so passionate
+about it that, after having invested **11 years in Medicine**, I decided to **shift**
+to a software development career. \n
+As a **full-stack developer**, I bring a unique perspective shaped by 
+both my medical background and comprehensive programming training.
+The first provided me **self-discipline** and **resiliency**, and it also taught me 
+the critical **importance of good UX and UI** through the flaws I encountered in
+healthcare software. The second, combined with my **hands-on experience in both
+backend and frontend development**, allows me to create holistic software solutions 
+that address complex user needs. This blend of medical insight, technical
+expertise, and a **self-starter** attitude positions me uniquely to 
+innovate and improve digital experiences in any industry.\n
+My goal is to use my diverse skill set in **challenging and evolving 
+environments**, working on projects that advance technological frontiers 
+and improve the user experience. My commitment goes beyond technical 
+achievement, though: I value being part of a team that makes a positive
+**difference**, developing technology that has a **meaningful impact** on our world.
+`,
+			},
 		},
 		projects: {
 			pageName: 'Projects',
