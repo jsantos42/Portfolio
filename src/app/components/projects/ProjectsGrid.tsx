@@ -4,16 +4,16 @@ import Link from 'next/link';
 import React from 'react';
 
 export const ProjectsGrid = ({
-	filteredProjects,
+	filteredSortedProjects,
 }: {
-	filteredProjects: Project[];
+	filteredSortedProjects: Project[];
 }) => (
 	<div
 		className="w-full pb-16 px-1 sm:px-8 grid grid-cols-projectsMobile
 		min-[332px]:grid-cols-projects justify-items-center items-start gap-12
 		antialiased"
 	>
-		{filteredProjects.map(project => (
+		{filteredSortedProjects.map(project => (
 			<Link
 				key={project.title}
 				rel={'no-referrer'}

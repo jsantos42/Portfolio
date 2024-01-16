@@ -1,6 +1,12 @@
 'use client';
-import { useState } from 'react';
-import { Filters, PageParams, Project, SelectedOptions } from '@src/types';
+import { useEffect, useState } from 'react';
+import {
+	Filters,
+	PageParams,
+	Project,
+	SelectedOptions,
+	SortCriteria,
+} from '@src/types';
 import { getDictionaries } from '@src/res/dictionaries';
 import { FilterSidebar } from '@src/app/components/projects/FilterSidebar';
 import { projects } from '@src/res/projects';
@@ -64,51 +70,21 @@ export default function Projects({ params }: { params: PageParams }) {
 	};
 
 	//==========================================================================
-	// TRACK THE SORTING CRITERIA
+	// TRACK THE SORTING CRITERIA AND THE FILTERED SORTED PROJECTS
 	//==========================================================================
-	const [sortBy, setSortBy] = useState('');
+	const [sortBy, setSortBy] = useState('recommended' as SortCriteria);
+	const [filteredSortedProjects, setFilteredSortedProjects] = useState(
+		projects as Project[]
+	);
 
 	//==========================================================================
 	// GET THE FILTERED AND SORTED PROJECTS
 	//==========================================================================
-	const getFilteredSortedProjects = (selectedOptions: SelectedOptions) => {
-		const filteredProjects = projects.filter(project => {
-			const selectedOptionsArray = Object.entries(selectedOptions) as [
-				keyof Filters,
-				SelectedOptions[keyof Filters],
-			][];
-
-			return selectedOptionsArray.every(([filterType, { selected }]) => {
-				if (!selected || selected.length === 0) {
-					return true;
-				}
-				if (filterType === 'date') {
-					return project[filterType]?.some(value =>
-						(selected as string[]).includes(value.substring(0, 4))
-					);
-				}
-				return project[filterType]?.some(value =>
-					(selected as string[]).includes(value)
-				);
-			});
-		});
-		if (!sortBy.length) {
-			return filteredProjects;
-		}
-		return filteredProjects.sort((a, b) => {
-			const getDate = (project: Project) =>
-				new Date(project.date?.[0] || '2000-01');
-
-			switch (sortBy) {
-				case 'newest':
-					return getDate(a) < getDate(b) ? 1 : -1;
-				case 'oldest':
-					return getDate(a) < getDate(b) ? -1 : 1;
-				default:
-					return 0;
-			}
-		});
-	};
+	useEffect(() => {
+		setFilteredSortedProjects(
+			getFilteredSortedProjects(selectedOptions, sortBy)
+		);
+	}, [selectedOptions, sortBy]);
 
 	return (
 		<>
@@ -137,12 +113,48 @@ export default function Projects({ params }: { params: PageParams }) {
 						}}
 					/>
 				) : null}
-				<ProjectsGrid
-					filteredProjects={getFilteredSortedProjects(
-						selectedOptions
-					)}
-				/>
+				<ProjectsGrid {...{ filteredSortedProjects }} />
 			</div>
 		</>
 	);
 }
+
+const getFilteredSortedProjects = (
+	selectedOptions: SelectedOptions,
+	sortBy: SortCriteria
+) => {
+	const filteredProjects = projects.filter(project => {
+		const selectedOptionsArray = Object.entries(selectedOptions) as [
+			keyof Filters,
+			SelectedOptions[keyof Filters],
+		][];
+
+		return selectedOptionsArray.every(([filterType, { selected }]) => {
+			if (!selected || selected.length === 0) {
+				return true;
+			}
+			if (filterType === 'date') {
+				return project[filterType]?.some(value =>
+					(selected as string[]).includes(value.substring(0, 4))
+				);
+			}
+			return project[filterType]?.some(value =>
+				(selected as string[]).includes(value)
+			);
+		});
+	});
+
+	return filteredProjects.sort((a, b) => {
+		const getDate = (project: Project) =>
+			new Date(project.date?.[0] || '2000-01');
+
+		switch (sortBy) {
+			case 'newest':
+				return getDate(a) < getDate(b) ? 1 : -1;
+			case 'oldest':
+				return getDate(a) < getDate(b) ? -1 : 1;
+			default:
+				return 0;
+		}
+	});
+};

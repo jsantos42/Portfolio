@@ -17,7 +17,7 @@ export const SortFilterButtons = ({
 	applyFiltersButton: string;
 	sortLabels: { [label in SortCriteria]: string };
 	toggleFilterModal: () => void;
-	setSortBy: (method: string) => void;
+	setSortBy: (method: SortCriteria) => void;
 }) => {
 	return (
 		<div
@@ -44,7 +44,7 @@ export const SortFilterButtons = ({
 				className="min-w-[140px] bg-transparent text-center border-2
 					border-stone-700 rounded-md"
 				defaultValue={''}
-				onChange={e => setSortBy(e.target.value)}
+				onChange={e => setSortBy(e.target.value as SortCriteria)}
 			>
 				{Object.entries(sortLabels).map(([key, value]) => (
 					<option key={key} value={key}>
