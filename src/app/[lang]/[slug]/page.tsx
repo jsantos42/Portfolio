@@ -1,12 +1,11 @@
-import { InfoType, PageParams } from '@src/types';
+import { PageParams } from '@src/types';
 import { getDictionaries } from '@src/res/dictionaries';
-import { data, getInfoLink, getInfoSvg } from '@src/res/data';
-import { TouchableLink } from '@src/app/components/navigation/TouchableLink';
+import { data } from '@src/res/data';
 import Markdown from 'react-markdown';
+import { SocialLogos } from '@src/app/components/SocialLogos';
 
 export default function Home({ params }: { params: PageParams }) {
 	const { pageContent, pageName } = getDictionaries()[params.lang].home;
-	const infoEntries = Object.entries(data.info) as [InfoType, string][];
 
 	return (
 		<div
@@ -29,27 +28,7 @@ export default function Home({ params }: { params: PageParams }) {
 							</h2>
 						))}
 				</div>
-				<div className="flex justify-start pt-6 pb-24 -ml-[9px]">
-					{infoEntries
-						.filter(
-							([key, value]) =>
-								key === 'emailAddress' ||
-								key === 'linkedInUser' ||
-								key === 'gitHubUser'
-						)
-						.sort(([keyA, valueA], [keyB, valueB]) =>
-							keyA < keyB ? 1 : -1
-						)
-						.map(([key, value]) => (
-							<TouchableLink
-								key={key}
-								href={getInfoLink(key, value)}
-								inNewWindow={true}
-							>
-								{getInfoSvg(key)}
-							</TouchableLink>
-						))}
-				</div>
+				<SocialLogos classes="flex justify-start pt-6 pb-24 -ml-[9px]" />
 			</header>
 			<main className="lg:w-1/2 max-w-[500px] pb-16 leading-relaxed antialiased">
 				<Markdown
