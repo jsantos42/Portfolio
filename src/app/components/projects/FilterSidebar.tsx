@@ -80,10 +80,10 @@ export const FilterSidebar = ({
 		>
 			<div
 				className="sticky top-sortFilterBar w-full max-h-sidebar p-4
-				flex flex-col text-sm overflow-scroll overscroll-contain
-				hideScrollBars"
+				flex flex-col text-sm antialiased overflow-scroll
+				overscroll-contain hideScrollBars"
 			>
-				<div className="flex justify-between w-sidebar gap-x-2">
+				<div className="w-sidebar flex justify-between gap-x-2 font-semibold">
 					{[true, false].map(willBeOpen => (
 						<button
 							key={willBeOpen.toString()}

@@ -59,7 +59,7 @@ export const FilterDropdown = ({
 				{filterLabel} ({filterSelectedOptions.selected.length}/
 				{filterOptions.length})
 			</summary>
-			<div className="flex flex-col gap-y-1 pt-1">
+			<div className="pt-1 flex flex-col gap-y-1 leading-relaxed">
 				{filterOptions.map(option => (
 					<div key={option} className="flex px-2 gap-x-2">
 						<input

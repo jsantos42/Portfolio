@@ -13,8 +13,14 @@ export const NavModal = ({
 	useEffect(preventScroll);
 
 	return (
-		<div className="w-full h-full fixed z-30 flex justify-center bg-theme/90 animate-fadeInFromTop">
-			<div className="w-full h-fit flex justify-center bg-theme py-16">
+		<div
+			className="w-full h-full fixed z-30 flex justify-center bg-theme/90
+		 animate-fadeInFromTop"
+		>
+			<div
+				className="w-full h-fit py-16 flex justify-center bg-theme
+			antialiased"
+			>
 				<PageList
 					{...{ lang, toggleNavModal, classes: 'text-center' }}
 				/>

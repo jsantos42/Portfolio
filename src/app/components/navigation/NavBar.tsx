@@ -30,7 +30,7 @@ export const NavBar = ({
 
 	return (
 		<>
-			<div className="w-full h-nav bg-theme sticky top-0 z-40">
+			<div className="w-full h-nav bg-theme sticky top-0 z-40 antialiased">
 				<div className="px-4 h-full">
 					<div className="flex justify-end items-center h-full">
 						<div

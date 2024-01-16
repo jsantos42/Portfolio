@@ -22,7 +22,7 @@ export const SortFilterButtons = ({
 	return (
 		<div
 			className="h-sortFilterBar sticky top-nav px-4 py-2 z-10 flex
-			gap-x-4 text-sm bg-theme justify-between"
+			gap-x-4 text-sm bg-theme justify-between antialiased"
 		>
 			{isMobile ? (
 				<button

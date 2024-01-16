@@ -10,7 +10,8 @@ export const ProjectsGrid = ({
 }) => (
 	<div
 		className="w-full pb-16 px-1 sm:px-8 grid grid-cols-projectsMobile
-		min-[332px]:grid-cols-projects justify-items-center items-start gap-12"
+		min-[332px]:grid-cols-projects justify-items-center items-start gap-12
+		antialiased"
 	>
 		{filteredProjects.map(project => (
 			<Link
@@ -54,7 +55,7 @@ export const ProjectsGrid = ({
 						</ul>
 						<p
 							className="text-center text-sm row-start-2 row-end-4
-						self-start"
+						self-start leading-relaxed"
 						>
 							{project.brief}
 						</p>
