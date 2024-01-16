@@ -2,7 +2,8 @@ import online_shop_api_png from '@public/images/projects/online_shop_api.png';
 import fast_food_gif from '@public/images/projects/fast_food.gif';
 import face_detector_gif from '@public/images/projects/face_detector.gif';
 import online_booking_gif from '@public/images/projects/online_booking.gif';
-import portfolio_gif from '@public/images/projects/portfolio.gif';
+import portfolio_v1_gif from '@public/images/projects/portfolio_v1.gif';
+import portfolio_v2_gif from '@public/images/projects/portfolio_v2.gif';
 import pokemon_gif from '@public/images/projects/pokemon.gif';
 import notepad_gif from '@public/images/projects/notepad.gif';
 import minishell_gif from '@public/images/projects/minishell.gif';
@@ -20,6 +21,20 @@ import {
 } from '@src/types';
 
 export const projects: Project[] = [
+	{
+		title: 'Portfolio v2',
+		img: portfolio_v2_gif,
+		brief: 'Personal website showcasing my projects and resume',
+		description: '',
+		repo: 'https://j-almeidasantos.engineer',
+		field: ['Front End'],
+		language: ['TypeScript'],
+		framework: ['Next.js', 'React.js'],
+		styling: ['Tailwind'],
+		db: undefined,
+		testingFramework: undefined,
+		date: ['2023-12'],
+	},
 	{
 		title: 'Online Shop API',
 		img: online_shop_api_png,
@@ -77,11 +92,11 @@ export const projects: Project[] = [
 		date: ['2022-08'],
 	},
 	{
-		title: 'Old portfolio',
-		img: portfolio_gif,
+		title: 'Portfolio v1',
+		img: portfolio_v1_gif,
 		brief: 'My first portfolio website showcasing my main projects',
 		description: '',
-		repo: 'https://github.com/jsantos42/portfolio',
+		repo: 'https://github.com/jsantos42/portfolio_v1',
 		field: ['Front End'],
 		language: ['JavaScript'],
 		framework: ['React.js'],
