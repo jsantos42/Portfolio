@@ -2,7 +2,6 @@ import type { Config } from 'tailwindcss';
 
 // Measures in rem
 const navHeight: number = 4;
-const footerHeight: number = 6;
 const sortFilterBarHeight: number = 3;
 const sideBarWidth: number = 250;
 
@@ -31,12 +30,11 @@ const config: Config = {
 			},
 			height: {
 				nav: `${navHeight}rem`,
-				footer: `${footerHeight}rem`,
 				sortFilterBar: `${sortFilterBarHeight}rem`,
 			},
 			minHeight: {
-				fillScreen: `calc(100vh - ${navHeight + footerHeight}rem)`,
-				sidebar: `calc(100vh - ${navHeight + footerHeight + sortFilterBarHeight}rem)`,
+				fillScreen: `calc(100vh - ${navHeight}rem)`,
+				sidebar: `calc(100vh - ${navHeight + sortFilterBarHeight}rem)`,
 			},
 			maxHeight: {
 				sidebar: `calc(100vh - ${navHeight + sortFilterBarHeight}rem)`,

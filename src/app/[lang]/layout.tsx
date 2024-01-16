@@ -4,7 +4,6 @@ import '../globals.css';
 import { PageParams } from '@src/types';
 import React from 'react';
 import { Navigation } from '@src/app/components/navigation/Navigation';
-import {Footer} from "@src/app/components/Footer";
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -25,7 +24,6 @@ export default function RootLayout({
 			<body className={inter.className}>
 				<Navigation {...{ lang }} />
 				<div className="min-h-fillScreen">{children}</div>
-				<Footer/>
 			</body>
 		</html>
 	);
