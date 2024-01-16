@@ -5,8 +5,10 @@
   "scripts": {
     "dev": "tsc && next dev",
     "build": "tsc && next build",
-    "start": "tsc && next start",
-    "lint": "next lint"
+    "start": "next start",
+    "lint": "next lint",
+    "deploy": "tsc && vercel",
+    "deploy:prod": "tsc && vercel --prod"
   },
   "dependencies": {
     "@formatjs/intl-localematcher": "^0.5.2",
