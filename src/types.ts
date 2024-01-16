@@ -16,7 +16,7 @@ type Page = 'home' | 'projects';
 type ProjectPageContent = {
 	sortButton: string;
 	sortLabels: {
-		[label in SortLabel]: string;
+		[criteria in SortCriteria]: string;
 	};
 	filtersTitle: string;
 	filterButton: string;
@@ -78,7 +78,7 @@ export type Project = {
 //==============================================================================
 // FILTERS AND SORTING
 //==============================================================================
-export type SortLabel = 'recommended' | 'newest' | 'oldest';
+export type SortCriteria = 'recommended' | 'newest' | 'oldest';
 
 export type Filters = {
 	field: Field[];

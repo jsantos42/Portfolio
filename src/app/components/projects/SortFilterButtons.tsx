@@ -1,4 +1,4 @@
-import { SortLabel } from '@src/types';
+import { SortCriteria } from '@src/types';
 
 export const SortFilterButtons = ({
 	isMobile,
@@ -15,7 +15,7 @@ export const SortFilterButtons = ({
 	filtersTitle: string;
 	filterButton: string;
 	applyFiltersButton: string;
-	sortLabels: { [label in SortLabel]: string };
+	sortLabels: { [label in SortCriteria]: string };
 	toggleFilterModal: () => void;
 	setSortBy: (method: string) => void;
 }) => {
