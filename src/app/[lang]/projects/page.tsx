@@ -20,7 +20,7 @@ export default function Projects({ params }: { params: PageParams }) {
 	//==========================================================================
 	const {
 		sortLabels,
-		filtersTitle,
+		filterResultsLabel,
 		filterButton,
 		applyFiltersButton,
 		expandAllButton,
@@ -89,10 +89,11 @@ export default function Projects({ params }: { params: PageParams }) {
 	return (
 		<>
 			<SortFilterButtons
+				projectsCount={filteredSortedProjects.length}
 				{...{
 					isMobile,
 					isFilterModalOpen,
-					filtersTitle,
+					filterResultsLabel,
 					filterButton,
 					applyFiltersButton,
 					sortLabels,

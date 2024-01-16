@@ -3,8 +3,9 @@ import { SortCriteria } from '@src/types';
 export const SortFilterButtons = ({
 	isMobile,
 	isFilterModalOpen,
+	projectsCount,
 	filterButton,
-	filtersTitle,
+	filterResultsLabel,
 	applyFiltersButton,
 	sortLabels,
 	toggleFilterModal,
@@ -12,7 +13,8 @@ export const SortFilterButtons = ({
 }: {
 	isMobile: boolean;
 	isFilterModalOpen: boolean;
-	filtersTitle: string;
+	projectsCount: number;
+	filterResultsLabel: string;
 	filterButton: string;
 	applyFiltersButton: string;
 	sortLabels: { [label in SortCriteria]: string };
@@ -37,7 +39,7 @@ export const SortFilterButtons = ({
 					className="w-sidebar flex justify-center items-end
 				text-base font-semibold"
 				>
-					{filtersTitle}
+					{filterResultsLabel}: {projectsCount}
 				</div>
 			)}
 			<select

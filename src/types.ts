@@ -18,7 +18,7 @@ type ProjectPageContent = {
 	sortLabels: {
 		[criteria in SortCriteria]: string;
 	};
-	filtersTitle: string;
+	filterResultsLabel: string;
 	filterButton: string;
 	applyFiltersButton: string;
 	expandAllButton: string;
