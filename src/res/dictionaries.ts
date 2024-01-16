@@ -7,7 +7,7 @@ const dictionaries: DictionaryWithLanguage = {
 			pageContent: {
 				headline: 'Full-Stack Developer | Former Medical Doctor',
 				summary: `
-I began programming as a self-taught endeavor in **2020**, and I became so passionate
+I began programming as a self-taught endeavor in **2020**, and became so passionate
 about it that, after having invested **11&nbsp;years in Medicine**, I decided to **shift**
 to a software development career. \n
 As a **full-stack developer**, I bring a unique perspective shaped by 
@@ -57,8 +57,24 @@ achievement, though: I value being part of a team that makes a positive
 		home: {
 			pageName: 'Accueil',
 			pageContent: {
-				headline: '',
-				summary: '',
+				headline: 'Développeur Full-Stack | Ancien Médecin',
+				summary: `
+J'ai commencé à programmer en autodidacte en **2020**, et j'en suis devenu tellement passionné
+que, après avoir investi **11&nbsp;ans en Médecine**, j'ai décidé de **changer** pour une carrière
+en développement logiciel. \n
+En tant que **développeur full-stack**, j'apporte une perspective unique façonnée par
+à la fois mon expérience médicale et ma formation complète en programmation.
+Le premier m'a fourni **discipline** et **résilience**, et il m'a également appris
+l'**importance cruciale d'une bonne UX et UI** à travers les défauts que j'ai rencontrés dans
+les logiciels de santé. Le second, combiné à mon **expérience pratique en développement backend et frontend**,
+me permet de créer des solutions logicielles holistiques qui répondent aux besoins complexes des utilisateurs.
+Ce mélange d'expertise médicale, d'expertise technique et d'une attitude **autonome** me positionne
+de manière unique pour innover et améliorer les expériences numériques dans n'importe quelle industrie.\n
+Mon objectif est d'utiliser mon ensemble de compétences diversifié dans des **environnements stimulants et évolutifs**,
+en travaillant sur des projets qui font avancer les frontières technologiques et améliorent l'UX.
+Cependant, mon engagement va au-delà de la réussite technique : je valorise le fait de faire partie d'une équipe qui fait une
+différence **positive**, en développant une technologie qui a un **impact significatif** sur notre monde.
+`,
 			},
 		},
 		projects: {
@@ -91,8 +107,26 @@ achievement, though: I value being part of a team that makes a positive
 		home: {
 			pageName: 'Início',
 			pageContent: {
-				headline: '',
-				summary: '',
+				headline: 'Desenvolvedor Full-Stack | Ex-Médico',
+				summary: `
+Comecei a programar como autodidacta em **2020**, e rapidamente me apercebi que
+tinha encontrado aquilo que queria fazer o resto da vida. Assim, decidi **largar a
+carreira médica** ao fim de **11&nbsp;anos** de investimento, e tornar-me engenheiro
+de software.\n
+Como **desenvolvedor full-stack**, trago uma perspectiva única moldada tanto pela 
+minha formação médica como pela minha formação programação. A primeira forneceu-me
+**disciplina** e **resiliência**, e também me ensinou a **importância crítica de 
+uma boa UX e UI** através das falhas que encontrei nos softwares de saúde com que
+trabalhei. A segunda, combinada com minha **experiência prática em desenvolvimento
+backend e frontend**, permite-me criar soluções holísticas que respondem às necessidades
+complexas dos utilizadores. Essa combinação de conhecimento médico, experiência técnica
+e uma atitude **empreendedora** posiciona-me de forma única para inovar e melhorar 
+as experiências digitais em qualquer setor.\n
+O meu objectivo é utilizar o meu conjunto diversificado de skills em **ambientes desafiantes e em constante mutação**,
+trabalhando em projetos que avançam as fronteiras tecnológicas e melhoram a experiência do utilizador.
+Contudo, não procuro apenas sucesso técnico: pretendo fazer parte de uma equipa que faz a **diferença**
+e que desenvolve tecnologia que tem um **impacto significativo** no nosso mundo.
+`,
 			},
 		},
 		projects: {
