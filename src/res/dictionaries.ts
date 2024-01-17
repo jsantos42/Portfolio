@@ -114,7 +114,7 @@ tinha encontrado aquilo que queria fazer o resto da vida. Assim, decidi **largar
 carreira médica** ao fim de **11&nbsp;anos** de investimento, e tornar-me engenheiro
 de software.\n
 Como **desenvolvedor full-stack**, trago uma perspectiva única moldada tanto pela 
-minha formação médica como pela minha formação programação. A primeira forneceu-me
+minha formação médica como pela minha formação em programação. A primeira forneceu-me
 **disciplina** e **resiliência**, e também me ensinou a **importância crítica de 
 uma boa UX e UI** através das falhas que encontrei nos softwares de saúde com que
 trabalhei. A segunda, combinada com minha **experiência prática em desenvolvimento
