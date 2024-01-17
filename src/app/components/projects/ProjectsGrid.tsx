@@ -42,7 +42,7 @@ export const ProjectsGrid = ({
 					>
 						<ul
 							className="row-start-1 flex flex-wrap justify-center
-						gap-x-2 text-sm font-semibold text-primary tracking-wide"
+						gap-x-3 text-sm font-semibold text-primary tracking-wide"
 						>
 							{[
 								...(project.language ?? []),
