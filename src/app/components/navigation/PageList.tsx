@@ -1,6 +1,11 @@
 import { TouchableLink } from '@src/app/components/navigation/TouchableLink';
-import { getDictionaries, getNewPathname } from '@src/res/dictionaries';
+import {
+	getDictionaries,
+	getNewPathname,
+	getSlug,
+} from '@src/res/dictionaries';
 import { SupportedLocale } from '@src/types';
+import { usePathname } from 'next/navigation';
 
 export const PageList = ({
 	lang,
@@ -13,19 +18,26 @@ export const PageList = ({
 }) => {
 	const dict = getDictionaries()[lang];
 	const pages = Object.values(dict);
+	const routeLabel = usePathname().split('/')[2];
 
 	return (
 		<ul className={classes}>
-			{pages.map(page => (
-				<li key={page.pageName}>
-					<TouchableLink
-						href={getNewPathname(lang, page.pageName)}
-						onClick={toggleNavModal}
+			{pages.map(({ pageName }) => {
+				return (
+					<li
+						key={pageName}
+						className={`uppercase tracking-widest font-bold
+							${getSlug(pageName) === routeLabel || 'opacity-50'}`}
 					>
-						{page.pageName}
-					</TouchableLink>
-				</li>
-			))}
+						<TouchableLink
+							href={getNewPathname(lang, pageName)}
+							onClick={toggleNavModal}
+						>
+							{pageName}
+						</TouchableLink>
+					</li>
+				);
+			})}
 		</ul>
 	);
 };
