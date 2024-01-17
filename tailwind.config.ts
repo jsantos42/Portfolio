@@ -33,11 +33,11 @@ const config: Config = {
 				sortFilterBar: `${sortFilterBarHeight}rem`,
 			},
 			minHeight: {
-				fillScreen: `calc(100vh - ${navHeight}rem)`,
-				sidebar: `calc(100vh - ${navHeight + sortFilterBarHeight}rem)`,
+				fillScreen: `calc(100dvh - ${navHeight}rem)`,
+				sidebar: `calc(100dvh - ${navHeight + sortFilterBarHeight}rem)`,
 			},
 			maxHeight: {
-				sidebar: `calc(100vh - ${navHeight + sortFilterBarHeight}rem)`,
+				sidebar: `calc(100dvh - ${navHeight + sortFilterBarHeight}rem)`,
 			},
 			animation: {
 				fadeInFromTop: 'fromTop 0.2s ease-out',
