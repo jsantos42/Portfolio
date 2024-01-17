@@ -1,7 +1,7 @@
 import { SupportedLocale } from '@src/types';
 import { useEffect } from 'react';
 import { preventScroll } from '@src/app/utils';
-import { getDictionaries, getSlug } from '@src/res/dictionaries';
+import { getDictionaries, getNewPathname } from '@src/res/dictionaries';
 import { TouchableLink } from '@src/app/components/navigation/TouchableLink';
 
 export const LangModal = ({
@@ -31,7 +31,7 @@ export const LangModal = ({
 							className={lang === locale ? 'font-bold ' : ''}
 						>
 							<TouchableLink
-								href={getSlug(locale, '')}
+								href={getNewPathname(locale, '')}
 								onClick={toggleLangModal}
 							>
 								{locale.toLocaleUpperCase()}

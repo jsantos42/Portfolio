@@ -1,5 +1,5 @@
 import { TouchableLink } from '@src/app/components/navigation/TouchableLink';
-import { getDictionaries, getSlug } from '@src/res/dictionaries';
+import { getDictionaries, getNewPathname } from '@src/res/dictionaries';
 import { SupportedLocale } from '@src/types';
 
 export const PageList = ({
@@ -19,7 +19,7 @@ export const PageList = ({
 			{pages.map(page => (
 				<li key={page.pageName}>
 					<TouchableLink
-						href={getSlug(lang, page.pageName)}
+						href={getNewPathname(lang, page.pageName)}
 						onClick={toggleNavModal}
 					>
 						{page.pageName}

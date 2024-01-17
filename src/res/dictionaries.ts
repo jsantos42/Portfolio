@@ -159,15 +159,18 @@ e que desenvolve tecnologia que tem um **impacto significativo** no nosso mundo.
 
 export const getDictionaries: () => DictionaryWithLanguage = () => dictionaries;
 
-export const getSlug = (lang: SupportedLocale, pageName: string) => {
-	if (!pageName) {
-		return `/${lang}`;
-	}
-
-	const pageSlug = pageName
+export const getSlug = (str: string) => {
+	return str
 		.normalize('NFD') // Decompose combined graphemes into the combination of simple ones
 		.replace(/\p{Diacritic}/gu, '') // replace all diacritical marks (accents)
 		.toLowerCase()
 		.replace(/ /g, '_');
-	return `/${lang}/${pageSlug}`;
+};
+
+export const getNewPathname = (lang: SupportedLocale, pageName: string) => {
+	if (!pageName) {
+		return `/${lang}`;
+	}
+
+	return `/${lang}/${getSlug(pageName)}`;
 };

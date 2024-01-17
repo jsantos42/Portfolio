@@ -3,7 +3,7 @@ import {Dictionary, SupportedLocale} from '@src/types';
 import {NextRequest, NextResponse} from 'next/server';
 import {match} from '@formatjs/intl-localematcher';
 import Negotiator from 'negotiator';
-import {getDictionaries, getSlug} from "@src/res/dictionaries";
+import {getDictionaries, getNewPathname} from "@src/res/dictionaries";
 
 //==============================================================================
 // LOCALES
@@ -46,7 +46,7 @@ export function middleware(req: NextRequest) {
 	// Redirect to homepage if root
 	if (locales.includes(pathname.substring(1) as SupportedLocale)) {
 		const lang = pathname.substring(1) as SupportedLocale;
-		req.nextUrl.pathname = getSlug(lang, getDictionaries()[lang].home.pageName);
+		req.nextUrl.pathname = getNewPathname(lang, getDictionaries()[lang].home.pageName);
 		return NextResponse.redirect(req.nextUrl);
 	}
 
@@ -75,7 +75,7 @@ const getStaticRoute = (pathname: string) => {
 
 	dictEntries.find(([lang, dict]) =>
 		Object.entries(dict).some(([page, {pageName}]) => {
-			if (pathname === getSlug(lang, pageName)) {
+			if (pathname === getNewPathname(lang, pageName)) {
 				staticRoute = `/${lang}/${page}`;
 				return true;
 			}
