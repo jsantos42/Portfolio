@@ -30,7 +30,10 @@ export default function Home({ params }: { params: PageParams }) {
 				</div>
 				<SocialLogos classes="flex justify-start pt-6 pb-24 -ml-[9px]" />
 			</header>
-			<main className="lg:w-1/2 max-w-[500px] pb-16 leading-relaxed antialiased">
+			<main
+				className="lg:w-1/2 max-w-[500px] pb-16 leading-relaxed
+				antialiased motion-safe:animate-fadeInFromBottom"
+			>
 				<Markdown
 					className={'flex flex-col gap-y-3'}
 					components={{

@@ -66,6 +66,17 @@ summary::-webkit-details-marker {
 	}
 }
 
+@keyframes fromBottom {
+	from {
+		transform: translateY(1%);
+		opacity: 0;
+	}
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
 @keyframes fromLeft {
 	from {
 		transform: translateX(-10%);

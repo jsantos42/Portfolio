@@ -41,6 +41,7 @@ const config: Config = {
 			},
 			animation: {
 				fadeInFromTop: 'fromTop 0.2s ease-out',
+				fadeInFromBottom: 'fromBottom 0.5s ease-out',
 				fadeInFromLeft: 'fromLeft 0.2s ease-out',
 			},
 			gridTemplateColumns: {
