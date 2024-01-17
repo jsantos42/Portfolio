@@ -59,21 +59,18 @@ achievement, though: I value being part of a team that makes a positive
 			pageContent: {
 				headline: 'Développeur Full-Stack | Ancien Médecin',
 				summary: `
-J'ai commencé à programmer en autodidacte en **2020**, et j'en suis devenu tellement passionné
-que, après avoir investi **11&nbsp;ans en Médecine**, j'ai décidé de **changer** pour une carrière
-en développement logiciel. \n
-En tant que **développeur full-stack**, j'apporte une perspective unique façonnée par
-à la fois mon expérience médicale et ma formation complète en programmation.
-Le premier m'a fourni **discipline** et **résilience**, et il m'a également appris
-l'**importance cruciale d'une bonne UX et UI** à travers les défauts que j'ai rencontrés dans
-les logiciels de santé. Le second, combiné à mon **expérience pratique en développement backend et frontend**,
-me permet de créer des solutions logicielles holistiques qui répondent aux besoins complexes des utilisateurs.
-Ce mélange d'expertise médicale, d'expertise technique et d'une attitude **autonome** me positionne
-de manière unique pour innover et améliorer les expériences numériques dans n'importe quelle industrie.\n
-Mon objectif est d'utiliser mon ensemble de compétences diversifié dans des **environnements stimulants et évolutifs**,
-en travaillant sur des projets qui font avancer les frontières technologiques et améliorent l'UX.
-Cependant, mon engagement va au-delà de la réussite technique : je valorise le fait de faire partie d'une équipe qui fait une
-différence **positive**, en développant une technologie qui a un **impact significatif** sur notre monde.
+J'ai commencé à programmer en autodidacte en **2020** et j'en suis devenu tellement passionné
+que, après avoir investi **11&nbsp;ans en Médecine**, j'ai décidé de me **reconvertir** professionnellement.\n
+En tant que **développeur full-stack**, je propose une perspective unique grâce à mon expérience 
+médicale et ma formation complète en programmation. La médecine m'a inculqué la **discipline** et
+la **résilience**, mais elle m'a également sensibilisé à l'**importance cruciale d'une interface utilisateur 
+de qualité**, notamment en observant les lacunes des logiciels de santé. Grâce à ma formation en programmation et 
+à mon **expérience pratique du développement backend et frontend**, je suis en mesure de concevoir des 
+solutions logicielles complètes qui répondent aux besoins complexes des utilisateurs. Mon expertise médicale et technique, associée à 
+mon **autonomie**, me permet d'innover et d'améliorer l'expérience numérique quel que soit le secteur d'activité.\n
+Mon objectif est d'exploiter mes compétences diversifiées dans des **environnements stimulants et évolutifs**, 
+en travaillant sur des projets qui repoussent les limites technologiques et améliorent l'expérience utilisateur. 
+Cependant, mon engagement va au-delà de la réussite technique: je cherche à faire partie d'une équipe qui a un **impact positif**.
 `,
 			},
 		},
