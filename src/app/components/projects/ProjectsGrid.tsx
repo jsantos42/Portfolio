@@ -33,6 +33,7 @@ export const ProjectsGrid = ({
 					<Image
 						src={project.img}
 						alt={project.title}
+						placeholder="empty"
 						className="w-full aspect-16/10 row-start-2 row-end-6"
 					/>
 					<div
