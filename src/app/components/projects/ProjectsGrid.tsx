@@ -10,8 +10,8 @@ export const ProjectsGrid = ({
 }) => (
 	<div
 		className="w-full pb-16 px-1 sm:px-8 grid grid-cols-projectsMobile
-		min-[332px]:grid-cols-projects justify-items-center items-start gap-12
-		antialiased"
+		min-[332px]:grid-cols-projects justify-items-center items-start gap-x-12
+		gap-y-16 antialiased"
 	>
 		{filteredSortedProjects.map(project => (
 			<Link
@@ -27,7 +27,7 @@ export const ProjectsGrid = ({
 					flex-col gap-y-4 justify-center items-center self-start
 					hover:bg-highlight rounded-xl"
 				>
-					<h2 className="md:text-lg font-semibold">
+					<h2 className="text-lg font-semibold">
 						{project.title}
 					</h2>
 					<Image
