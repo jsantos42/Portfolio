@@ -126,7 +126,7 @@ export type Framework =
 	| 'Qt';
 
 export type StylingFramework =
-	| 'Tailwind'
+	| 'Tailwind CSS'
 	| 'Styled Components'
 	| 'CSS/SASS/LESS';
 

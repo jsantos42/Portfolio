@@ -30,7 +30,7 @@ export const projects: Project[] = [
 		field: ['Front End'],
 		language: ['TypeScript'],
 		framework: ['Next.js', 'React.js'],
-		styling: ['Tailwind'],
+		styling: ['Tailwind CSS'],
 		db: undefined,
 		testingFramework: undefined,
 		date: ['2023-12'],
@@ -221,7 +221,7 @@ export const frameworks: Framework[] = [
 ];
 
 export const stylingFrameworks: StylingFramework[] = [
-	'Tailwind',
+	'Tailwind CSS',
 	'Styled Components',
 	'CSS/SASS/LESS',
 ];
