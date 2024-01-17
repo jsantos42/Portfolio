@@ -37,7 +37,7 @@ export const SortFilterButtons = ({
 			) : (
 				<div
 					className="w-sidebar flex justify-center items-end
-				text-base font-semibold"
+				text-base font-semibold tracking-wide"
 				>
 					{filterResultsLabel}: {projectsCount}
 				</div>

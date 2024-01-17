@@ -27,7 +27,7 @@ export const ProjectsGrid = ({
 					flex-col gap-y-4 justify-center items-center self-start
 					hover:bg-highlight rounded-xl"
 				>
-					<h2 className="text-lg font-semibold">
+					<h2 className="text-lg font-semibold tracking-wide">
 						{project.title}
 					</h2>
 					<Image
@@ -42,7 +42,7 @@ export const ProjectsGrid = ({
 					>
 						<ul
 							className="row-start-1 flex flex-wrap justify-center
-						gap-x-2 text-sm font-semibold text-primary"
+						gap-x-2 text-sm font-semibold text-primary tracking-wide"
 						>
 							{[
 								...(project.language ?? []),

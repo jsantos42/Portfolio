@@ -83,7 +83,10 @@ export const FilterSidebar = ({
 				flex flex-col text-sm antialiased overflow-scroll
 				overscroll-contain hideScrollBars"
 			>
-				<div className="w-sidebar flex justify-between gap-x-2 font-semibold">
+				<div
+					className="w-sidebar flex justify-between gap-x-2
+					font-semibold tracking-wide"
+				>
 					{[true, false].map(willBeOpen => (
 						<button
 							key={willBeOpen.toString()}
