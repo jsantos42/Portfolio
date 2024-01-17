@@ -28,7 +28,8 @@ export const LangModal = ({
 					{locales.map(locale => (
 						<li
 							key={locale}
-							className={lang === locale ? 'font-bold ' : ''}
+							className={`uppercase tracking-widest font-bold
+							${locale === lang || 'opacity-50'}`}
 						>
 							<TouchableLink
 								href={getNewPathname(locale, '')}
