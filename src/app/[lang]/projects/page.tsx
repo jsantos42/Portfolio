@@ -114,7 +114,10 @@ export default function Projects({ params }: { params: PageParams }) {
 						}}
 					/>
 				) : null}
-				<ProjectsGrid {...{ filteredSortedProjects }} />
+				<ProjectsGrid
+					lang={params.lang}
+					{...{ filteredSortedProjects }}
+				/>
 			</div>
 		</>
 	);

@@ -27,10 +27,9 @@ type ProjectPageContent = {
 };
 
 type HomePageContent = {
-	headline: string,
-	summary: string,
+	headline: string;
+	summary: string;
 };
-
 
 type PageContent = {
 	home: HomePageContent;
@@ -69,8 +68,9 @@ export type Project = {
 	title: string;
 	img: StaticImageData;
 	repo: string;
-	brief: string;
-	description: string;
+	brief: {
+		[locale in SupportedLocale]: string;
+	};
 } & {
 	[K in keyof Filters]: Filters[K] | undefined;
 };

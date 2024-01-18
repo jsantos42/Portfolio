@@ -1,12 +1,14 @@
-import { Project } from '@src/types';
+import { Project, SupportedLocale } from '@src/types';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
 export const ProjectsGrid = ({
 	filteredSortedProjects,
+	lang,
 }: {
 	filteredSortedProjects: Project[];
+	lang: SupportedLocale;
 }) => (
 	<div
 		className="w-full pb-16 px-1 sm:px-8 grid grid-cols-projectsMobile
@@ -61,7 +63,7 @@ export const ProjectsGrid = ({
 							className="text-sm text-center text-themeHighlight
 							row-start-2 row-end-4 self-start leading-relaxed"
 						>
-							{project.brief}
+							{project.brief[lang]}
 						</p>
 					</div>
 				</div>

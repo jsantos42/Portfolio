@@ -24,8 +24,11 @@ export const projects: Project[] = [
 	{
 		title: 'Portfolio v2',
 		img: portfolio_v2_gif,
-		brief: 'Personal website showcasing my projects and resume',
-		description: '',
+		brief: {
+			en: 'Personal website showcasing my projects and resume',
+			fr: 'Portfolio personnel présentant mes projets et mon CV',
+			pt: 'Website pessoal com os meus projectos e currículo',
+		},
 		repo: 'https://j-almeidasantos.engineer',
 		field: ['Front End'],
 		language: ['TypeScript'],
@@ -38,8 +41,11 @@ export const projects: Project[] = [
 	{
 		title: 'Online Shop API',
 		img: online_shop_api_png,
-		brief: 'API with OAuth2 authentication that sends confirmation emails to clients',
-		description: '',
+		brief: {
+			en: 'API with OAuth2 authentication that sends confirmation emails to clients',
+			fr: 'API avec authentification OAuth2 qui envoie des emails de confirmation aux clients',
+			pt: 'API com autenticação OAuth2 que envia emails de confirmação aos clientes',
+		},
 		repo: 'https://github.com/jsantos42/OnlineShopAPI',
 		field: ['Back End'],
 		language: ['PHP'],
@@ -52,8 +58,11 @@ export const projects: Project[] = [
 	{
 		title: 'Fast-Food and Schools in Portugal',
 		img: fast_food_gif,
-		brief: 'Datascience project to find out a potential geographical clustering',
-		description: '',
+		brief: {
+			en: 'Datascience project to find out a potential geographical clustering',
+			fr: 'Projet de datascience pour trouver un regroupement géographique potentiel',
+			pt: 'Projecto de datascience para encontrar um potencial agrupamento geográfico',
+		},
 		repo: 'https://github.com/jsantos42/fast_food_and_schools_in_Portugal',
 		field: ['Datascience'],
 		language: ['Python', 'R'],
@@ -66,8 +75,11 @@ export const projects: Project[] = [
 	{
 		title: 'Face Detector',
 		img: face_detector_gif,
-		brief: 'Fullstack project, with API endpoints and login access',
-		description: '',
+		brief: {
+			en: 'Fullstack project, with API endpoints and login access',
+			fr: 'Projet fullstack, avec des endpoints API et un accès de connexion',
+			pt: 'Projecto fullstack, com API endpoints e acesso de login',
+		},
 		repo: 'https://github.com/jsantos42/faceDetector',
 		field: ['Front End', 'Back End'],
 		language: ['JavaScript'],
@@ -80,8 +92,11 @@ export const projects: Project[] = [
 	{
 		title: 'Online Booking',
 		img: online_booking_gif,
-		brief: 'Single Page Application to schedule appointments',
-		description: '',
+		brief: {
+			en: 'Single Page Application to schedule appointments',
+			fr: 'Application Web Monopage pour planifier des rendez-vous',
+			pt: 'Aplicação Web de Página Única para marcar consultas',
+		},
 		repo: 'https://github.com/jsantos42/onlineBooking',
 		field: ['Front End'],
 		language: ['JavaScript'],
@@ -94,8 +109,11 @@ export const projects: Project[] = [
 	{
 		title: 'Portfolio v1',
 		img: portfolio_v1_gif,
-		brief: 'My first portfolio website showcasing my main projects',
-		description: '',
+		brief: {
+			en: 'My first portfolio website showcasing my main projects',
+			fr: 'Mon premier site web de portfolio présentant mes principaux projets',
+			pt: 'O meu primeiro website de portfólio com os meus principais projectos',
+		},
 		repo: 'https://github.com/jsantos42/portfolio_v1',
 		field: ['Front End'],
 		language: ['JavaScript'],
@@ -108,8 +126,11 @@ export const projects: Project[] = [
 	{
 		title: 'Moves of Pokémons',
 		img: pokemon_gif,
-		brief: 'Searchable list, using AJAX requests and a public API',
-		description: '',
+		brief: {
+			en: 'Filterable list, using AJAX requests and a public API',
+			fr: 'Liste filtrable, en utilisant des requêtes AJAX et une API publique',
+			pt: 'Lista filtrável, utilizando pedidos AJAX e uma API pública',
+		},
 		repo: 'https://github.com/jsantos42/MovesOfPokemons',
 		field: ['Front End'],
 		language: ['JavaScript'],
@@ -122,8 +143,11 @@ export const projects: Project[] = [
 	{
 		title: 'Notepad',
 		img: notepad_gif,
-		brief: 'Simple desktop app made with Qt',
-		description: '',
+		brief: {
+			en: 'Simple desktop app made with Qt',
+			fr: 'Application de bureau simple faite avec Qt',
+			pt: 'Aplicação de desktop simples, feita com Qt',
+		},
 		repo: 'https://github.com/jsantos42/Qt/tree/main/Notepad',
 		field: ['Front End'],
 		language: ['C++'],
@@ -136,8 +160,11 @@ export const projects: Project[] = [
 	{
 		title: 'Minishell',
 		img: minishell_gif,
-		brief: 'A Unix shell, implemented with an Abstract Syntax Tree',
-		description: '',
+		brief: {
+			en: 'A Unix shell, implemented with an Abstract Syntax Tree',
+			fr: 'Un shell Unix, implémenté avec un Arbre de la Syntaxe Abstraite',
+			pt: 'Uma shell Unix, implementado com uma Árvore de Sintaxe Abstrata',
+		},
 		repo: 'https://github.com/jsantos42/minishell',
 		field: ['Low Level'],
 		language: ['C'],
@@ -150,8 +177,11 @@ export const projects: Project[] = [
 	{
 		title: 'Cub3D',
 		img: cub3d_gif,
-		brief: '3D maze using raycasting',
-		description: '',
+		brief: {
+			en: '3D maze using raycasting',
+			fr: 'Labyrinthe 3D utilisant le raycasting',
+			pt: 'Labirinto 3D usando raycasting',
+		},
 		repo: 'https://github.com/jsantos42/cub3d',
 		field: ['Game Dev'],
 		language: ['C'],
@@ -164,8 +194,11 @@ export const projects: Project[] = [
 	{
 		title: 'So Long',
 		img: so_long_gif,
-		brief: '2D game, using textures and sprites',
-		description: '',
+		brief: {
+			en: '2D game, using textures and sprites',
+			fr: 'Jeu 2D, utilisant des textures et des sprites',
+			pt: 'Jogo 2D, usando texturas e sprites',
+		},
 		repo: 'https://github.com/jsantos42/so_long',
 		field: ['Game Dev'],
 		language: ['C'],
@@ -178,8 +211,11 @@ export const projects: Project[] = [
 	{
 		title: 'Dining Philosophers',
 		img: philo_gif,
-		brief: 'Implementation of a concurrent algorithm, using threads',
-		description: '',
+		brief: {
+			en: 'Implementation of a concurrent algorithm, using threads',
+			fr: "Implémentation d'un algorithme concurrent, en utilisant des threads",
+			pt: 'Implementação de um algoritmo concorrente, usando threads',
+		},
 		repo: 'https://github.com/jsantos42/Dining_Philosophers',
 		field: ['Low Level'],
 		language: ['C', 'C++'],
