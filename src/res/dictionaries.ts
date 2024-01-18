@@ -9,21 +9,17 @@ const dictionaries: DictionaryWithLanguage = {
 				summary: `
 I began programming as a self-taught endeavor in **2020**, and became so passionate
 about it that, after having invested **11&nbsp;years in Medicine**, I decided to **shift**
-to a software development career. \n
-As a **full-stack developer**, I bring a unique perspective shaped by 
-both my medical background and comprehensive programming training.
-The first provided me **self-discipline** and **resiliency**, and it also taught me 
-the critical **importance of good UX and UI** through the flaws I encountered in
-healthcare software. The second, combined with my **hands-on experience in both
-backend and frontend development**, allows me to create holistic software solutions 
-that address complex user needs. This blend of medical insight, technical
-expertise, and a **self-starter** attitude positions me uniquely to 
-innovate and improve digital experiences in any industry.\n
+to a software development career.\n
+Today, as a **full-stack developer**, I think outside of the box and have a 
+unique perspective thanks to my background. It taught me the **critical importance
+of good UX and UI** through the flaws I encountered in healthcare software. And,
+of course, you don't fare well in the medical field without **hard-work** and
+ **self-discipline**.\n
 My goal is to use my diverse skill set in **challenging and evolving 
-environments**, working on projects that advance technological frontiers 
-and improve the user experience. My commitment goes beyond technical 
-achievement, though: I value being part of a team that makes a positive
-**difference**, developing technology that has a **meaningful impact** on our world.
+environments**, working on projects that improve the user experience. My commitment
+goes beyond technical achievement, though: I value being part of a team that makes
+a positive **difference**, developing technology that has a **meaningful impact** 
+on our world.
 `,
 			},
 		},
@@ -61,15 +57,13 @@ achievement, though: I value being part of a team that makes a positive
 				summary: `
 J'ai commencé à programmer en autodidacte en **2020** et j'en suis devenu tellement passionné
 que, après avoir investi **11&nbsp;ans en Médecine**, j'ai décidé de me **reconvertir** professionnellement.\n
-En tant que **développeur full-stack**, je propose une perspective unique grâce à mon expérience 
-médicale et ma formation complète en programmation. La médecine m'a inculqué la **discipline** et
-la **résilience**, mais elle m'a également sensibilisé à l'**importance cruciale d'une interface utilisateur 
-de qualité**, notamment en observant les lacunes des logiciels de santé. Grâce à ma formation en programmation et 
-à mon **expérience pratique du développement backend et frontend**, je suis en mesure de concevoir des 
-solutions logicielles complètes qui répondent aux besoins complexes des utilisateurs. Mon expertise médicale et technique, associée à 
-mon **autonomie**, me permet d'innover et d'améliorer l'expérience numérique quel que soit le secteur d'activité.\n
+Aujourd'hui, en tant que **développeur full-stack**, je pense différemment et j'ai une
+perspective unique grâce à mon parcours. Il m'a appris l'**importance critique
+d'une bonne UX et UI**, notamment en observant les lacunes des logiciels de santé.
+Et, bien sûr, on ne s'en sort pas bien dans le domaine médical sans **travail acharné**
+et **discipline**.\n
 Mon objectif est d'exploiter mes compétences diversifiées dans des **environnements stimulants et évolutifs**, 
-en travaillant sur des projets qui repoussent les limites technologiques et améliorent l'expérience utilisateur. 
+en travaillant sur des projets qui améliorent l'expérience utilisateur. 
 Cependant, mon engagement va au-delà de la réussite technique: je cherche à faire partie d'une équipe qui a un **impact positif**.
 `,
 			},
@@ -104,25 +98,22 @@ Cependant, mon engagement va au-delà de la réussite technique: je cherche à f
 		home: {
 			pageName: 'Início',
 			pageContent: {
-				headline: 'Desenvolvedor Full-Stack | Ex-Médico',
+				headline: 'Developer Full-Stack | Ex-Médico',
 				summary: `
 Comecei a programar como autodidacta em **2020**, e rapidamente me apercebi que
 tinha encontrado aquilo que queria fazer o resto da vida. Assim, decidi **largar a
 carreira médica** ao fim de **11&nbsp;anos** de investimento, e tornar-me engenheiro
 de software.\n
-Como **desenvolvedor full-stack**, trago uma perspectiva única moldada tanto pela 
-minha formação médica como pela minha formação em programação. A primeira forneceu-me
-**disciplina** e **resiliência**, e também me ensinou a **importância crítica de 
-uma boa UX e UI** através das falhas que encontrei nos softwares de saúde com que
-trabalhei. A segunda, combinada com minha **experiência prática em desenvolvimento
-backend e frontend**, permite-me criar soluções holísticas que respondem às necessidades
-complexas dos utilizadores. Essa combinação de conhecimento médico, experiência técnica
-e uma atitude **empreendedora** posiciona-me de forma única para inovar e melhorar 
-as experiências digitais em qualquer setor.\n
-O meu objectivo é utilizar o meu conjunto diversificado de skills em **ambientes desafiantes e em constante mutação**,
-trabalhando em projetos que avançam as fronteiras tecnológicas e melhoram a experiência do utilizador.
-Contudo, não procuro apenas sucesso técnico: pretendo fazer parte de uma equipa que faz a **diferença**
-e que desenvolve tecnologia que tem um **impacto significativo** no nosso mundo.
+Hoje em dia, como **developer full-stack**, tenho um raciocínio "fora da caixa" 
+e uma perspectiva única moldada pelo meu background. Aprendi
+a **importância crítica de uma boa UX e UI** através das falhas que encontrei nos softwares de saúde com que
+trabalhei. E obviamente que **disciplina** e **resiliência** são pedras basilares
+para a progressão na carreira médica. \n
+O meu objectivo é alavancar o meu conjunto diverso de *skills* em **ambientes desafiantes e em 
+constante mutação**, trabalhando em projetos que melhorem a experiência do utilizador.
+Mas não procuro apenas sucesso técnico: pretendo fazer parte de uma equipa 
+que faz a **diferença** e que desenvolve tecnologia que tem um **impacto 
+significativo** no nosso mundo.
 `,
 			},
 		},
