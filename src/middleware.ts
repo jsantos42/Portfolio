@@ -1,5 +1,5 @@
 // THIS PAGE MUST BE ON THE SAME LEVEL AS THE PAGES/APP FOLDER !!!
-import {Dictionary, SupportedLocale} from '@src/types';
+import {Dictionary, Page, SupportedLocale} from '@src/types';
 import {NextRequest, NextResponse} from 'next/server';
 import {match} from '@formatjs/intl-localematcher';
 import Negotiator from 'negotiator';
@@ -46,7 +46,7 @@ export function middleware(req: NextRequest) {
 	// Redirect to homepage if root
 	if (locales.includes(pathname.substring(1) as SupportedLocale)) {
 		const lang = pathname.substring(1) as SupportedLocale;
-		req.nextUrl.pathname = getNewPathname(lang, getDictionaries()[lang].home.pageName);
+		req.nextUrl.pathname = getNewPathname(lang, 'home');
 		return NextResponse.redirect(req.nextUrl);
 	}
 
@@ -73,9 +73,9 @@ const getStaticRoute = (pathname: string) => {
 		Dictionary,
 	][];
 
-	dictEntries.find(([lang, dict]) =>
-		Object.entries(dict).some(([page, {pageName}]) => {
-			if (pathname === getNewPathname(lang, pageName)) {
+	dictEntries.some(([lang, dict]) =>
+		(Object.keys(dict) as Page[]).some(page => {
+			if (pathname === getNewPathname(lang, page)) {
 				staticRoute = `/${lang}/${page}`;
 				return true;
 			}

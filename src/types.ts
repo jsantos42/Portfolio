@@ -11,7 +11,7 @@ export type PageParams = {
 	lang: SupportedLocale;
 };
 
-type Page = 'home' | 'projects';
+export type Page = 'home' | 'projects';
 
 type ProjectPageContent = {
 	sortButton: string;

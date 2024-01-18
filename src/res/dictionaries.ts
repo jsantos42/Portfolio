@@ -1,4 +1,4 @@
-import { DictionaryWithLanguage, SupportedLocale } from '@src/types';
+import { DictionaryWithLanguage, Page, SupportedLocale } from '@src/types';
 
 const dictionaries: DictionaryWithLanguage = {
 	en: {
@@ -155,7 +155,9 @@ export const getSlug = (str: string) => {
 		.replace(/ /g, '_');
 };
 
-export const getNewPathname = (lang: SupportedLocale, pageName: string) => {
+export const getNewPathname = (lang: SupportedLocale, page: Page) => {
+	const { pageName } = dictionaries[lang][page];
+
 	if (!pageName) {
 		return `/${lang}`;
 	}

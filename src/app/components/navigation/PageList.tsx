@@ -4,7 +4,7 @@ import {
 	getNewPathname,
 	getSlug,
 } from '@src/res/dictionaries';
-import { SupportedLocale } from '@src/types';
+import { Dictionary, Page, SupportedLocale } from '@src/types';
 import { usePathname } from 'next/navigation';
 
 export const PageList = ({
@@ -17,12 +17,15 @@ export const PageList = ({
 	toggleNavModal?: () => void;
 }) => {
 	const dict = getDictionaries()[lang];
-	const pages = Object.values(dict);
+	const dictionaryEntries = Object.entries(dict) as [
+		Page,
+		Dictionary[Page],
+	][];
 	const routeLabel = usePathname().split('/')[2];
 
 	return (
 		<ul className={classes}>
-			{pages.map(({ pageName }) => {
+			{dictionaryEntries.map(([page, { pageName }]) => {
 				return (
 					<li
 						key={pageName}
@@ -30,7 +33,7 @@ export const PageList = ({
 							${getSlug(pageName) === routeLabel || 'opacity-50'}`}
 					>
 						<TouchableLink
-							href={getNewPathname(lang, pageName)}
+							href={getNewPathname(lang, page)}
 							onClick={toggleNavModal}
 						>
 							{pageName}

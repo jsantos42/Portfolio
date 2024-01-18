@@ -32,7 +32,7 @@ export const LangModal = ({
 							${locale === lang || 'opacity-50'}`}
 						>
 							<TouchableLink
-								href={getNewPathname(locale, '')}
+								href={getNewPathname(locale, 'home')}
 								onClick={toggleLangModal}
 							>
 								{locale.toLocaleUpperCase()}
