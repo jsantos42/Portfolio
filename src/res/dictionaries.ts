@@ -110,7 +110,7 @@ a **importância crítica de uma boa UX e UI** através das falhas que encontrei
 trabalhei. E obviamente que **disciplina** e **resiliência** são pedras basilares
 para a progressão na carreira médica. \n
 O meu objectivo é alavancar o meu conjunto diverso de *skills* em **ambientes desafiantes e em 
-constante mutação**, trabalhando em projetos que melhorem a experiência do utilizador.
+constante mutação**, trabalhando em projectos que melhorem a experiência do utilizador.
 Mas não procuro apenas sucesso técnico: pretendo fazer parte de uma equipa 
 que faz a **diferença** e que desenvolve tecnologia que tem um **impacto 
 significativo** no nosso mundo.
@@ -126,7 +126,7 @@ significativo** no nosso mundo.
 					newest: 'Mais recente',
 					oldest: 'Mais antigo',
 				},
-				filterResultsLabel: 'Projetos filtrados',
+				filterResultsLabel: 'Projectos filtrados',
 				filterButton: 'Filtrar',
 				applyFiltersButton: 'Aplicar',
 				expandAllButton: 'Expandir todos',
