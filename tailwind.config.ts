@@ -60,6 +60,9 @@ const config: Config = {
 			aspectRatio: {
 				'16/10': '16 / 10',
 			},
+			boxShadow: {
+				grid: 'inset 0 1px 0 0 rgba(148, 163, 184, 0.1)',
+			},
 		},
 	},
 	plugins: [],

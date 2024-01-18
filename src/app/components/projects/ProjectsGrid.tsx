@@ -27,7 +27,7 @@ export const ProjectsGrid = ({
 					className="min-w-[248px] min-[332px]:min-w-[324px]
 					max-w-[500px] max-h-[550px] px-3 py-4 flex flex-wrap
 					flex-col gap-y-4 justify-center items-center self-start
-					hover:bg-highlight rounded-xl"
+					hover:bg-highlight rounded-xl hover:shadow-grid"
 				>
 					<h2
 						className="text-lg font-semibold tracking-wide
