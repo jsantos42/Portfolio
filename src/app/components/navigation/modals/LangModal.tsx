@@ -1,8 +1,13 @@
-import { SupportedLocale } from '@src/types';
+import { Page, SupportedLocale } from '@src/types';
 import { useEffect } from 'react';
 import { preventScroll } from '@src/app/utils';
-import { getDictionaries, getNewPathname } from '@src/res/dictionaries';
+import {
+	getDictionaries,
+	getNewPathname,
+	getSlug,
+} from '@src/res/dictionaries';
 import { TouchableLink } from '@src/app/components/navigation/TouchableLink';
+import { usePathname } from 'next/navigation';
 
 export const LangModal = ({
 	lang,
@@ -13,7 +18,14 @@ export const LangModal = ({
 	toggleLangModal: () => void;
 	isMobile: boolean;
 }) => {
-	const locales = Object.keys(getDictionaries()) as SupportedLocale[];
+	const dictionaries = getDictionaries();
+	const locales = Object.keys(dictionaries) as SupportedLocale[];
+	const dict = dictionaries[lang];
+	const currentRouteLabel = usePathname().split('/')[2];
+
+	const currentPage = Object.entries(dict).find(
+		([page, { pageName }]) => getSlug(pageName) === currentRouteLabel
+	)?.[0] as Page;
 
 	useEffect(preventScroll);
 
@@ -32,7 +44,10 @@ export const LangModal = ({
 							${locale === lang || 'opacity-50'}`}
 						>
 							<TouchableLink
-								href={getNewPathname(locale, 'home')}
+								href={getNewPathname(
+									locale,
+									currentPage || 'home'
+								)}
 								onClick={toggleLangModal}
 							>
 								{locale.toLocaleUpperCase()}
