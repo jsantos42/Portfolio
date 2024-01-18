@@ -8,8 +8,8 @@ const dictionaries: DictionaryWithLanguage = {
 				headline: 'Full-Stack Developer | Former Medical Doctor',
 				summary: `
 I began programming as a self-taught endeavor in **2020**, and became so passionate
-about it that, after having invested **11&nbsp;years in Medicine**, I decided to **shift**
-to a software development career.\n
+about it that I **switched** to a software development career, after having 
+dedicated **11&nbsp;years** of my life to **Medicine**.\n
 Today, as a **full-stack developer**, I think outside of the box and have a 
 unique perspective thanks to my background. It taught me the **critical importance
 of good UX and UI** through the flaws I encountered in healthcare software. And,
