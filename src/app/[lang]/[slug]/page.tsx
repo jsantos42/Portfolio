@@ -22,7 +22,8 @@ export default function Home({ params }: { params: PageParams }) {
 						.map((i, index) => (
 							<h2
 								key={index}
-								className="text-lg lg:text-xl font-semibold"
+								className="text-lg lg:text-xl font-semibold
+								text-themeHighlight"
 							>
 								{i}
 							</h2>

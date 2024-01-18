@@ -27,7 +27,10 @@ export const ProjectsGrid = ({
 					flex-col gap-y-4 justify-center items-center self-start
 					hover:bg-highlight rounded-xl"
 				>
-					<h2 className="text-lg font-semibold tracking-wide">
+					<h2
+						className="text-lg font-semibold tracking-wide
+						text-themeHighlight"
+					>
 						{project.title}
 					</h2>
 					<Image
@@ -55,8 +58,8 @@ export const ProjectsGrid = ({
 							))}
 						</ul>
 						<p
-							className="text-center text-sm row-start-2 row-end-4
-						self-start leading-relaxed"
+							className="text-sm text-center text-themeHighlight
+							row-start-2 row-end-4 self-start leading-relaxed"
 						>
 							{project.brief}
 						</p>

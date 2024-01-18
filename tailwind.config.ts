@@ -22,6 +22,7 @@ const config: Config = {
 			},
 			colors: {
 				theme: 'rgba(var(--foreground-rgb))',
+				themeHighlight: 'rgba(var(--foreground-highlight-rgb))',
 				primary: 'rgba(var(--primary-rgb))',
 				contrast: 'rgba(var(--background-rgb))',
 			},

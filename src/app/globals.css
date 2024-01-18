@@ -8,7 +8,8 @@
  * cf https://tailwindcss.com/docs/background-color#changing-the-opacity
 */
 :root {
-	--foreground-rgb: 0, 0, 0;
+	--foreground-rgb: 70, 70, 70;
+	--foreground-highlight-rgb: 0, 0, 0;
 	--background-rgb: 245, 245, 245;
 	--background-highlight-rgb: 255, 255, 255;
 	--primary-rgb: 17, 94, 89;
@@ -16,7 +17,8 @@
 
 @media (prefers-color-scheme: dark) {
 	:root {
-		--foreground-rgb: 255, 255, 255;
+		--foreground-rgb: 200, 200, 200;
+		--foreground-highlight-rgb: 255, 255, 255;
 		--background-rgb: 19, 21, 22;
 		--background-highlight-rgb: 24, 26, 27;
 		--primary-rgb: 26, 146, 138;
