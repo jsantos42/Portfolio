@@ -1,8 +1,14 @@
+import React from 'react';
+import dynamic from 'next/dynamic';
 import { getDictionaries, getSlug } from '@src/res/dictionaries';
 import { StaticParams, SupportedLocale } from '@src/types';
 import HomePage from '@src/app/components/homePage/HomePage';
-import ProjectsPage from '@src/app/components/projectsPage/ProjectsPage';
-import React from 'react';
+
+// https://nextjs.org/docs/app/building-your-application/optimizing/lazy-loading#nextdynamic
+const ProjectsPage = dynamic(
+	() => import('@src/app/components/projectsPage/ProjectsPage'),
+	{ ssr: false }
+);
 
 export const dynamicParams = false;
 

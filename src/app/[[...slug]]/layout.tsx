@@ -3,7 +3,13 @@ import { Inter } from 'next/font/google';
 import '../globals.css';
 import { StaticParams, SupportedLocale } from '@src/types';
 import React from 'react';
-import { Navigation } from '@src/app/components/navigation/Navigation';
+import dynamic from 'next/dynamic';
+
+// https://nextjs.org/docs/app/building-your-application/optimizing/lazy-loading#nextdynamic
+const Navigation = dynamic(
+	() => import('@src/app/components/navigation/Navigation'),
+	{ ssr: false }
+);
 
 const inter = Inter({ subsets: ['latin'] });
 

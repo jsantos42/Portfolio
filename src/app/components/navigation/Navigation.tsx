@@ -7,7 +7,7 @@ import { NavModal } from '@src/app/components/navigation/modals/NavModal';
 import { LangModal } from '@src/app/components/navigation/modals/LangModal';
 import { useMobileState } from '@src/app/utils';
 
-export const Navigation = ({ lang }: { lang: SupportedLocale }) => {
+export default function Navigation({ lang }: { lang: SupportedLocale }) {
 	const [isNavModalOpen, setIsNavModalOpen] = useState(false);
 	const [isLangModalOpen, setIsLangModalOpen] = useState(false);
 	const isMobile = useMobileState(768, [
