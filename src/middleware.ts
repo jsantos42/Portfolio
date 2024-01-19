@@ -1,15 +1,15 @@
 // THIS PAGE MUST BE ON THE SAME LEVEL AS THE PAGES/APP FOLDER !!!
-import {Dictionary, Page, SupportedLocale} from '@src/types';
-import {NextRequest, NextResponse} from 'next/server';
-import {match} from '@formatjs/intl-localematcher';
+import { SupportedLocale } from '@src/types';
+import { NextRequest, NextResponse } from 'next/server';
+import { match } from '@formatjs/intl-localematcher';
 import Negotiator from 'negotiator';
-import {getDictionaries, getNewPathname} from "@src/res/dictionaries";
+import { getNewPathname } from '@src/res/dictionaries';
 
 //==============================================================================
 // LOCALES
 //==============================================================================
 const defaultLocale = 'en';
-const locales: SupportedLocale[] = [defaultLocale, 'fr', 'pt'];
+const supportedLocales: SupportedLocale[] = [defaultLocale, 'fr', 'pt'];
 
 //==============================================================================
 // MIDDLEWARE CONFIG (use `?!` to exclude routes from the middleware)
@@ -23,63 +23,30 @@ export const config = {
 //==============================================================================
 export function middleware(req: NextRequest) {
 	const { pathname } = req.nextUrl;
-	if (!hasValidLocale(pathname)) {
-		const header = req.headers.get('accept-language') ?? undefined;
+	const currentLocale = pathname.split('/')[1];
+
+	if (!supportedLocales.includes(currentLocale as SupportedLocale)) {
+		const acceptLangHeaderValue =
+			req.headers.get('accept-language') ?? undefined;
 		const negotiator = new Negotiator({
-			headers: { 'accept-language': header },
+			headers: { 'accept-language': acceptLangHeaderValue },
 		});
 		const languages = negotiator.languages();
 
 		// Protect against 'RangeError: Incorrect locale information provided'
-		let locale;
+		let newLocale: SupportedLocale;
 		try {
-			locale = match(languages, locales, defaultLocale);
+			newLocale = match(
+				languages,
+				supportedLocales,
+				defaultLocale
+			) as SupportedLocale;
 		} catch (error) {
 			console.log(error);
-			locale = defaultLocale;
+			newLocale = defaultLocale;
 		}
 
-		req.nextUrl.pathname = `/${locale}${pathname}`;
+		req.nextUrl.pathname = getNewPathname(newLocale, 'home');
 		return NextResponse.redirect(req.nextUrl);
 	}
-
-	// Redirect to homepage if root
-	if (locales.includes(pathname.substring(1) as SupportedLocale)) {
-		const lang = pathname.substring(1) as SupportedLocale;
-		req.nextUrl.pathname = getNewPathname(lang, 'home');
-		return NextResponse.redirect(req.nextUrl);
-	}
-
-	const staticRoute = getStaticRoute(pathname);
-	if (staticRoute.length === 0) {
-		return NextResponse.error();
-	}
-
-	req.nextUrl.pathname = staticRoute;
-	return NextResponse.rewrite(req.nextUrl);
 }
-
-const hasValidLocale = (pathname: string) => {
-	return locales.some(
-		locale =>
-			pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
-	);
-};
-
-const getStaticRoute = (pathname: string) => {
-	let staticRoute = '';
-	const dictEntries = Object.entries(getDictionaries()) as [
-		SupportedLocale,
-		Dictionary,
-	][];
-
-	dictEntries.some(([lang, dict]) =>
-		(Object.keys(dict) as Page[]).some(page => {
-			if (pathname === getNewPathname(lang, page)) {
-				staticRoute = `/${lang}/${page}`;
-				return true;
-			}
-		})
-	);
-	return staticRoute;
-};

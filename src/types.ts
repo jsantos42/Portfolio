@@ -5,10 +5,8 @@ export type SupportedLocale = 'en' | 'pt' | 'fr';
 //==============================================================================
 // PAGES
 //==============================================================================
-export type PageParams = {
-	slug: string;
-} & {
-	lang: SupportedLocale;
+export type StaticParams = {
+	slug: [SupportedLocale, string];
 };
 
 export type Page = 'home' | 'projects';

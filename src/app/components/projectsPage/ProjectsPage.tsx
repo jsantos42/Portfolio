@@ -2,19 +2,23 @@
 import { useEffect, useState } from 'react';
 import {
 	Filters,
-	PageParams,
 	Project,
 	SelectedOptions,
 	SortCriteria,
+	SupportedLocale,
 } from '@src/types';
 import { getDictionaries } from '@src/res/dictionaries';
-import { FilterSidebar } from '@src/app/components/projects/FilterSidebar';
+import { FilterSidebar } from '@src/app/components/projectsPage/FilterSidebar';
 import { projects } from '@src/res/projects';
-import { ProjectsGrid } from '@src/app/components/projects/ProjectsGrid';
+import { ProjectsGrid } from '@src/app/components/projectsPage/ProjectsGrid';
 import { useMobileState } from '@src/app/utils';
-import { SortFilterButtons } from '@src/app/components/projects/SortFilterButtons';
+import { SortFilterButtons } from '@src/app/components/projectsPage/SortFilterButtons';
 
-export default function Projects({ params }: { params: PageParams }) {
+export default function ProjectsPage({
+	currentLocale,
+}: {
+	currentLocale: SupportedLocale;
+}) {
 	//==========================================================================
 	// GET ENTRIES FROM THE DICTIONARY IN THE RIGHT LANGUAGE
 	//==========================================================================
@@ -26,7 +30,7 @@ export default function Projects({ params }: { params: PageParams }) {
 		expandAllButton,
 		collapseAllButton,
 		filtersLabels,
-	} = getDictionaries()[params.lang].projects.pageContent;
+	} = getDictionaries()[currentLocale].projects.pageContent;
 
 	//==========================================================================
 	// TRACK THE FILTERS' SELECTED OPTIONS AND OPENING STATUS OF ITS DROPDOWNS
@@ -115,7 +119,7 @@ export default function Projects({ params }: { params: PageParams }) {
 					/>
 				) : null}
 				<ProjectsGrid
-					lang={params.lang}
+					lang={currentLocale}
 					{...{ filteredSortedProjects }}
 				/>
 			</div>

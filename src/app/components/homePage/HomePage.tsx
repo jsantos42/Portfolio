@@ -1,11 +1,15 @@
-import { PageParams } from '@src/types';
+import { SupportedLocale } from '@src/types';
 import { getDictionaries } from '@src/res/dictionaries';
 import { data } from '@src/res/data';
 import Markdown from 'react-markdown';
-import { SocialLogos } from '@src/app/components/SocialLogos';
+import { SocialLogos } from '@src/app/components/homePage/SocialLogos';
 
-export default function Home({ params }: { params: PageParams }) {
-	const { pageContent, pageName } = getDictionaries()[params.lang].home;
+export default function HomePage({
+	currentLocale,
+}: {
+	currentLocale: SupportedLocale;
+}) {
+	const { pageContent } = getDictionaries()[currentLocale].home;
 
 	return (
 		<div

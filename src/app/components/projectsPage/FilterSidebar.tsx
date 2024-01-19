@@ -1,5 +1,5 @@
 import { Filters, ProjectFiltersDict, SelectedOptions } from '@src/types';
-import { FilterDropdown } from '@src/app/components/projects/FilterDropdown';
+import { FilterDropdown } from '@src/app/components/projectsPage/FilterDropdown';
 import {
 	db,
 	fields,

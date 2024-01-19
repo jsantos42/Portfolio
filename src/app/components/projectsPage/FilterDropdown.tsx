@@ -10,7 +10,7 @@ export const FilterDropdown = ({
 }: {
 	filterLabel: string;
 	filterType: keyof Filters;
-	filterOptions: Filters[keyof Filters]
+	filterOptions: Filters[keyof Filters];
 	filterSelectedOptions: SelectedOptions[keyof Filters];
 	handleFilterChange: (
 		filterType: keyof Filters,
