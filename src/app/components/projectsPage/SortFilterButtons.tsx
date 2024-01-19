@@ -46,6 +46,7 @@ export const SortFilterButtons = ({
 				className="min-w-[140px] bg-transparent text-center border-2
 					border-stone-700 rounded-md"
 				defaultValue={''}
+				id={'sort'}
 				onChange={e => setSortBy(e.target.value as SortCriteria)}
 			>
 				{Object.entries(sortLabels).map(([key, value]) => (
