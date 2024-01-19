@@ -65,13 +65,14 @@ export const FilterDropdown = ({
 						<input
 							type={'checkbox'}
 							name={filterLabel}
+							id={option}
 							value={option}
 							checked={(
 								filterSelectedOptions.selected as string[]
 							).includes(option)}
 							onChange={handleCheckboxChange}
 						/>
-						<label htmlFor={filterLabel}>{option}</label>
+						<label htmlFor={option}>{option}</label>
 					</div>
 				))}
 			</div>
