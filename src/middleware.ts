@@ -8,8 +8,8 @@ import {getDictionaries, getNewPathname} from "@src/res/dictionaries";
 //==============================================================================
 // LOCALES
 //==============================================================================
-const defaultLocale = 'pt';
-const locales: SupportedLocale[] = [defaultLocale, 'en', 'fr'];
+const defaultLocale = 'en';
+const locales: SupportedLocale[] = [defaultLocale, 'fr', 'pt'];
 
 //==============================================================================
 // MIDDLEWARE CONFIG (use `?!` to exclude routes from the middleware)
