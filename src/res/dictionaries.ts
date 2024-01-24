@@ -8,18 +8,12 @@ const dictionaries: DictionaryWithLanguage = {
 				headline: 'Full-Stack Developer | Former Medical Doctor',
 				summary: `
 I began programming as a self-taught endeavor in **2020**, and became so passionate
-about it that I **switched** to a software development career, after having 
-dedicated **11&nbsp;years** of my life to **Medicine**.\n
-Today, as a **full-stack developer**, I think outside of the box and have a 
-unique perspective thanks to my background. It taught me the **critical importance
-of good UX and UI** through the flaws I encountered in healthcare software. And,
-of course, you don't fare well in the medical field without **hard-work** and
- **self-discipline**.\n
-My goal is to use my diverse skill set in **challenging and evolving 
-environments**, working on projects that improve the user experience. My commitment
-goes beyond technical achievement, though: I value being part of a team that makes
-a positive **difference**, developing technology that has a **meaningful impact** 
-on our world.
+about it that I **switched** to a software development career, after having dedicated 
+**11&nbsp;years** of my life to **Medicine**.\n
+Today, as a full-stack developer, I think outside of the box and have a unique 
+perspective thanks to my background. I’m happiest working in challenging and evolving
+environments, on projects that **improve the user experience** and that have a 
+**meaningful impact** on our world.
 `,
 			},
 		},
