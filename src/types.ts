@@ -24,9 +24,20 @@ type ProjectPageContent = {
 	filtersLabels: ProjectFiltersDict;
 };
 
-type HomePageContent = {
+export type HomePageContent = {
 	headline: string;
+	summaryLabel: string;
 	summary: string;
+	experienceLabel: string;
+	experience: {
+		title: string;
+		company: string;
+		companyWebsite: string;
+		startDate: string;
+		endDate: string;
+		description: string;
+		stack: (ProgrammingLanguage | Framework | StylingFramework | Database | TestingFramework)[]
+	}[];
 };
 
 type PageContent = {
@@ -116,6 +127,7 @@ export type ProgrammingLanguage =
 
 export type Framework =
 	| 'React.js'
+	| 'Ember.js'
 	| 'Next.js'
 	| 'React Native'
 	| 'Node.js'
