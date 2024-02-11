@@ -1,15 +1,17 @@
 import { SupportedLocale } from '@src/types';
 import { getDictionaries } from '@src/res/dictionaries';
 import { data } from '@src/res/data';
-import Markdown from 'react-markdown';
 import { SocialLogos } from '@src/app/components/homePage/SocialLogos';
+import { Summary } from '@src/app/components/homePage/Summary';
+import { Headline } from '@src/app/components/homePage/Headline';
 
 export default function HomePage({
 	currentLocale,
 }: {
 	currentLocale: SupportedLocale;
 }) {
-	const { pageContent } = getDictionaries()[currentLocale].home;
+	const { headline, summary } =
+		getDictionaries()[currentLocale].home.pageContent;
 
 	return (
 		<div
@@ -21,17 +23,7 @@ export default function HomePage({
 					<h1 className="text-3xl lg:text-4xl text-primary font-semibold mb-1">
 						{data.name}
 					</h1>
-					{(pageContent.headline as string)
-						.split('|')
-						.map((i, index) => (
-							<h2
-								key={index}
-								className="text-lg lg:text-xl font-semibold
-								text-themeHighlight"
-							>
-								{i}
-							</h2>
-						))}
+					<Headline text={headline} />
 				</div>
 				<SocialLogos classes="flex justify-start pt-6 pb-24 -ml-[9px]" />
 			</header>
@@ -39,16 +31,7 @@ export default function HomePage({
 				className="lg:w-1/2 max-w-[500px] pb-16 leading-relaxed
 				antialiased motion-safe:animate-fadeInFromBottom"
 			>
-				<Markdown
-					className={'flex flex-col gap-y-3'}
-					components={{
-						strong: props => (
-							<strong className="text-primary" {...props} />
-						),
-					}}
-				>
-					{pageContent.summary}
-				</Markdown>
+				<Summary text={summary} />
 			</main>
 		</div>
 	);
