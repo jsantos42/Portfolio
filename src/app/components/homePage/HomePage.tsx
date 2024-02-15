@@ -20,7 +20,7 @@ export default function HomePage({
 		lg:pt-16 lg:px-24 flex flex-wrap justify-start"
 		>
 			<header className="min-w-[232px] min-[345px]:min-w-[305px] lg:w-1/2">
-				<div className="antialiased tracking-tight">
+				<div className="lg:fixed lg:z-50 antialiased tracking-tight">
 					<h1
 						className="mb-1 text-3xl lg:text-4xl text-primary
 					font-semibold"
@@ -28,8 +28,8 @@ export default function HomePage({
 						{data.name}
 					</h1>
 					<Headline text={headline} />
+					<SocialLogos classes="flex justify-start pt-6 pb-24 -ml-[9px]" />
 				</div>
-				<SocialLogos classes="flex justify-start pt-6 pb-24 -ml-[9px]" />
 			</header>
 			<main
 				className="lg:w-1/2 max-w-[500px] pb-16 leading-relaxed
