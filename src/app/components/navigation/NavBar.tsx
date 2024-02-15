@@ -30,7 +30,7 @@ export const NavBar = ({
 
 	return (
 		<nav
-			className="w-full h-nav sticky top-0 z-40 px-4 flex justify-end
+			className="w-full h-nav sticky top-0 z-20 px-4 flex justify-end
 				items-center bg-theme antialiased"
 		>
 			<div className={`flex items-center gap-${isMobile ? '1' : '8'}`}>

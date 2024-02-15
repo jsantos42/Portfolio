@@ -20,7 +20,7 @@ export default function HomePage({
 		lg:pt-16 lg:px-24 flex flex-wrap justify-start"
 		>
 			<header className="min-w-[232px] min-[345px]:min-w-[305px] lg:w-1/2">
-				<div className="lg:fixed lg:z-50 antialiased tracking-tight">
+				<div className="lg:fixed lg:z-20 antialiased tracking-tight">
 					<h1
 						className="mb-1 text-3xl lg:text-4xl text-primary
 					font-semibold"
