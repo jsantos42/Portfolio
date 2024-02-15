@@ -6,9 +6,11 @@ import React from 'react';
 import dynamic from 'next/dynamic';
 
 // https://nextjs.org/docs/app/building-your-application/optimizing/lazy-loading#nextdynamic
+// Prevents window is not defined error; also loads a placeholder of the same
+// height as the navbar to prevent layout shift
 const Navigation = dynamic(
 	() => import('@src/app/components/navigation/Navigation'),
-	{ ssr: false }
+	{ ssr: false, loading: () => <div className="h-nav"></div> }
 );
 
 const inter = Inter({ subsets: ['latin'] });
