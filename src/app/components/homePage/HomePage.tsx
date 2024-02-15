@@ -37,7 +37,7 @@ export default function HomePage({
 			>
 				<section aria-label="About" className="pb-16 lg:pb-24">
 					<h3
-						className="sticky top-nav pb-2 w-full bg-theme/90
+						className="sticky top-nav pb-2 w-full bg-theme/95
 					text-primary tracking-widest font-bold uppercase
 					lg:sr-only lg:opacity-0"
 					>
@@ -47,7 +47,7 @@ export default function HomePage({
 				</section>
 				<section aria-label="Experience" className="pb-16">
 					<h3
-						className="sticky top-nav pb-2 w-full bg-theme/90
+						className="sticky top-nav pb-2 w-full bg-theme/95
 					text-primary tracking-widest font-bold uppercase"
 					>
 						{experienceLabel}
