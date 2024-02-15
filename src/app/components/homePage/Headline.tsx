@@ -1,9 +1,10 @@
-export const Headline = ({ text }: { text: string }) =>
-	text.split('|').map((str, index) => (
-		<h2
-			key={index}
-			className="text-lg lg:text-xl font-semibold text-themeHighlight"
-		>
-			{str}
+export const Headline = ({ text }: { text: string }) => {
+	const strArray = text.split('| ');
+	return (
+		<h2 className="text-lg lg:text-xl font-semibold text-themeHighlight">
+			{strArray[0]}
+			<br />
+			{strArray[1]}
 		</h2>
-	));
+	);
+};
