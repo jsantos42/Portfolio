@@ -29,37 +29,30 @@ export const NavBar = ({
 	);
 
 	return (
-		<>
-			<div className="w-full h-nav bg-theme sticky top-0 z-40 antialiased">
-				<div className="px-4 h-full">
-					<div className="flex justify-end items-center h-full">
-						<div
-							className={`flex items-center ${
-								isMobile ? 'gap-1' : 'gap-8'
-							}`}
-						>
-							{isMobile ? (
-								<>
-									{languageSwitcher()}
-									<HamburgerMenu
-										{...{ isNavModalOpen, toggleNavModal }}
-									/>
-								</>
-							) : (
-								<>
-									<PageList
-										{...{
-											lang,
-											classes: 'flex gap-x-8 text-theme',
-										}}
-									/>
-									{languageSwitcher()}
-								</>
-							)}
-						</div>
-					</div>
-				</div>
+		<nav
+			className="w-full h-nav sticky top-0 z-40 px-4 flex justify-end
+				items-center bg-theme antialiased"
+		>
+			<div className={`flex items-center gap-${isMobile ? '1' : '8'}`}>
+				{isMobile ? (
+					<>
+						{languageSwitcher()}
+						<HamburgerMenu
+							{...{ isNavModalOpen, toggleNavModal }}
+						/>
+					</>
+				) : (
+					<>
+						<PageList
+							{...{
+								lang,
+								classes: 'flex gap-x-8 text-theme',
+							}}
+						/>
+						{languageSwitcher()}
+					</>
+				)}
 			</div>
-		</>
+		</nav>
 	);
 };
