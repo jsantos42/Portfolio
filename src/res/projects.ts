@@ -4,6 +4,7 @@ import face_detector_gif from '@public/images/projects/face_detector.gif';
 import online_booking_gif from '@public/images/projects/online_booking.gif';
 import portfolio_v1_gif from '@public/images/projects/portfolio_v1.gif';
 import portfolio_v2_gif from '@public/images/projects/portfolio_v2.gif';
+import bi_dashboard from '@public/images/projects/bi_dashboard.gif';
 import pokemon_gif from '@public/images/projects/pokemon.gif';
 import notepad_gif from '@public/images/projects/notepad.gif';
 import minishell_gif from '@public/images/projects/minishell.gif';
@@ -37,6 +38,23 @@ export const projects: Project[] = [
 		db: undefined,
 		testingFramework: undefined,
 		date: ['2023-12'],
+	},
+	{
+		title: 'BI Dashboard',
+		img: bi_dashboard,
+		brief: {
+			en: 'Dashboard with several charts made with Chart.js and ApexCharts',
+			fr: 'Tableau de bord avec plusieurs graphiques réalisés avec Chart.js et ApexCharts',
+			pt: 'Dashboard com vários gráficos feitos com Chart.js e ApexCharts',
+		},
+		repo: 'https://github.com/jsantos42/bi_dashboard',
+		field: ['Front End'],
+		language: ['TypeScript'],
+		framework: ['Next.js', 'React.js'],
+		styling: ['Tailwind CSS'],
+		db: undefined,
+		testingFramework: undefined,
+		date: ['2024-01'],
 	},
 	{
 		title: 'Online Shop API',
