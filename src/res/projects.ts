@@ -11,6 +11,7 @@ import minishell_gif from '@public/images/projects/minishell.gif';
 import cub3d_gif from '@public/images/projects/cub3d.gif';
 import so_long_gif from '@public/images/projects/so_long.gif';
 import philo_gif from '@public/images/projects/philo.gif';
+import flashcards_png from '@public/images/projects/flashcards.png';
 import {
 	Database,
 	Field,
@@ -22,6 +23,23 @@ import {
 } from '@src/types';
 
 export const projects: Project[] = [
+	{
+		title: 'Flashcards',
+		img: flashcards_png,
+		brief: {
+			en: 'Flashcards app to help memorize information',
+			fr: 'Application de cartes mémoire',
+			pt: 'Aplicação de flashcards',
+		},
+		repo: 'https://github.com/jsantos42/flashcards',
+		field: ['Front End', "Back End"],
+		language: ['TypeScript'],
+		framework: ['Next.js', 'React.js', "Node.js", "Express.js"],
+		styling: ['Tailwind CSS'],
+		db: ['MySQL'],
+		testingFramework: ['Jest'],
+		date: ['2024-04'],
+	},
 	{
 		title: 'Portfolio v2',
 		img: portfolio_v2_gif,
@@ -282,7 +300,7 @@ export const stylingFrameworks: StylingFramework[] = [
 
 export const db: Database[] = ['MySQL', 'PostgreSQL'];
 
-export const testingFrameworks: TestingFramework[] = ['PHPunit'];
+export const testingFrameworks: TestingFramework[] = ['PHPunit', 'Jest'];
 
 const STARTING_YEAR = 2020;
 const length = new Date().getFullYear() - STARTING_YEAR + 1;

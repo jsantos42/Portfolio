@@ -142,4 +142,4 @@ export type StylingFramework =
 
 export type Database = 'MySQL' | 'PostgreSQL';
 
-export type TestingFramework = 'PHPunit';
+export type TestingFramework = 'PHPunit' | 'Jest';
