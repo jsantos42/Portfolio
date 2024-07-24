@@ -43,4 +43,4 @@ export default function Navigation({ lang }: { lang: SupportedLocale }) {
 			) : null}
 		</>
 	);
-};
+}

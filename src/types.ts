@@ -36,7 +36,13 @@ export type HomePageContent = {
 		startDate: string;
 		endDate: string;
 		description: string;
-		stack: (ProgrammingLanguage | Framework | StylingFramework | Database | TestingFramework)[]
+		stack: (
+			| ProgrammingLanguage
+			| Framework
+			| StylingFramework
+			| Database
+			| TestingFramework
+		)[];
 	}[];
 };
 

@@ -1,8 +1,4 @@
-export const CloseButton = ({
-	toggleModal,
-}: {
-	toggleModal: () => void;
-}) => {
+export const CloseButton = ({ toggleModal }: { toggleModal: () => void }) => {
 	return (
 		<button onClick={toggleModal}>
 			<svg
