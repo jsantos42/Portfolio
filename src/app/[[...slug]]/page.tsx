@@ -38,17 +38,11 @@ export default function Page({
 	params: { slug: [SupportedLocale, string] };
 }) {
 	const dict = getDictionaries()[currentLocale];
+	const componentMap = {
+		[getSlug(dict.home.pageName)]: HomePage,
+		[getSlug(dict.projects.pageName)]: ProjectsPage,
+	};
+	const ComponentToRender = componentMap[remainingPathname] || HomePage;
 
-	let componentToRender: React.JSX.Element;
-	switch (remainingPathname) {
-		case getSlug(dict.home.pageName):
-			componentToRender = <HomePage {...{ currentLocale }} />;
-			break;
-		case getSlug(dict.projects.pageName):
-			componentToRender = <ProjectsPage {...{ currentLocale }} />;
-			break;
-		default:
-			componentToRender = <HomePage {...{ currentLocale }} />;
-	}
-	return <>{componentToRender}</>;
+	return <ComponentToRender {...{ currentLocale }} />;
 }
