@@ -18,7 +18,8 @@ const inter = Inter({ subsets: ['latin'] });
 export const metadata: Metadata = {
 	title: 'João Almeida Santos',
 	description: 'Fullstack developer | Former Medical Doctor',
-	keywords: 'developer, doctor, fullstack, react, next, typescript, react-native',
+	keywords:
+		'developer, doctor, fullstack, react, next, typescript, react-native',
 };
 
 export const generateStaticParams = () => {

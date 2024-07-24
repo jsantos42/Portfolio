@@ -29,7 +29,6 @@ export const getInfoSvg = (info: InfoType) => {
 	}
 };
 
-
 export const getInfoLink = (info: InfoType, data: string) => {
 	switch (info) {
 		case 'phoneNumber':
