@@ -1,14 +1,14 @@
-import {Data, InfoType} from "@src/types";
-import {emailSvg, gitHubSvg, linkedInSvg, phoneSvg} from "@src/res/svg";
+import { Data, InfoType } from '@src/types';
+import { emailSvg, gitHubSvg, linkedInSvg, phoneSvg } from '@src/res/svg';
 
 export const data: Data = {
-	name: process.env.MY_NAME || '',
+	name: process.env.NEXT_PUBLIC_MY_NAME || '',
 	info: {
-		phoneNumber: process.env.PHONE_NUMBER || '',
-		emailAddress: process.env.EMAIL_ADDRESS || '',
-		linkedInUser: process.env.LINKEDIN_USER || '',
-		gitHubUser: process.env.GITHUB_USER || '',
-		website: process.env.WEBSITE || '',
+		phoneNumber: process.env.NEXT_PUBLIC_PHONE_NUMBER || '',
+		emailAddress: process.env.NEXT_PUBLIC_EMAIL_ADDRESS || '',
+		linkedInUser: process.env.NEXT_PUBLIC_LINKEDIN_USER || '',
+		gitHubUser: process.env.NEXT_PUBLIC_GITHUB_USER || '',
+		website: process.env.NEXT_PUBLIC_WEBSITE || '',
 	},
 };
 
