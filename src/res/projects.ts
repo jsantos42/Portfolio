@@ -48,7 +48,7 @@ export const projects: Project[] = [
 			fr: 'Portfolio personnel présentant mes projets et mon CV',
 			pt: 'Website pessoal com os meus projectos e currículo',
 		},
-		repo: 'https://jsantos.me',
+		repo: 'https://github.com/jsantos42/portfolio',
 		field: ['Front End'],
 		language: ['TypeScript'],
 		framework: ['Next.js', 'React.js'],
