@@ -20,6 +20,9 @@ export const metadata: Metadata = {
 	description: 'Fullstack developer | Former Medical Doctor',
 	keywords:
 		'developer, doctor, fullstack, react, next, typescript, react-native',
+	icons: {
+		icon: '/favicon.png',
+	},
 };
 
 export const generateStaticParams = () => {

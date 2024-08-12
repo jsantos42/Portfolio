@@ -15,7 +15,7 @@ const supportedLocales: SupportedLocale[] = [defaultLocale, 'fr', 'pt'];
 // MIDDLEWARE CONFIG (use `?!` to exclude routes from the middleware)
 //==============================================================================
 export const config = {
-	matcher: ['/((?!api|_next/static|_next/image|favicon.ico).*)'],
+	matcher: ['/((?!api|_next/static|_next/image|favicon.png).*)'],
 };
 
 //==============================================================================
