@@ -1,17 +1,30 @@
 import online_shop_api_png from '@public/images/projects/online_shop_api.png';
+import fast_food_png from '@public/images/projects/fast_food.png';
 import fast_food_gif from '@public/images/projects/fast_food.gif';
+import face_detector_png from '@public/images/projects/face_detector.png';
 import face_detector_gif from '@public/images/projects/face_detector.gif';
+import online_booking_png from '@public/images/projects/online_booking.png';
 import online_booking_gif from '@public/images/projects/online_booking.gif';
+import portfolio_v1_png from '@public/images/projects/portfolio_v1.png';
 import portfolio_v1_gif from '@public/images/projects/portfolio_v1.gif';
+import portfolio_v2_png from '@public/images/projects/portfolio_v2.png';
 import portfolio_v2_gif from '@public/images/projects/portfolio_v2.gif';
-import bi_dashboard from '@public/images/projects/bi_dashboard.gif';
+import bi_dashboard_png from '@public/images/projects/bi_dashboard.png';
+import bi_dashboard_gif from '@public/images/projects/bi_dashboard.gif';
+import pokemon_png from '@public/images/projects/pokemon.png';
 import pokemon_gif from '@public/images/projects/pokemon.gif';
+import notepad_png from '@public/images/projects/notepad.png';
 import notepad_gif from '@public/images/projects/notepad.gif';
+import minishell_png from '@public/images/projects/minishell.png';
 import minishell_gif from '@public/images/projects/minishell.gif';
+import cub3d_png from '@public/images/projects/cub3d.png';
 import cub3d_gif from '@public/images/projects/cub3d.gif';
+import so_long_png from '@public/images/projects/so_long.png';
 import so_long_gif from '@public/images/projects/so_long.gif';
+import philo_png from '@public/images/projects/philo.png';
 import philo_gif from '@public/images/projects/philo.gif';
 import flashcards_png from '@public/images/projects/flashcards.png';
+import flashcards_gif from '@public/images/projects/flashcards.gif';
 import {
 	Database,
 	Field,
@@ -25,7 +38,8 @@ import {
 export const projects: Project[] = [
 	{
 		title: 'Flashcards',
-		img: flashcards_png,
+		staticImg: flashcards_png,
+		gif: flashcards_gif,
 		brief: {
 			en: 'Flashcards app to help memorize information',
 			fr: 'Application de cartes mémoire',
@@ -42,7 +56,8 @@ export const projects: Project[] = [
 	},
 	{
 		title: 'Portfolio v2',
-		img: portfolio_v2_gif,
+		staticImg: portfolio_v2_png,
+		gif: portfolio_v2_gif,
 		brief: {
 			en: 'Personal website showcasing my projects and resume',
 			fr: 'Portfolio personnel présentant mes projets et mon CV',
@@ -59,7 +74,8 @@ export const projects: Project[] = [
 	},
 	{
 		title: 'BI Dashboard',
-		img: bi_dashboard,
+		staticImg: bi_dashboard_png,
+		gif: bi_dashboard_gif,
 		brief: {
 			en: 'Dashboard with several charts made with Chart.js and ApexCharts',
 			fr: 'Tableau de bord avec plusieurs graphiques réalisés avec Chart.js et ApexCharts',
@@ -76,7 +92,9 @@ export const projects: Project[] = [
 	},
 	{
 		title: 'Online Shop API',
-		img: online_shop_api_png,
+		staticImg: online_shop_api_png,
+		// no gif available
+		gif: online_shop_api_png,
 		brief: {
 			en: 'API with OAuth2 authentication that sends confirmation emails to clients',
 			fr: 'API avec authentification OAuth2 qui envoie des emails de confirmation aux clients',
@@ -93,7 +111,8 @@ export const projects: Project[] = [
 	},
 	{
 		title: 'Fast-Food and Schools in Portugal',
-		img: fast_food_gif,
+		staticImg: fast_food_png,
+		gif: fast_food_gif,
 		brief: {
 			en: 'Datascience project to find out a potential geographical clustering',
 			fr: 'Projet de datascience pour trouver un regroupement géographique potentiel',
@@ -110,7 +129,8 @@ export const projects: Project[] = [
 	},
 	{
 		title: 'Face Detector',
-		img: face_detector_gif,
+		staticImg: face_detector_png,
+		gif: face_detector_gif,
 		brief: {
 			en: 'Fullstack project, with API endpoints and login access',
 			fr: 'Projet fullstack, avec des endpoints API et un accès de connexion',
@@ -127,7 +147,8 @@ export const projects: Project[] = [
 	},
 	{
 		title: 'Online Booking',
-		img: online_booking_gif,
+		staticImg: online_booking_png,
+		gif: online_booking_gif,
 		brief: {
 			en: 'Single Page Application to schedule appointments',
 			fr: 'Application Web Monopage pour planifier des rendez-vous',
@@ -144,7 +165,8 @@ export const projects: Project[] = [
 	},
 	{
 		title: 'Portfolio v1',
-		img: portfolio_v1_gif,
+		staticImg: portfolio_v1_png,
+		gif: portfolio_v1_gif,
 		brief: {
 			en: 'My first portfolio website showcasing my main projects',
 			fr: 'Mon premier site web de portfolio présentant mes principaux projets',
@@ -161,7 +183,8 @@ export const projects: Project[] = [
 	},
 	{
 		title: 'Moves of Pokémons',
-		img: pokemon_gif,
+		staticImg: pokemon_png,
+		gif: pokemon_gif,
 		brief: {
 			en: 'Filterable list, using AJAX requests and a public API',
 			fr: 'Liste filtrable, en utilisant des requêtes AJAX et une API publique',
@@ -178,7 +201,8 @@ export const projects: Project[] = [
 	},
 	{
 		title: 'Notepad',
-		img: notepad_gif,
+		staticImg: notepad_png,
+		gif: notepad_gif,
 		brief: {
 			en: 'Simple desktop app made with Qt',
 			fr: 'Application de bureau simple faite avec Qt',
@@ -195,7 +219,8 @@ export const projects: Project[] = [
 	},
 	{
 		title: 'Minishell',
-		img: minishell_gif,
+		staticImg: minishell_png,
+		gif: minishell_gif,
 		brief: {
 			en: 'A Unix shell, implemented with an Abstract Syntax Tree',
 			fr: 'Un shell Unix, implémenté avec un Arbre de la Syntaxe Abstraite',
@@ -212,7 +237,8 @@ export const projects: Project[] = [
 	},
 	{
 		title: 'Cub3D',
-		img: cub3d_gif,
+		staticImg: cub3d_png,
+		gif: cub3d_gif,
 		brief: {
 			en: '3D maze using raycasting',
 			fr: 'Labyrinthe 3D utilisant le raycasting',
@@ -229,7 +255,8 @@ export const projects: Project[] = [
 	},
 	{
 		title: 'So Long',
-		img: so_long_gif,
+		staticImg: so_long_png,
+		gif: so_long_gif,
 		brief: {
 			en: '2D game, using textures and sprites',
 			fr: 'Jeu 2D, utilisant des textures et des sprites',
@@ -246,7 +273,8 @@ export const projects: Project[] = [
 	},
 	{
 		title: 'Dining Philosophers',
-		img: philo_gif,
+		staticImg: philo_png,
+		gif: philo_gif,
 		brief: {
 			en: 'Implementation of a concurrent algorithm, using threads',
 			fr: "Implémentation d'un algorithme concurrent, en utilisant des threads",

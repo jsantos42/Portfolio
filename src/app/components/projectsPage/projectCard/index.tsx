@@ -8,9 +8,13 @@ import { ProjectImage } from './ProjectImage';
 export const ProjectCard = ({
 	project,
 	lang,
+	index,
+	isMobile,
 }: {
 	project: Project;
 	lang: SupportedLocale;
+	index: number;
+	isMobile: boolean;
 }) => (
 	<Link
 		key={project.title}
@@ -26,7 +30,7 @@ export const ProjectCard = ({
 					hover:bg-highlight rounded-xl hover:shadow-grid"
 		>
 			<ProjectTitle {...{ project }} />
-			<ProjectImage {...{ project }} />
+			<ProjectImage isMobile={isMobile} {...{ project, index }} />
 			<div className="grid grid-rows-projects gap-y-2 items-center">
 				<ProjectStack {...{ project }} />
 				<ProjectBrief {...{ project, lang }} />

@@ -120,6 +120,7 @@ export default function ProjectsPage({
 				) : null}
 				<ProjectsGrid
 					lang={currentLocale}
+					isMobile={isMobile}
 					{...{ filteredSortedProjects }}
 				/>
 			</div>

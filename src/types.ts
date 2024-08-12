@@ -81,7 +81,8 @@ export type Data = {
 
 export type Project = {
 	title: string;
-	img: StaticImageData;
+	staticImg: StaticImageData;
+	gif: StaticImageData;
 	repo: string;
 	brief: {
 		[locale in SupportedLocale]: string;
