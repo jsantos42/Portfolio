@@ -25,11 +25,11 @@ environments, on projects that **improve the user experience** and that have a
 						startDate: 'Sep 2022',
 						endDate: 'present',
 						description: `
-• Cut down response times by up to 80%, by optimising API endpoints
-• Improved business intelligence for the commercial team, by developing endpoints for KPI extraction
-• Created a staging environment, by containerizing the app with Docker Compose
-• Created tests for every new feature (QUnit and PHPUnit)
-• Automated routine tasks with Python scripts`,
+              • Cut down response times by up to 80%, by optimising API endpoints
+              • Improved business intelligence for the commercial team, by developing endpoints for KPI extraction
+              • Created a staging environment, by containerizing the app with Docker Compose
+              • Created tests for every new feature (QUnit and PHPUnit)
+              • Automated routine tasks with Python scripts`,
 						stack: ['Ember.js', 'Laravel', 'PHP'],
 					},
 					{
@@ -39,8 +39,8 @@ environments, on projects that **improve the user experience** and that have a
 						startDate: 'Jan 2022',
 						endDate: 'Jun 2022',
 						description: `
-• Developed the frontend (HMI) of the BMW’s cars’ infotainment
-• Added new features, with corresponding Unit Tests`,
+              • Developed the frontend (HMI) of the BMW’s cars’ infotainment
+              • Added new features, with corresponding Unit Tests`,
 						stack: ['C++', 'Qt'],
 					},
 					{
@@ -50,8 +50,8 @@ environments, on projects that **improve the user experience** and that have a
 						startDate: 'Jun 2020',
 						endDate: 'Dec 2021',
 						description: `
-• Studied the clustering of fast-food restaurants around schools
-• Analysed geospatial data`,
+              • Studied the clustering of fast-food restaurants around schools
+              • Analysed geospatial data`,
 						stack: ['Python', 'R'],
 					},
 					{
@@ -61,8 +61,8 @@ environments, on projects that **improve the user experience** and that have a
 						startDate: 'Mar 2018',
 						endDate: 'Jul 2021',
 						description: `
-• Worked in the ER department of the largest hospital in the country
-• Attended clerkships in Paris (>1y) and Uppsala`,
+              • Worked in the ER department of the largest hospital in the country
+              • Attended clerkships in Paris (>1y) and Uppsala`,
 						stack: [],
 					},
 				],
@@ -121,11 +121,11 @@ Cependant, mon engagement va au-delà de la réussite technique: je cherche à f
 						startDate: 'Sep 2022',
 						endDate: 'actuel',
 						description: `
-• Réduction des temps de réponse de 80% en optimisant les points d'API
-• Amélioration de la business intelligence pour l'équipe commerciale, en développant des points d'API pour l'extraction de KPI
-• Création d'un environnement de staging, en containerisant l'application avec Docker Compose
-• Création de tests pour chaque nouvelle fonctionnalité (QUnit et PHPUnit)
-• Automatisation des tâches de routine avec des scripts Python`,
+              • Réduction des temps de réponse de 80% en optimisant les points d'API
+              • Amélioration de la business intelligence pour l'équipe commerciale, en développant des points d'API pour l'extraction de KPI
+              • Création d'un environnement de staging, en containerisant l'application avec Docker Compose
+              • Création de tests pour chaque nouvelle fonctionnalité (QUnit et PHPUnit)
+              • Automatisation des tâches de routine avec des scripts Python`,
 						stack: ['Ember.js', 'Laravel', 'PHP'],
 					},
 					{
@@ -135,8 +135,8 @@ Cependant, mon engagement va au-delà de la réussite technique: je cherche à f
 						startDate: 'Jan 2022',
 						endDate: 'Jun 2022',
 						description: `
-• Développement du frontend (HMI) de l'infotainment des voitures BMW
-• Ajout de nouvelles fonctionnalités, avec les tests unitaires correspondants`,
+              • Développement du frontend (HMI) de l'infotainment des voitures BMW
+              • Ajout de nouvelles fonctionnalités, avec les tests unitaires correspondants`,
 						stack: ['C++', 'Qt'],
 					},
 					{
@@ -146,8 +146,8 @@ Cependant, mon engagement va au-delà de la réussite technique: je cherche à f
 						startDate: 'Jun 2020',
 						endDate: 'Dec 2021',
 						description: `
-• Étude du clustering des fast-foods autour des écoles
-• Analyse de données géospatiales`,
+              • Étude du clustering des fast-foods autour des écoles
+              • Analyse de données géospatiales`,
 						stack: ['Python', 'R'],
 					},
 					{
@@ -157,8 +157,8 @@ Cependant, mon engagement va au-delà de la réussite technique: je cherche à f
 						startDate: 'Mar 2018',
 						endDate: 'Jul 2021',
 						description: `
-• Travail aux urgences du plus grand hôpital du pays
-• Stages à Paris (>1an) et Uppsala`,
+              • Travail aux urgences du plus grand hôpital du pays
+              • Stages à Paris (>1an) et Uppsala`,
 						stack: [],
 					},
 				],
@@ -221,11 +221,11 @@ significativo** no nosso mundo.
 						startDate: 'Sep 2022',
 						endDate: 'actual',
 						description: `
-• Reduzi os tempos de resposta até 80%, optimizando os endpoints da API
-• Melhorei a BI para a equipa comercial, desenvolvendo endpoints para extração de KPIs
-• Criei um ambiente de staging, containerizando a aplicação com Docker Compose
-• Criei testes para cada nova funcionalidade (QUnit e PHPUnit)
-• Automatizei tarefas rotineiras com scripts Python`,
+              • Reduzi os tempos de resposta até 80%, optimizando os endpoints da API
+              • Melhorei a BI para a equipa comercial, desenvolvendo endpoints para extração de KPIs
+              • Criei um ambiente de staging, containerizando a aplicação com Docker Compose
+              • Criei testes para cada nova funcionalidade (QUnit e PHPUnit)
+              • Automatizei tarefas rotineiras com scripts Python`,
 						stack: ['Ember.js', 'Laravel', 'PHP'],
 					},
 					{
@@ -235,8 +235,8 @@ significativo** no nosso mundo.
 						startDate: 'Jan 2022',
 						endDate: 'Jun 2022',
 						description: `
-• Desenvolvi o frontend (HMI) do infotainment dos carros da BMW
-• Adicionei novas funcionalidades, com os respetivos testes unitários`,
+              • Desenvolvi o frontend (HMI) do infotainment dos carros da BMW
+              • Adicionei novas funcionalidades, com os respetivos testes unitários`,
 						stack: ['C++', 'Qt'],
 					},
 					{
@@ -246,8 +246,8 @@ significativo** no nosso mundo.
 						startDate: 'Jun 2020',
 						endDate: 'Dec 2021',
 						description: `
-• Estudei o clustering de restaurantes de fast-food em torno das escolas
-• Analisei dados geoespaciais`,
+              • Estudei o clustering de restaurantes de fast-food em torno das escolas
+              • Analisei dados geoespaciais`,
 						stack: ['Python', 'R'],
 					},
 					{
@@ -257,8 +257,8 @@ significativo** no nosso mundo.
 						startDate: 'Mar 2018',
 						endDate: 'Jul 2021',
 						description: `
-• Trabalhei no serviço de urgência do maior hospital do país
-• Frequentei estágios em Paris (>1ano) e Uppsala`,
+              • Trabalhei no serviço de urgência do maior hospital do país
+              • Frequentei estágios em Paris (>1ano) e Uppsala`,
 						stack: [],
 					},
 				],
