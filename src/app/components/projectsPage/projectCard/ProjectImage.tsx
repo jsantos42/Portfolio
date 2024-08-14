@@ -42,6 +42,7 @@ export const ProjectImage = ({
 			placeholder="empty"
 			className={imageClasses}
 			priority={isFirstRow() || shouldRenderStaticImg()}
+			unoptimized={!shouldRenderStaticImg()}
 		/>
 	);
 };
