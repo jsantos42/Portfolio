@@ -9,18 +9,17 @@ import {
 	testingFrameworks,
 	years,
 } from '@src/res/projects';
-import { useEffect } from 'react';
+import { useContext, useEffect } from 'react';
 import { preventScroll } from '@src/app/utils';
+import { ScreenTypeContext } from '.';
 
 export const FilterSidebar = ({
-	isMobile,
 	expandAllButton,
 	collapseAllButton,
 	filtersLabels,
 	selectedOptions,
 	setSelectedOptions,
 }: {
-	isMobile: boolean;
 	expandAllButton: string;
 	collapseAllButton: string;
 	filtersLabels: ProjectFiltersDict;
@@ -36,6 +35,7 @@ export const FilterSidebar = ({
 		testingFramework: testingFrameworks,
 		date: years,
 	};
+	const isMobile = useContext(ScreenTypeContext);
 
 	useEffect(() => {
 		if (isMobile) {

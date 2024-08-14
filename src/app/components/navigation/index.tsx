@@ -1,11 +1,13 @@
 'use client';
 
-import { useState } from 'react';
+import { createContext, useState } from 'react';
 import { NavBar } from '@src/app/components/navigation/NavBar';
 import { SupportedLocale } from '@src/types';
 import { NavModal } from '@src/app/components/navigation/modals/NavModal';
 import { LangModal } from '@src/app/components/navigation/modals/LangModal';
 import { useMobileState } from '@src/app/utils';
+
+export const ScreenTypeContext = createContext<null | boolean>(null);
 
 export default function Navigation({ lang }: { lang: SupportedLocale }) {
 	const [isNavModalOpen, setIsNavModalOpen] = useState(false);
@@ -26,7 +28,7 @@ export default function Navigation({ lang }: { lang: SupportedLocale }) {
 	};
 
 	return (
-		<>
+		<ScreenTypeContext.Provider value={isMobile}>
 			<NavBar
 				{...{
 					lang,
@@ -34,13 +36,12 @@ export default function Navigation({ lang }: { lang: SupportedLocale }) {
 					toggleLangModal,
 					isNavModalOpen,
 					isLangModalOpen,
-					isMobile,
 				}}
 			/>
 			{isNavModalOpen ? <NavModal {...{ lang, toggleNavModal }} /> : null}
 			{isLangModalOpen ? (
-				<LangModal {...{ lang, toggleLangModal, isMobile }} />
+				<LangModal {...{ lang, toggleLangModal }} />
 			) : null}
-		</>
+		</ScreenTypeContext.Provider>
 	);
 }

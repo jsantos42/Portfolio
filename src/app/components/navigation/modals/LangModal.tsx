@@ -1,5 +1,5 @@
 import { Page, SupportedLocale } from '@src/types';
-import { useEffect } from 'react';
+import { useContext, useEffect } from 'react';
 import { preventScroll } from '@src/app/utils';
 import {
 	getDictionaries,
@@ -8,24 +8,23 @@ import {
 } from '@src/res/dictionaries';
 import { TouchableLink } from '@src/app/components/navigation/TouchableLink';
 import { usePathname } from 'next/navigation';
+import { ScreenTypeContext } from '..';
 
 export const LangModal = ({
 	lang,
 	toggleLangModal,
-	isMobile,
 }: {
 	lang: SupportedLocale;
 	toggleLangModal: () => void;
-	isMobile: boolean;
 }) => {
 	const dictionaries = getDictionaries();
 	const locales = Object.keys(dictionaries) as SupportedLocale[];
 	const dict = dictionaries[lang];
 	const currentRouteLabel = usePathname().split('/')[2];
-
 	const currentPage = Object.entries(dict).find(
 		([page, { pageName }]) => getSlug(pageName) === currentRouteLabel
 	)?.[0] as Page;
+	const isMobile = useContext(ScreenTypeContext);
 
 	useEffect(preventScroll);
 

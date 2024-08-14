@@ -1,5 +1,5 @@
 'use client';
-import { useEffect, useState } from 'react';
+import { createContext, useEffect, useState } from 'react';
 import {
 	Filters,
 	Project,
@@ -13,6 +13,8 @@ import { projects } from '@src/res/projects';
 import { ProjectsGrid } from '@src/app/components/projectsPage/ProjectsGrid';
 import { useMobileState } from '@src/app/utils';
 import { SortFilterButtons } from '@src/app/components/projectsPage/SortFilterButtons';
+
+export const ScreenTypeContext = createContext<null | boolean>(null);
 
 export default function ProjectsPage({
 	currentLocale,
@@ -91,11 +93,10 @@ export default function ProjectsPage({
 	}, [selectedOptions, sortBy]);
 
 	return (
-		<>
+		<ScreenTypeContext.Provider value={isMobile}>
 			<SortFilterButtons
 				projectsCount={filteredSortedProjects.length}
 				{...{
-					isMobile,
 					isFilterModalOpen,
 					filterResultsLabel,
 					filterButton,
@@ -109,7 +110,6 @@ export default function ProjectsPage({
 				{!isMobile || isFilterModalOpen ? (
 					<FilterSidebar
 						{...{
-							isMobile,
 							expandAllButton,
 							collapseAllButton,
 							filtersLabels,
@@ -120,11 +120,10 @@ export default function ProjectsPage({
 				) : null}
 				<ProjectsGrid
 					lang={currentLocale}
-					isMobile={isMobile}
 					{...{ filteredSortedProjects }}
 				/>
 			</div>
-		</>
+		</ScreenTypeContext.Provider>
 	);
 }
 

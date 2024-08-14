@@ -1,19 +1,19 @@
 import { Project } from '@src/types';
 import Image from 'next/image';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
+import { ScreenTypeContext } from '..';
 
 const imageClasses = 'w-full aspect-16/10 row-start-2 row-end-6';
 
 export const ProjectImage = ({
 	project,
 	index,
-	isMobile,
 }: {
 	project: Project;
 	index: number;
-	isMobile: boolean;
 }) => {
 	const [isHovering, setIsHovering] = useState(false);
+	const isMobile = useContext(ScreenTypeContext);
 
 	function getSrc() {
 		if (shouldRenderStaticImg()) {

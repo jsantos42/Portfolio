@@ -1,7 +1,8 @@
 import { SortCriteria } from '@src/types';
+import { useContext } from 'react';
+import { ScreenTypeContext } from '.';
 
 export const SortFilterButtons = ({
-	isMobile,
 	isFilterModalOpen,
 	projectsCount,
 	filterButton,
@@ -11,7 +12,6 @@ export const SortFilterButtons = ({
 	toggleFilterModal,
 	setSortBy,
 }: {
-	isMobile: boolean;
 	isFilterModalOpen: boolean;
 	projectsCount: number;
 	filterResultsLabel: string;
@@ -21,6 +21,8 @@ export const SortFilterButtons = ({
 	toggleFilterModal: () => void;
 	setSortBy: (method: SortCriteria) => void;
 }) => {
+	const isMobile = useContext(ScreenTypeContext);
+
 	return (
 		<div
 			className="h-sortFilterBar sticky top-nav px-4 py-2 z-10 flex
