@@ -20,17 +20,40 @@ environments, on projects that **improve the user experience** and that have a
 				experience: [
 					{
 						title: 'Full-Stack Developer',
+						company: 'Vita',
+						companyWebsite: 'https://vitameals.com/',
+						startDate: 'Nov 2023',
+						endDate: 'present',
+						description: `
+              • Migrate the web app, from WordPress and Vue.js to React and React Native
+              • Integrate back-end APIs, ensuring efficient data flow and reduced load times`,
+						stack: [
+							'React.js',
+							'Node.js',
+							'React Native',
+							'TypeScript',
+							'MySQL',
+						],
+					},
+					{
+						title: 'Full-Stack Developer',
 						company: 'haelsi',
 						companyWebsite: 'https://haelsi.at/',
 						startDate: 'Sep 2022',
-						endDate: 'present',
+						endDate: 'Sep 2023',
 						description: `
               • Cut down response times by up to 80%, by optimising API endpoints
               • Improved business intelligence for the commercial team, by developing endpoints for KPI extraction
               • Created a staging environment, by containerizing the app with Docker Compose
               • Created tests for every new feature (QUnit and PHPUnit)
               • Automated routine tasks with Python scripts`,
-						stack: ['Ember.js', 'Laravel', 'PHP'],
+						stack: [
+							'Ember.js',
+							'Laravel',
+							'PHP',
+							'Python',
+							'MySQL',
+						],
 					},
 					{
 						title: 'Software Engineer Intern',
@@ -116,17 +139,40 @@ Cependant, mon engagement va au-delà de la réussite technique: je cherche à f
 				experience: [
 					{
 						title: 'Développeur Full-Stack',
+						company: 'Vita',
+						companyWebsite: 'https://vitameals.com/',
+						startDate: 'Nov 2023',
+						endDate: 'actuel',
+						description: `
+              • Migration de l'application web, de WordPress et Vue.js vers React et React Native
+              • Intégration des APIs back-end, garantissant un flux de données efficace et des temps de chargement réduits`,
+						stack: [
+							'React.js',
+							'Node.js',
+							'React Native',
+							'TypeScript',
+							'MySQL',
+						],
+					},
+					{
+						title: 'Développeur Full-Stack',
 						company: 'haelsi',
 						companyWebsite: 'https://haelsi.at/',
 						startDate: 'Sep 2022',
-						endDate: 'actuel',
+						endDate: 'Sep 2023',
 						description: `
               • Réduction des temps de réponse de 80% en optimisant les points d'API
               • Amélioration de la business intelligence pour l'équipe commerciale, en développant des points d'API pour l'extraction de KPI
               • Création d'un environnement de staging, en containerisant l'application avec Docker Compose
               • Création de tests pour chaque nouvelle fonctionnalité (QUnit et PHPUnit)
               • Automatisation des tâches de routine avec des scripts Python`,
-						stack: ['Ember.js', 'Laravel', 'PHP'],
+						stack: [
+							'Ember.js',
+							'Laravel',
+							'PHP',
+							'Python',
+							'MySQL',
+						],
 					},
 					{
 						title: 'Ingénieur Logiciel Stagiaire',
@@ -216,17 +262,40 @@ significativo** no nosso mundo.
 				experience: [
 					{
 						title: 'Developer Full-Stack',
+						company: 'Vita',
+						companyWebsite: 'https://vitameals.com/',
+						startDate: 'Nov 2023',
+						endDate: 'presente',
+						description: `
+              • Migrei a aplicação web, de WordPress e Vue.js para React e React Native
+              • Integrei APIs back-end, garantindo um fluxo de dados eficiente e tempos de carregamento reduzidos`,
+						stack: [
+							'React.js',
+							'Node.js',
+							'React Native',
+							'TypeScript',
+							'MySQL',
+						],
+					},
+					{
+						title: 'Developer Full-Stack',
 						company: 'haelsi',
 						companyWebsite: 'https://haelsi.at/',
 						startDate: 'Sep 2022',
-						endDate: 'actual',
+						endDate: 'Sep 2023',
 						description: `
               • Reduzi os tempos de resposta até 80%, optimizando os endpoints da API
               • Melhorei a BI para a equipa comercial, desenvolvendo endpoints para extração de KPIs
               • Criei um ambiente de staging, containerizando a aplicação com Docker Compose
               • Criei testes para cada nova funcionalidade (QUnit e PHPUnit)
               • Automatizei tarefas rotineiras com scripts Python`,
-						stack: ['Ember.js', 'Laravel', 'PHP'],
+						stack: [
+							'Ember.js',
+							'Laravel',
+							'PHP',
+							'Python',
+							'MySQL',
+						],
 					},
 					{
 						title: 'Engenheiro de Software Estagiário',
