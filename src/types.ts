@@ -140,7 +140,8 @@ export type Framework =
 	| 'Node.js'
 	| 'Express.js'
 	| 'Laravel'
-	| 'Qt';
+	| 'Qt'
+	| 'Docker'; // not a framework but will stay here until adding a new category
 
 export type StylingFramework =
 	| 'Tailwind CSS'
