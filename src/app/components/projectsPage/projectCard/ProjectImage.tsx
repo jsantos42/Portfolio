@@ -3,8 +3,6 @@ import Image from 'next/image';
 import { useContext, useState } from 'react';
 import { ScreenTypeContext } from '..';
 
-const imageClasses = 'w-full aspect-16/10 row-start-2 row-end-6';
-
 export const ProjectImage = ({
 	project,
 	index,
@@ -14,6 +12,8 @@ export const ProjectImage = ({
 }) => {
 	const [isHovering, setIsHovering] = useState(false);
 	const isMobile = useContext(ScreenTypeContext);
+	const imageClasses = `max-h-[250px] row-start-2 row-end-6
+		${index === 0 ? 'w-auto' : 'w-full aspect-16/10'} `;
 
 	function getSrc() {
 		if (shouldRenderStaticImg()) {

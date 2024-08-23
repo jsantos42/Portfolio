@@ -25,6 +25,8 @@ import philo_png from '@public/images/projects/philo.png';
 import philo_gif from '@public/images/projects/philo.gif';
 import flashcards_png from '@public/images/projects/flashcards.png';
 import flashcards_gif from '@public/images/projects/flashcards.gif';
+import groceries_png from '@public/images/projects/groceries.png';
+import groceries_gif from '@public/images/projects/groceries.gif';
 import {
 	Database,
 	Field,
@@ -36,6 +38,24 @@ import {
 } from '@src/types';
 
 export const projects: Project[] = [
+	{
+		title: 'Groceries App',
+		staticImg: groceries_png,
+		gif: groceries_gif,
+		brief: {
+			en: 'Mobile app for a groceries list, featuring autocomplete',
+			fr: 'Application mobile pour une liste de courses, avec saisie semi-automatique',
+			pt: 'Aplicação móvel para uma lista de compras, com preenchimento automático',
+		},
+		repo: 'https://github.com/jsantos42/GroceriesApp',
+		field: ['Front End', 'Mobile'],
+		language: ['TypeScript'],
+		framework: ['React Native'],
+		styling: ['Tailwind CSS'],
+		db: undefined,
+		testingFramework: undefined,
+		date: ['2024-08'],
+	},
 	{
 		title: 'Flashcards',
 		staticImg: flashcards_png,
