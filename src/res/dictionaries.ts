@@ -8,7 +8,7 @@ const dictionaries: DictionaryWithLanguage = {
 				headline: 'Full-Stack Developer | Former Medical Doctor',
 				summaryLabel: 'About Me',
 				summary: `
-I began programming as a self-taught endeavor in **2020**, and became so passionate
+I began programming as a self-taught endeavor in **2020**, and I became so passionate
 about it that I **switched** to a software development career, after having dedicated 
 **11&nbsp;years** of my life to **Medicine**.\n
 Today, as a full-stack developer, I think outside of the box and have a unique 
@@ -20,26 +20,36 @@ environments, on projects that **improve the user experience** and that have a
 				experience: [
 					{
 						title: 'Full-Stack Developer',
+						company: 'Observador',
+						companyWebsite: 'https://observador.pt/',
+						startDate: 'Nov 2024',
+						endDate: 'present',
+						description: '',
+						stack: ['TypeScript', 'PHP', 'Go', 'WordPress'],
+					},
+					{
+						title: 'Full-Stack Developer',
 						company: 'Vita',
 						companyWebsite: 'https://vitameals.com/',
-						startDate: 'Nov 2023',
-						endDate: 'present',
+						startDate: 'Oct 2023',
+						endDate: 'Nov 2024',
 						description: `
               • Migrate the web app, from WordPress and Vue.js to React and React Native
               • Integrate back-end APIs, ensuring efficient data flow and reduced load times`,
 						stack: [
-							'React.js',
-							'Node.js',
-							'React Native',
 							'TypeScript',
-							'MySQL',
+							'PHP',
+							'React.js',
+							'React Native',
+							'Node.js',
+							'WordPress',
 						],
 					},
 					{
 						title: 'Full-Stack Developer',
 						company: 'haelsi',
 						companyWebsite: 'https://haelsi.at/',
-						startDate: 'Sep 2022',
+						startDate: 'Aug 2022',
 						endDate: 'Sep 2023',
 						description: `
               • Cut down response times by up to 80%, by optimising API endpoints
@@ -48,11 +58,11 @@ environments, on projects that **improve the user experience** and that have a
               • Created tests for every new feature (QUnit and PHPUnit)
               • Automated routine tasks with Python scripts`,
 						stack: [
-							'Ember.js',
-							'Laravel',
+							'JavaScript',
 							'PHP',
 							'Python',
-							'MySQL',
+							'Ember.js',
+							'Laravel',
 						],
 					},
 					{
@@ -139,26 +149,36 @@ Cependant, mon engagement va au-delà de la réussite technique: je cherche à f
 				experience: [
 					{
 						title: 'Développeur Full-Stack',
+						company: 'Observador',
+						companyWebsite: 'https://observador.pt/',
+						startDate: 'Nov 2024',
+						endDate: 'actuel',
+						description: '',
+						stack: ['TypeScript', 'PHP', 'Go', 'WordPress'],
+					},
+					{
+						title: 'Développeur Full-Stack',
 						company: 'Vita',
 						companyWebsite: 'https://vitameals.com/',
-						startDate: 'Nov 2023',
-						endDate: 'actuel',
+						startDate: 'Oct 2023',
+						endDate: 'Nov 2024',
 						description: `
               • Migration de l'application web, de WordPress et Vue.js vers React et React Native
               • Intégration des APIs back-end, garantissant un flux de données efficace et des temps de chargement réduits`,
 						stack: [
-							'React.js',
-							'Node.js',
-							'React Native',
 							'TypeScript',
-							'MySQL',
+							'PHP',
+							'React.js',
+							'React Native',
+							'Node.js',
+							'WordPress',
 						],
 					},
 					{
 						title: 'Développeur Full-Stack',
 						company: 'haelsi',
 						companyWebsite: 'https://haelsi.at/',
-						startDate: 'Sep 2022',
+						startDate: 'Aou 2022',
 						endDate: 'Sep 2023',
 						description: `
               • Réduction des temps de réponse de 80% en optimisant les points d'API
@@ -167,11 +187,11 @@ Cependant, mon engagement va au-delà de la réussite technique: je cherche à f
               • Création de tests pour chaque nouvelle fonctionnalité (QUnit et PHPUnit)
               • Automatisation des tâches de routine avec des scripts Python`,
 						stack: [
-							'Ember.js',
-							'Laravel',
+							'JavaScript',
 							'PHP',
 							'Python',
-							'MySQL',
+							'Ember.js',
+							'Laravel',
 						],
 					},
 					{
@@ -262,26 +282,36 @@ significativo** no nosso mundo.
 				experience: [
 					{
 						title: 'Developer Full-Stack',
+						company: 'Observador',
+						companyWebsite: 'https://observador.pt/',
+						startDate: 'Nov 2024',
+						endDate: 'presente',
+						description: '',
+						stack: ['TypeScript', 'PHP', 'Go', 'WordPress'],
+					},
+					{
+						title: 'Developer Full-Stack',
 						company: 'Vita',
 						companyWebsite: 'https://vitameals.com/',
-						startDate: 'Nov 2023',
-						endDate: 'presente',
+						startDate: 'Oct 2023',
+						endDate: 'Nov 2024',
 						description: `
               • Migrei a aplicação web, de WordPress e Vue.js para React e React Native
               • Integrei APIs back-end, garantindo um fluxo de dados eficiente e tempos de carregamento reduzidos`,
 						stack: [
-							'React.js',
-							'Node.js',
-							'React Native',
 							'TypeScript',
-							'MySQL',
+							'PHP',
+							'React.js',
+							'React Native',
+							'Node.js',
+							'WordPress',
 						],
 					},
 					{
 						title: 'Developer Full-Stack',
 						company: 'haelsi',
 						companyWebsite: 'https://haelsi.at/',
-						startDate: 'Sep 2022',
+						startDate: 'Ago 2022',
 						endDate: 'Sep 2023',
 						description: `
               • Reduzi os tempos de resposta até 80%, optimizando os endpoints da API
@@ -290,11 +320,11 @@ significativo** no nosso mundo.
               • Criei testes para cada nova funcionalidade (QUnit e PHPUnit)
               • Automatizei tarefas rotineiras com scripts Python`,
 						stack: [
-							'Ember.js',
-							'Laravel',
+							'JavaScript',
 							'PHP',
 							'Python',
-							'MySQL',
+							'Ember.js',
+							'Laravel',
 						],
 					},
 					{

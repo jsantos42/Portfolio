@@ -127,6 +127,7 @@ export type ProgrammingLanguage =
 	| 'TypeScript'
 	| 'JavaScript'
 	| 'PHP'
+	| 'Go'
 	| 'Python'
 	| 'R'
 	| 'C'
@@ -140,6 +141,7 @@ export type Framework =
 	| 'Node.js'
 	| 'Express.js'
 	| 'Laravel'
+	| 'WordPress'
 	| 'Qt'
 	| 'Docker'; // not a framework but will stay here until adding a new category
 
