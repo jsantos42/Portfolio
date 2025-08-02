@@ -24,7 +24,14 @@ environments, on projects that **improve the user experience** and that have a
 						companyWebsite: 'https://observador.pt/',
 						startDate: 'Nov 2024',
 						endDate: 'present',
-						description: '',
+						description: `
+              • Performed a major dependency upgrade of the whole website (node.js, packages, webpack, gulp, etc.)
+              • Created a backoffice platform so that our customer service staff could easily view and manage our clients' data
+              • Improved our bitbucket CI/CD pipeline by removing the build files from the repo, building on deploy, adding precommit hooks that would format and linter our code
+              • Created several promotional campaigns with A/B testing making use of Growthbook
+              • WordPress
+
+`,
 						stack: ['TypeScript', 'PHP', 'Go', 'WordPress'],
 					},
 					{
