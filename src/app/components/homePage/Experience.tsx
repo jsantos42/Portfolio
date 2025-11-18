@@ -25,14 +25,11 @@ export const Experience = ({
 						{position.title} @ {position.company}
 					</h1>
 					<ul className="text-sm text-theme/80">
-						{position.description
-							.split('•')
-							.slice(1)
-							.map(i => (
-								<li key={i} className="">
-									• {i}
-								</li>
-							))}
+						{position.description.split('\n').map((line, idx) => (
+							<li key={idx} className="whitespace-pre-wrap">
+								{line}
+							</li>
+						))}
 					</ul>
 					<ul
 						className="mt-2 flex flex-wrap justify-center

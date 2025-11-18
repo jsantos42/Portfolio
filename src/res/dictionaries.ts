@@ -24,12 +24,13 @@ I enjoy working in **challenging and evolving environments**, on projects that
 						startDate: 'Nov 2024',
 						endDate: 'present',
 						description: `
-              • Performed a major dependency upgrade of the whole website (node.js, packages, webpack, gulp, etc.)
-              • Created a backoffice platform so that our customer service staff could easily view and manage our clients' data
-              • Improved our bitbucket CI/CD pipeline by removing the build files from the repo, building on deploy, adding precommit hooks that would format and linter our code
-              • Created several promotional campaigns with A/B testing making use of Growthbook
-              • WordPress
-
+• Created a backoffice to allow customer service to manage clients' data
+• Performed a major dependency upgrade (PHP, node.js and npm packages)
+• Collaborated with external clients for content syndication, building endpoints and RSS feeds
+• Improved our DX:
+   • Streamlined our Bitbucket CI/CD pipeline with YAML anchors 
+   • Removed the build files from the repo, building on the pipeline
+   • Added pre-commit hooks to format and linter our code
 `,
 						stack: ['TypeScript', 'PHP', 'Go', 'WordPress'],
 					},
@@ -40,8 +41,8 @@ I enjoy working in **challenging and evolving environments**, on projects that
 						startDate: 'Sep 2023',
 						endDate: 'Nov 2024',
 						description: `
-              • Migrate the web app, from WordPress and Vue.js to React and React Native
-              • Integrate back-end APIs, ensuring efficient data flow and reduced load times`,
+• Migrated the web app, from WordPress and Vue.js to React and React Native
+• Enforced minimal technical debt through rigorous code standards, code reviews, and automated testing`,
 						stack: [
 							'TypeScript',
 							'PHP',
@@ -58,11 +59,11 @@ I enjoy working in **challenging and evolving environments**, on projects that
 						startDate: 'Sep 2022',
 						endDate: 'Sep 2023',
 						description: `
-              • Cut down response times by up to 80%, by optimising API endpoints
-              • Improved business intelligence for the commercial team, by developing endpoints for KPI extraction
-              • Created a staging environment, by containerizing the app with Docker Compose
-              • Created tests for every new feature (QUnit and PHPUnit)
-              • Automated routine tasks with Python scripts`,
+• Cut down response times, by optimising SQL queries
+• Improved business intelligence for the commercial team, by developing endpoints for KPI extraction
+• Created a staging environment, by containerizing the app with Docker Compose
+• Created tests for every new feature (QUnit and PHPUnit)
+• Automated routine tasks with Python scripts`,
 						stack: [
 							'JavaScript',
 							'PHP',
@@ -78,8 +79,8 @@ I enjoy working in **challenging and evolving environments**, on projects that
 						startDate: 'Jan 2022',
 						endDate: 'Jun 2022',
 						description: `
-              • Developed the frontend (HMI) of the BMW’s cars’ infotainment
-              • Added new features, with corresponding Unit Tests`,
+• Developed the frontend (HMI) of the BMW’s cars’ infotainment
+• Added new features, with corresponding Unit Tests`,
 						stack: ['C++', 'Qt'],
 					},
 					{
@@ -89,8 +90,8 @@ I enjoy working in **challenging and evolving environments**, on projects that
 						startDate: 'Jun 2020',
 						endDate: 'Dec 2021',
 						description: `
-              • Studied the clustering of fast-food restaurants around schools
-              • Analysed geospatial data`,
+• Studied the clustering of fast-food restaurants around schools
+• Analysed geospatial data`,
 						stack: ['Python', 'R'],
 					},
 					{
@@ -100,8 +101,8 @@ I enjoy working in **challenging and evolving environments**, on projects that
 						startDate: 'Mar 2018',
 						endDate: 'Jul 2021',
 						description: `
-              • Worked in the ER department of the largest hospital in the country
-              • Attended clerkships in Paris (>1y) and Uppsala`,
+• Worked in the ER department of the largest hospital in the country
+• Attended clerkships in Paris (>1y) and Uppsala`,
 						stack: [],
 					},
 				],
@@ -155,7 +156,15 @@ projets qui **améliorent l’UI** et qui ont un **impact significatif sur notre
 						companyWebsite: 'https://observador.pt/',
 						startDate: 'Nov 2024',
 						endDate: 'actuel',
-						description: '',
+						description: `
+• Créé un backoffice pour permettre au service client de gérer les données des clients
+• Réalisé une mise à jour majeure des dépendances (PHP, Node.js et paquets npm)
+• Collaboré avec des clients externes pour la syndication de contenu, en développant des endpoints et des flux RSS
+• Amélioré notre DX :
+   • Rationalisé notre pipeline CI/CD Bitbucket avec des ancres YAML 
+   • Retiré les fichiers de build du repositoire, en s'appuyant sur le pipeline
+   • Ajouté des hooks pre-commit pour formater le code et exécuter le linter
+`,
 						stack: ['TypeScript', 'PHP', 'Go', 'WordPress'],
 					},
 					{
@@ -165,8 +174,8 @@ projets qui **améliorent l’UI** et qui ont un **impact significatif sur notre
 						startDate: 'Sep 2023',
 						endDate: 'Nov 2024',
 						description: `
-              • Migration de l'application web, de WordPress et Vue.js vers React et React Native
-              • Intégration des APIs back-end, garantissant un flux de données efficace et des temps de chargement réduits`,
+• Migration de l'application web, de WordPress et Vue.js vers React et React Native
+• Limitation de la dette technique grâce à des standards de code stricts, des revues de code et des tests automatisés`,
 						stack: [
 							'TypeScript',
 							'PHP',
@@ -183,11 +192,11 @@ projets qui **améliorent l’UI** et qui ont un **impact significatif sur notre
 						startDate: 'Sep 2022',
 						endDate: 'Sep 2023',
 						description: `
-              • Réduction des temps de réponse de 80% en optimisant les points d'API
-              • Amélioration de la business intelligence pour l'équipe commerciale, en développant des points d'API pour l'extraction de KPI
-              • Création d'un environnement de staging, en containerisant l'application avec Docker Compose
-              • Création de tests pour chaque nouvelle fonctionnalité (QUnit et PHPUnit)
-              • Automatisation des tâches de routine avec des scripts Python`,
+• Réduction des temps de réponse en optimisant les requêtes SQL
+• Amélioration de la business intelligence pour l'équipe commerciale, en développant des points d'API pour l'extraction de KPI
+• Création d'un environnement de staging, en containerisant l'application avec Docker Compose
+• Création de tests pour chaque nouvelle fonctionnalité (QUnit et PHPUnit)
+• Automatisation des tâches de routine avec des scripts Python`,
 						stack: [
 							'JavaScript',
 							'PHP',
@@ -203,8 +212,8 @@ projets qui **améliorent l’UI** et qui ont un **impact significatif sur notre
 						startDate: 'Jan 2022',
 						endDate: 'Jun 2022',
 						description: `
-              • Développement du frontend (HMI) de l'infotainment des voitures BMW
-              • Ajout de nouvelles fonctionnalités, avec les tests unitaires correspondants`,
+• Développement du frontend (HMI) de l'infotainment des voitures BMW
+• Ajout de nouvelles fonctionnalités, avec les tests unitaires correspondants`,
 						stack: ['C++', 'Qt'],
 					},
 					{
@@ -214,8 +223,8 @@ projets qui **améliorent l’UI** et qui ont un **impact significatif sur notre
 						startDate: 'Jun 2020',
 						endDate: 'Dec 2021',
 						description: `
-              • Étude du clustering des fast-foods autour des écoles
-              • Analyse de données géospatiales`,
+• Étude du clustering des fast-foods autour des écoles
+• Analyse de données géospatiales`,
 						stack: ['Python', 'R'],
 					},
 					{
@@ -225,8 +234,8 @@ projets qui **améliorent l’UI** et qui ont un **impact significatif sur notre
 						startDate: 'Mar 2018',
 						endDate: 'Jul 2021',
 						description: `
-              • Travail aux urgences du plus grand hôpital du pays
-              • Stages à Paris (>1an) et Uppsala`,
+• Travail aux urgences du plus grand hôpital du pays
+• Stages à Paris (>1an) et Uppsala`,
 						stack: [],
 					},
 				],
@@ -280,7 +289,15 @@ Gosto de ambientes **desafiantes e em constante evolução**, e de trabalhar em 
 						companyWebsite: 'https://observador.pt/',
 						startDate: 'Nov 2024',
 						endDate: 'presente',
-						description: '',
+						description: `
+• Criei um backoffice para permitir ao apoio ao cliente gerir os dados dos clientes
+• Fiz uma atualização major das dependências (PHP, Node.js e pacotes npm)
+• Colaborei com clientes externos para a sindicação de conteúdos, desenvolvendo endpoints e feeds RSS
+• Melhorei a nossa DX:
+   • Otimizei o pipeline de CI/CD no Bitbucket com âncoras YAML
+   • Removi os ficheiros de build do repositório, movendo o build para o pipeline
+   • Adicionei hooks de pre-commit para formatar o código e correr o linter
+`,
 						stack: ['TypeScript', 'PHP', 'Go', 'WordPress'],
 					},
 					{
@@ -290,8 +307,8 @@ Gosto de ambientes **desafiantes e em constante evolução**, e de trabalhar em 
 						startDate: 'Set 2023',
 						endDate: 'Nov 2024',
 						description: `
-              • Migrei a aplicação web, de WordPress e Vue.js para React e React Native
-              • Integrei APIs back-end, garantindo um fluxo de dados eficiente e tempos de carregamento reduzidos`,
+					• Migrei a aplicação web, de WordPress e Vue.js para React e React Native
+					• Mantive a dívida técnica mínima através de padrões de código rigorosos, code reviews e testes automatizados`,
 						stack: [
 							'TypeScript',
 							'PHP',
@@ -308,11 +325,11 @@ Gosto de ambientes **desafiantes e em constante evolução**, e de trabalhar em 
 						startDate: 'Set 2022',
 						endDate: 'Set 2023',
 						description: `
-              • Reduzi os tempos de resposta até 80%, optimizando os endpoints da API
-              • Melhorei a BI para a equipa comercial, desenvolvendo endpoints para extração de KPIs
-              • Criei um ambiente de staging, containerizando a aplicação com Docker Compose
-              • Criei testes para cada nova funcionalidade (QUnit e PHPUnit)
-              • Automatizei tarefas rotineiras com scripts Python`,
+					• Reduzi os tempos de resposta, otimizando queries SQL
+					• Melhorei a BI para a equipa comercial, desenvolvendo endpoints para extração de KPIs
+					• Criei um ambiente de staging, containerizando a aplicação com Docker Compose
+					• Criei testes para cada nova funcionalidade (QUnit e PHPUnit)
+					• Automatizei tarefas rotineiras com scripts Python`,
 						stack: [
 							'JavaScript',
 							'PHP',
@@ -328,8 +345,8 @@ Gosto de ambientes **desafiantes e em constante evolução**, e de trabalhar em 
 						startDate: 'Jan 2022',
 						endDate: 'Jun 2022',
 						description: `
-              • Desenvolvi o frontend (HMI) do infotainment dos carros da BMW
-              • Adicionei novas funcionalidades, com os respetivos testes unitários`,
+• Desenvolvi o frontend (HMI) do infotainment dos carros da BMW
+• Adicionei novas funcionalidades, com os respetivos testes unitários`,
 						stack: ['C++', 'Qt'],
 					},
 					{
@@ -339,8 +356,8 @@ Gosto de ambientes **desafiantes e em constante evolução**, e de trabalhar em 
 						startDate: 'Jun 2020',
 						endDate: 'Dec 2021',
 						description: `
-              • Estudei o clustering de restaurantes de fast-food em torno das escolas
-              • Analisei dados geoespaciais`,
+• Estudei o clustering de restaurantes de fast-food em torno das escolas
+• Analisei dados geoespaciais`,
 						stack: ['Python', 'R'],
 					},
 					{
@@ -350,8 +367,8 @@ Gosto de ambientes **desafiantes e em constante evolução**, e de trabalhar em 
 						startDate: 'Mar 2018',
 						endDate: 'Jul 2021',
 						description: `
-              • Trabalhei no serviço de urgência do maior hospital do país
-              • Frequentei estágios em Paris (>1ano) e Uppsala`,
+• Trabalhei no serviço de urgência do maior hospital do país
+• Frequentei estágios em Paris (>1ano) e Uppsala`,
 						stack: [],
 					},
 				],
