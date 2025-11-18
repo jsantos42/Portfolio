@@ -8,13 +8,12 @@ const dictionaries: DictionaryWithLanguage = {
 				headline: 'Full-Stack Developer | Former Medical Doctor',
 				summaryLabel: 'About Me',
 				summary: `
-I began programming as a self-taught endeavor in **2020**, and I became so passionate
-about it that I **switched** to a software development career, after having dedicated 
-**11&nbsp;years** of my life to **Medicine**.\n
-Today, as a full-stack developer, I think outside of the box and have a unique 
-perspective thanks to my background. I’m happiest working in challenging and evolving
-environments, on projects that **improve the user experience** and that have a 
-**meaningful impact** on our world.
+I started programming for a personal project back in **2020**. What began as a hobby 
+grew into a passion that ultimately led me to **shift** careers after **11 years in Medicine**.\n
+Today, as a **full-stack developer**, I collaborate effectively with both teammates 
+and clients, thanks to my **tactful communication** style and fluency in **5 languages**.\n
+I enjoy working in **challenging and evolving environments**, on projects that 
+**improve the user experience** and that have a **meaningful impact** on our world.
 `,
 				experienceLabel: 'Experience',
 				experience: [
@@ -38,7 +37,7 @@ environments, on projects that **improve the user experience** and that have a
 						title: 'Full-Stack Developer',
 						company: 'Vita',
 						companyWebsite: 'https://vitameals.com/',
-						startDate: 'Oct 2023',
+						startDate: 'Sep 2023',
 						endDate: 'Nov 2024',
 						description: `
               • Migrate the web app, from WordPress and Vue.js to React and React Native
@@ -56,7 +55,7 @@ environments, on projects that **improve the user experience** and that have a
 						title: 'Full-Stack Developer',
 						company: 'haelsi',
 						companyWebsite: 'https://haelsi.at/',
-						startDate: 'Aug 2022',
+						startDate: 'Sep 2022',
 						endDate: 'Sep 2023',
 						description: `
               • Cut down response times by up to 80%, by optimising API endpoints
@@ -138,19 +137,15 @@ environments, on projects that **improve the user experience** and that have a
 		home: {
 			pageName: 'Accueil',
 			pageContent: {
-				headline: 'Développeur Full-Stack | Ancien Médecin',
+				headline: 'Développeur Full-Stack | Ex-Médecin',
 				summaryLabel: 'À propos',
 				summary: `
-J'ai commencé à programmer en autodidacte en **2020** et j'en suis devenu tellement passionné
-que, après avoir investi **11&nbsp;ans en Médecine**, j'ai décidé de me **reconvertir** professionnellement.\n
-Aujourd'hui, en tant que **développeur full-stack**, je pense différemment et j'ai une
-perspective unique grâce à mon parcours. Il m'a appris l'**importance critique
-d'une bonne UX et UI**, notamment en observant les lacunes des logiciels de santé.
-Et, bien sûr, on ne s'en sort pas bien dans le domaine médical sans **travail acharné**
-et **discipline**.\n
-Mon objectif est d'exploiter mes compétences diversifiées dans des **environnements stimulants et évolutifs**,
-en travaillant sur des projets qui améliorent l'expérience utilisateur.
-Cependant, mon engagement va au-delà de la réussite technique: je cherche à faire partie d'une équipe qui a un **impact positif**.
+J’ai commencé à programmer en **2020** pour un projet personnel. Ce qui avait débuté comme un 
+passe-temps est devenu une passion qui m’a finalement conduit à **changer** de carrière après **11 ans en Médecine**. 
+Aujourd’hui, en tant que **développeur full-stack**, je collabore efficacement avec mes collegues et les clients, 
+grâce à mon **sens de la communication** et à ma maîtrise de **5 langues**. 
+Je suis le plus heureux dans des environnements **stimulants et en constante évolution**, en travaillant sur des 
+projets qui **améliorent l’UI** et qui ont un **impact significatif sur notre monde**.
 `,
 				experienceLabel: 'Expérience',
 				experience: [
@@ -167,7 +162,7 @@ Cependant, mon engagement va au-delà de la réussite technique: je cherche à f
 						title: 'Développeur Full-Stack',
 						company: 'Vita',
 						companyWebsite: 'https://vitameals.com/',
-						startDate: 'Oct 2023',
+						startDate: 'Sep 2023',
 						endDate: 'Nov 2024',
 						description: `
               • Migration de l'application web, de WordPress et Vue.js vers React et React Native
@@ -185,7 +180,7 @@ Cependant, mon engagement va au-delà de la réussite technique: je cherche à f
 						title: 'Développeur Full-Stack',
 						company: 'haelsi',
 						companyWebsite: 'https://haelsi.at/',
-						startDate: 'Aou 2022',
+						startDate: 'Sep 2022',
 						endDate: 'Sep 2023',
 						description: `
               • Réduction des temps de réponse de 80% en optimisant les points d'API
@@ -270,20 +265,12 @@ Cependant, mon engagement va au-delà de la réussite technique: je cherche à f
 				headline: 'Developer Full-Stack | Ex-Médico',
 				summaryLabel: 'Sobre Mim',
 				summary: `
-Comecei a programar como autodidacta em **2020**, e rapidamente me apercebi que
-tinha encontrado aquilo que queria fazer o resto da vida. Assim, decidi **largar a
-carreira médica** ao fim de **11&nbsp;anos** de investimento, e tornar-me engenheiro
-de software.\n
-Hoje em dia, como **developer full-stack**, tenho um raciocínio "fora da caixa"
-e uma perspectiva única moldada pelo meu background. Aprendi
-a **importância crítica de uma boa UX e UI** através das falhas que encontrei nos softwares de saúde com que
-trabalhei. E obviamente que **disciplina** e **resiliência** são pedras basilares
-para a progressão na carreira médica. \n
-O meu objectivo é alavancar o meu conjunto diverso de *skills* em **ambientes desafiantes e em
-constante mutação**, trabalhando em projectos que melhorem a experiência do utilizador.
-Mas não procuro apenas sucesso técnico: pretendo fazer parte de uma equipa
-que faz a **diferença** e que desenvolve tecnologia que tem um **impacto
-significativo** no nosso mundo.
+Comecei a programar em **2020** para um projeto pessoal. O que começou como um hobby 
+transformou-se numa paixão que me levou a **mudar** de carreira após **11 anos em Medicina**.\n
+Hoje, como **programador full-stack**, colaboro de forma eficaz tanto com colegas 
+como com clientes, graças ao meu **tacto na comunicação** e à minha fluência em **5 línguas**.\n 
+Gosto de ambientes **desafiantes e em constante evolução**, e de trabalhar em projetos que 
+**melhoram a experiência do utilizador** e que têm um **impacto significativo** no nosso mundo.
 `,
 				experienceLabel: 'Experiência',
 				experience: [
@@ -300,7 +287,7 @@ significativo** no nosso mundo.
 						title: 'Developer Full-Stack',
 						company: 'Vita',
 						companyWebsite: 'https://vitameals.com/',
-						startDate: 'Oct 2023',
+						startDate: 'Set 2023',
 						endDate: 'Nov 2024',
 						description: `
               • Migrei a aplicação web, de WordPress e Vue.js para React e React Native
@@ -318,8 +305,8 @@ significativo** no nosso mundo.
 						title: 'Developer Full-Stack',
 						company: 'haelsi',
 						companyWebsite: 'https://haelsi.at/',
-						startDate: 'Ago 2022',
-						endDate: 'Sep 2023',
+						startDate: 'Set 2022',
+						endDate: 'Set 2023',
 						description: `
               • Reduzi os tempos de resposta até 80%, optimizando os endpoints da API
               • Melhorei a BI para a equipa comercial, desenvolvendo endpoints para extração de KPIs
