@@ -1,13 +1,8 @@
 import React from 'react';
-import dynamic from 'next/dynamic';
 import { getDictionaries, getSlug } from '@src/res/dictionaries';
 import { StaticParams, SupportedLocale } from '@src/types';
 import HomePage from '@src/app/components/homePage';
-
-// https://nextjs.org/docs/app/building-your-application/optimizing/lazy-loading#nextdynamic
-const ProjectsPage = dynamic(() => import('@src/app/components/projectsPage'), {
-	ssr: false,
-});
+import ProjectsPage from '@src/app/components/projectsPage/ProjectsPageDynamic';
 
 export const dynamicParams = false;
 
@@ -29,13 +24,14 @@ export const generateStaticParams = () => {
 	return params;
 };
 
-export default function Page({
-	params: {
-		slug: [currentLocale, remainingPathname],
-	},
+export default async function Page({
+	params,
 }: {
-	params: { slug: [SupportedLocale, string] };
+	params: Promise<{ slug?: string[] }>;
 }) {
+	const { slug } = await params;
+	const currentLocale = (slug?.[0] ?? 'en') as SupportedLocale;
+	const remainingPathname = slug?.[1] ?? '';
 	const dict = getDictionaries()[currentLocale];
 	const componentMap = {
 		[getSlug(dict.home.pageName)]: HomePage,

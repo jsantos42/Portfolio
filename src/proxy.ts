@@ -12,16 +12,16 @@ const defaultLocale = 'en';
 const supportedLocales: SupportedLocale[] = [defaultLocale, 'fr', 'pt'];
 
 //==============================================================================
-// MIDDLEWARE CONFIG (use `?!` to exclude routes from the middleware)
+// PROXY CONFIG (use `?!` to exclude routes from the proxy)
 //==============================================================================
 export const config = {
 	matcher: ['/((?!api|_next/static|_next/image|favicon.png).*)'],
 };
 
 //==============================================================================
-// MIDDLEWARE
+// PROXY
 //==============================================================================
-export function middleware(req: NextRequest) {
+export function proxy(req: NextRequest) {
 	const { pathname } = req.nextUrl;
 	const currentLocale = pathname.split('/')[1];
 
